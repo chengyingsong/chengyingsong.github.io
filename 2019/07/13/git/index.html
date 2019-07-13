@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="git,工具,环境,linux,">
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="学习笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="柠檬精">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="工作区—–git add ——暂缓区——-git commit - m ——-版本库（本地）（主分支） 命令 pwd                                      显示版本库路径  git add “file “                      把文件添加到仓库（可反复使用，或者同时添加多个文件） git commit -m &amp;lt; message &amp;gt;">
+<meta name="keywords" content="git,工具,环境,linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git">
+<meta property="og:url" content="http://yoursite.com/2019/07/13/git/index.html">
 <meta property="og:site_name" content="柠檬精">
-<meta property="og:description" content="学习笔记">
+<meta property="og:description" content="工作区—–git add ——暂缓区——-git commit - m ——-版本库（本地）（主分支） 命令 pwd                                      显示版本库路径  git add “file “                      把文件添加到仓库（可反复使用，或者同时添加多个文件） git commit -m &amp;lt; message &amp;gt;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-13T12:30:21.881Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="柠檬精">
-<meta name="twitter:description" content="学习笔记">
+<meta name="twitter:title" content="git">
+<meta name="twitter:description" content="工作区—–git add ——暂缓区——-git commit - m ——-版本库（本地）（主分支） 命令 pwd                                      显示版本库路径  git add “file “                      把文件添加到仓库（可反复使用，或者同时添加多个文件） git commit -m &amp;lt; message &amp;gt;">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/13/git/">
 
 
 
 
 
-  <title>柠檬精</title>
+  <title>git | 柠檬精</title>
   
 
 
@@ -143,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,9 +248,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -279,9 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/13/git/" itemprop="url">git</a></h1>
+          <h1 class="post-title" itemprop="name headline">git</h1>
         
 
         <div class="post-meta">
@@ -353,8 +352,7 @@
       
 
       
-        
-          <p>工作区—–git add ——暂缓区——-git commit - m ——-版本库（本地）（主分支）</p>
+        <p>工作区—–git add ——暂缓区——-git commit - m ——-版本库（本地）（主分支）</p>
 <h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><ul>
 <li>pwd                                      显示版本库路径 </li>
 <li>git add “file “                      把文件添加到仓库（可反复使用，或者同时添加多个文件）</li>
@@ -374,14 +372,38 @@
 <p>如果已经commit到版本库，使用git reset –hard 版本号  命令返回原来版本以撤销版本库修改</p>
 </blockquote>
 <p>删除文件，首先使用rm file命令手动删除工作区文件，然后使用git rm file，删除版本库文件并git commit。如果在删除工作区文件之后想要恢复文件，可以使用git checkout – file命令撤销。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/07/13/git/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<a id="more"></a>
+
+<h3 id="关联远程库"><a href="#关联远程库" class="headerlink" title="关联远程库"></a>关联远程库</h3><ul>
+<li>git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:用户名/库.git    关联远程仓库</li>
+<li>git push -u origin master   把本地库的所有内容推送到远程库上，并把当前分支和远程库分支关联【-u参数】</li>
+</ul>
+<p>关联一个远程库，使用命令<code>git remote add origin git@server-name:path/repo-name.git</code>；</p>
+<p>关联后，使用命令<code>git push -u origin master</code>第一次推送master分支的所有内容；</p>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改；</p>
+<p>分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！</p>
+<p>*<em>从远程库中克隆下来文件 *</em> </p>
+<p>要克隆一个仓库，首先必须知道仓库的地址，然后使用==<code>git clone</code>==命令克隆。</p>
+<p>Git支持多种协议，包括<code>https</code>，但通过<code>ssh</code>支持的原生<code>git</code>协议速度最快</p>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p>查看分支：<code>git branch</code></p>
+<p>创建分支：<code>git branch &lt;name&gt;</code></p>
+<p>切换分支：<code>git checkout &lt;name&gt;</code></p>
+<p>创建+切换分支：<code>git checkout -b &lt;name&gt;</code></p>
+<p>合并某分支到当前分支：<code>git merge &lt;name&gt;</code>【快速合并】</p>
+<p>删除分支：<code>git branch -d &lt;name&gt;</code></p>
+<p>当Git无法自动合并冲突时，即不同分支对同一文件有不同修改，必须首先解决冲突，再提交 ，合并完成。</p>
+<blockquote>
+<p>使用git log –graph命令可以看到分支合并图</p>
+</blockquote>
+<p>合并分支时，加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而<code>fast forward</code>合并就看不出来曾经做过合并。</p>
+<p>git stash把没有commit的现场储藏起来，工作区被清理干净，可以去进行bug修复</p>
+<p>git stash list  查看工作现场存放</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git stash apply  //恢复现场，不删除stash内容</span><br><span class="line">git stash drop   //删除stash内容</span><br></pre></td></tr></table></figure>
+
+<p>git stash pop  恢复现场同时删除stash内容。</p>
+<p>git stash apply stash@{0} 恢复指定stash</p>
+<p>如果要丢弃一个没有被合并过的分支，可以通过<code>git branch -D &lt;name&gt;</code>强行删除。</p>
+
       
     </div>
     
@@ -396,334 +418,42 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/13/python/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="莫久">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/title.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="柠檬精">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/13/python/" itemprop="url">python笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-13T17:09:45+08:00">
-                2019-07-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/git/" rel="tag"># git</a>
           
-
+            <a href="/tags/工具/" rel="tag"># 工具</a>
           
-            
+            <a href="/tags/环境/" rel="tag"># 环境</a>
           
-
+            <a href="/tags/linux/" rel="tag"># linux</a>
           
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p><strong>特殊点</strong></p>
-<ol>
-<li>print函数是将其中的所有值都计算完毕再开始输出。即print(1,2,1/0)。由于计算途中出现错误是不会有输出的。</li>
-<li>python中没有静态局部变量，但是可以使用闭包，默认参数或者列表对象以及nonlocal关键字实现</li>
-<li>python的@语法。当解释器读到@的这样的修饰符之后，会先解析@后的内容，直接就把@下一行的函数或者类作为@后边的函数的参数，然后将返回值赋值给下一行修饰的函数对象。 </li>
-</ol>
-<p><strong>变量</strong> </p>
-<p>变量名第一个字符必须是字母或下划线，不能是数字，也不能是python的关键字，而且英文大小字母敏感。</p>
-<p>==python的变量不需要声明，变量的赋值操作即是变量声明和定义的过程。还可以给几个变量同时赋值。如，a,b,c=1,2,3==</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/07/13/python/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/13/python/" rel="next" title="python笔记">
+                <i class="fa fa-chevron-left"></i> python笔记
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/python pages/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="莫久">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/title.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="柠檬精">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/12/python pages/" itemprop="url">python库的使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-12T16:47:09+08:00">
-                2019-07-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h2 id="turtle库"><a href="#turtle库" class="headerlink" title="turtle库"></a>turtle库</h2><ul>
-<li>引入模块 import turtle</li>
-<li>turtle.setup(a,b,c,d)  a,b决定绘制界面的长和宽，，c,d决定绘图界面出现在屏幕的位置，若无设置默认为出现在屏幕中央。</li>
-</ul>
-<p><strong>turtle坐标体系</strong> </p>
-<p>绝对坐标，在绘图界面中的坐标系的坐标</p>
-<ul>
-<li>turtle.goto()     线性绝对坐标的移动  </li>
-</ul>
-<p>空间坐标（海龟坐标），以海龟的视角，前后左右方向的坐标</p>
-<ul>
-<li>turtle.bk(d)  海龟后退d单位</li>
-<li>turtle.fd(d)  海龟前进d单位</li>
-<li>turtle.circle(r,angle)  海龟向左前方以半径r移动angle角度</li>
-</ul>
-<p>绝对角度坐标 以角度为坐标</p>
-<ul>
-<li>turtle.seth(angle) 改变海龟前进的方向角度 （有负角）</li>
-<li>turtle.left（angle) 海龟向左移动angle角</li>
-<li>turtle.right(angle) 海龟向右移动angle角</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/07/12/python pages/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -733,10 +463,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -744,6 +475,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -764,8 +499,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -827,6 +571,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令"><span class="nav-number">1.</span> <span class="nav-text">命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关联远程库"><span class="nav-number">1.1.</span> <span class="nav-text">关联远程库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理"><span class="nav-number">1.2.</span> <span class="nav-text">分支管理</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -967,6 +727,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
