@@ -87,17 +87,17 @@
 <meta property="og:site_name" content="柠檬笔记">
 <meta property="og:description" content="第一章  基础知识1.1 数值数据数据类型：整型，浮点型，复数型 整型  无符号整数：8位，16位，32位，64位。 带符号整数：8位，16位，32位，64位。   类似C语言的符号位，所有无符号的最大值大一倍。这里的位数是bit位的意思  强制类型转换函数 ：int8,  uint8;【后边的位数可以改变，主要是有无符号位】 ==强制类型转换如果范围超出，取所转换范围的最大值==  x=int8">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/07/13/matlab/matlab/matlab1.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/13/matlab/matlab/matlab2.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/13/matlab/matlab/matlab3.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/13/matlab/matlab/matlab4.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/13/matlab/matlab%5Cmatlab5.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/13/matlab/matlab%5Cmatlab6.png">
-<meta property="og:updated_time" content="2019-07-13T13:13:07.613Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/13/matlab/matlab1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/13/matlab/matlab2.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/13/matlab/matlab3.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/13/matlab/matlab4.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/13/matlab/matlab5.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/13/matlab/matlab6.png">
+<meta property="og:updated_time" content="2019-07-13T13:21:52.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MATLAB">
 <meta name="twitter:description" content="第一章  基础知识1.1 数值数据数据类型：整型，浮点型，复数型 整型  无符号整数：8位，16位，32位，64位。 带符号整数：8位，16位，32位，64位。   类似C语言的符号位，所有无符号的最大值大一倍。这里的位数是bit位的意思  强制类型转换函数 ：int8,  uint8;【后边的位数可以改变，主要是有无符号位】 ==强制类型转换如果范围超出，取所转换范围的最大值==  x=int8">
-<meta name="twitter:image" content="http://yoursite.com/2019/07/13/matlab/matlab/matlab1.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/13/matlab/matlab1.png">
 
 
 
@@ -948,7 +948,7 @@
 <p>m,n将图形窗口分成m*n个绘图区，p指定当前活动的绘图区</p>
 </blockquote>
 <p>除了完全平分所有的区域，可以把绘图区每次任意切分只要没有重叠部分就好。</p>
-<p><img src="matlab/matlab1.png" alt="img"></p>
+<p><img src="/2019/07/13/matlab/matlab1.png" alt="img"></p>
 <h3 id="4-3-其他形式的二维曲线"><a href="#4-3-其他形式的二维曲线" class="headerlink" title="4.3 其他形式的二维曲线"></a>4.3 其他形式的二维曲线</h3><p><strong>其他坐标系下的二维曲线图</strong></p>
 <ol>
 <li>对数坐标图</li>
@@ -993,7 +993,7 @@
 </ol>
 <ul>
 <li>扇形图：pie（x,explode)  x存储数据，explode控制图块的显示模式</li>
-<li><img src="matlab/matlab2.png" alt="img"></li>
+<li><img src="/2019/07/13/matlab/matlab2.png" alt="img"></li>
 <li>面积图： area</li>
 </ul>
 <ol start="4">
@@ -1039,7 +1039,7 @@
 <li>具有等高线的曲面函数surfc</li>
 <li>具有光照效果的曲面函数surfl</li>
 </ul>
-<p><img src="matlab/matlab3.png" alt="img"></p>
+<p><img src="/2019/07/13/matlab/matlab3.png" alt="img"></p>
 <p><strong>标准三维曲面</strong> </p>
 <ol>
 <li><p>sphere函数  [x,y,z] = sphere(n)</p>
@@ -1191,7 +1191,7 @@
 <li>数值差分和差商</li>
 </ol>
 <p>微积分中，任意函数f(x)在X0点的导数是通过极限定义的：</p>
-<p><img src="matlab/matlab4.png" alt="img"></p>
+<p><img src="/2019/07/13/matlab/matlab4.png" alt="img"></p>
 <p>函数的微分接近于函数在该点的差分，导数接近于函数在该点的差商。</p>
 <ol start="2">
 <li>数值微分的实现</li>
@@ -1331,7 +1331,7 @@
 <li>nn是数字，代表所用方法的阶数，例如，0de23是采用2阶龙格-库塔算法，用三阶公式做误差估计来调节步长，具有低等精度</li>
 <li>xx是字母，用于标注方法的专门特征，例如ode15s,ode23s中的s代表Stiff,表示函数适用于刚性方程</li>
 </ul>
-<p><img src="matlab%5Cmatlab5.png" alt></p>
+<p><img src="/2019/07/13/matlab/matlab5.png" alt="img"></p>
 <ol start="3">
 <li>刚性问题</li>
 </ol>
@@ -1367,7 +1367,7 @@
 <blockquote>
 <p>第一种格式指定变量满足的条件，第二种格式指定表达式expr属于集合set</p>
 </blockquote>
-<p><img src="matlab%5Cmatlab6.png" alt="img"></p>
+<p><img src="/2019/07/13/matlab/matlab6.png" alt="img"></p>
 <ol start="3">
 <li>逻辑运算</li>
 </ol>
