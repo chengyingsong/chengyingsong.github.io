@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="cat命令（显示文件内容）cat命令连接文件并打印到标准输出设备上，cat经常用来显示文件的内容，类似于type命令。  当文件过大时，会滚屏。因此一般用more等命令分屏显示。为了控制滚屏可以按Ctri+S键，停止，按Ctrl+Q键恢复滚屏。按Ctrl+C（中断）键可以终止该命令的执行，并且返回Shell提示符状态。  语法 1cat(选项)(参数)  选项  —n或-number: 有1开始对">
+<meta name="description" content="cat命令（显示文件内容）cat命令连接文件并打印到标准输出设备上，cat经常用来显示文件的内容，类似于type命令。  当文件过大时，会滚屏。因此一般用more等命令分屏显示。为了控制滚屏可以按Ctri+S键，停止，按Ctrl+Q键恢复滚屏。按Ctrl+C（中断）键可以终止该命令的执行，并且返回Shell提示符状态。  语法 1cat(选项)(参数) 选项  —n或-number: 有1开始对所">
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux 基本命令">
 <meta property="og:url" content="http://yoursite.com/2019/07/13/linux-command/index.html">
 <meta property="og:site_name" content="柠檬笔记">
-<meta property="og:description" content="cat命令（显示文件内容）cat命令连接文件并打印到标准输出设备上，cat经常用来显示文件的内容，类似于type命令。  当文件过大时，会滚屏。因此一般用more等命令分屏显示。为了控制滚屏可以按Ctri+S键，停止，按Ctrl+Q键恢复滚屏。按Ctrl+C（中断）键可以终止该命令的执行，并且返回Shell提示符状态。  语法 1cat(选项)(参数)  选项  —n或-number: 有1开始对">
+<meta property="og:description" content="cat命令（显示文件内容）cat命令连接文件并打印到标准输出设备上，cat经常用来显示文件的内容，类似于type命令。  当文件过大时，会滚屏。因此一般用more等命令分屏显示。为了控制滚屏可以按Ctri+S键，停止，按Ctrl+Q键恢复滚屏。按Ctrl+C（中断）键可以终止该命令的执行，并且返回Shell提示符状态。  语法 1cat(选项)(参数) 选项  —n或-number: 有1开始对所">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-07-13T12:47:43.488Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux 基本命令">
-<meta name="twitter:description" content="cat命令（显示文件内容）cat命令连接文件并打印到标准输出设备上，cat经常用来显示文件的内容，类似于type命令。  当文件过大时，会滚屏。因此一般用more等命令分屏显示。为了控制滚屏可以按Ctri+S键，停止，按Ctrl+Q键恢复滚屏。按Ctrl+C（中断）键可以终止该命令的执行，并且返回Shell提示符状态。  语法 1cat(选项)(参数)  选项  —n或-number: 有1开始对">
+<meta name="twitter:description" content="cat命令（显示文件内容）cat命令连接文件并打印到标准输出设备上，cat经常用来显示文件的内容，类似于type命令。  当文件过大时，会滚屏。因此一般用more等命令分屏显示。为了控制滚屏可以按Ctri+S键，停止，按Ctrl+Q键恢复滚屏。按Ctrl+C（中断）键可以终止该命令的执行，并且返回Shell提示符状态。  语法 1cat(选项)(参数) 选项  —n或-number: 有1开始对所">
 
 
 
@@ -348,12 +348,11 @@
 </blockquote>
 <p><strong>语法</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat(选项)(参数)</span><br></pre></td></tr></table></figure>
-
 <p><strong>选项</strong></p>
 <ul>
 <li>—n或-number: 有1开始对所有输出的行数编号；</li>
-<li>-b或–number-nonblank:和-n相似，只不过对于空白行不编号</li>
-<li>-s 或–squeeze-blank:   当遇到有连续两行以上的空白行，就代换为一行的空白行</li>
+<li>-b或—number-nonblank:和-n相似，只不过对于空白行不编号</li>
+<li>-s 或—squeeze-blank:   当遇到有连续两行以上的空白行，就代换为一行的空白行</li>
 <li>-A:   显示不可打印字符时，行尾显示“$“</li>
 <li>-e：  等价”-vE”选项</li>
 <li>-t:     等价于”-vT“选项</li>
@@ -362,7 +361,6 @@
 <p>文件列表：指定要连接的文件列表</p>
 <p><strong>实例</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat m1   #在屏幕上显示文件m1的内容</span><br><span class="line">cat mi m2   #同时显示文件m1和m2的内容</span><br><span class="line">cat m1 m2 &gt;file  #将文件m1和m2合并后放入文件file中</span><br></pre></td></tr></table></figure>
-
 <h2 id="grep命令（在文本中搜索）"><a href="#grep命令（在文本中搜索）" class="headerlink" title="grep命令（在文本中搜索）"></a>grep命令（在文本中搜索）</h2><p>grep命令是文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来</p>
 <p><strong>选项</strong></p>
 <ul>
@@ -394,60 +392,42 @@
 <p><strong>常见用法</strong></p>
 <p>在文件中搜索一个单词，命令行会返回一个包含==”所查找字符串“==的文本行。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep &quot;字符串&quot;  file_name</span><br></pre></td></tr></table></figure>
-
 <p>在多个文件查找：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep string file_1 file_2 file3...</span><br></pre></td></tr></table></figure>
-
 <p>输出除要查找字符串之外所有行的<strong>-v</strong>选项：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -v string file_name</span><br></pre></td></tr></table></figure>
-
-<p>标记匹配颜色  –color=auto 选项：</p>
+<p>标记匹配颜色  —color=auto 选项：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep string file_name --color=auto</span><br></pre></td></tr></table></figure>
-
 <p>使用==正则表达式== -E选项：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grep -E &quot;[1-9]+&quot;</span><br><span class="line">egrep &quot;[1-9]+&quot;</span><br></pre></td></tr></table></figure>
-
 <p>只输出文件中匹配到的部分  -o 选项：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">echo this is test line.| grep -o -E &quot;[a-z]+\.&quot;</span><br><span class="line">line</span><br><span class="line">echo this is a test line. | egrep -o &quot;[a-z]+\.&quot;</span><br><span class="line">line.</span><br></pre></td></tr></table></figure>
-
 <p>统计文本或者文本中包好匹配字符串的行数 -c 选项</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -c string file_name</span><br></pre></td></tr></table></figure>
-
 <p>输出包含匹配字符串的行数 -n  选项</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">grep string -n file_name</span><br><span class="line">或者</span><br><span class="line">cat file_name | grep string -n</span><br><span class="line"></span><br><span class="line">#多个文件</span><br><span class="line">grep string -n file_1 file_2</span><br></pre></td></tr></table></figure>
-
 <p>打印样式匹配所位于的字符或字节偏移</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo gun is not unix | grep -b -o &quot;not&quot;</span><br><span class="line">7:not   </span><br><span class="line">#一行字符串的字符偏移是从该行的第一个字符开始计算，起始值为0。选项 -b -o 一般总是配合使用</span><br></pre></td></tr></table></figure>
-
 <p><strong>搜索多个文件并查找匹配文本在哪些文件中</strong>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -l string file1 file2 file3...</span><br></pre></td></tr></table></figure>
-
 <p><strong>grep递归搜素文件</strong></p>
 <p>在多级目录中对文本进行递归搜索：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep string . -r -n  #.表示当前目录</span><br></pre></td></tr></table></figure>
-
 <p><strong>忽略匹配样式中的字符大小写：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;hello world&quot; | grep -i &quot;HELLO&quot;</span><br><span class="line">hello</span><br></pre></td></tr></table></figure>
-
 <p>选项-e 制动多个匹配样式：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">echo this is a text line | grep -e &quot;is&quot; -e &quot;line&quot; -o</span><br><span class="line">is</span><br><span class="line">line</span><br><span class="line">#也可以使用-f选项来匹配多个样式，在样式文件中逐行写出需要匹配的字符</span><br><span class="line">cat patfile</span><br><span class="line">aaa</span><br><span class="line">bbb</span><br><span class="line"></span><br><span class="line">echo aaa bbb ccc ddd eee | grep -f patfile -o</span><br></pre></td></tr></table></figure>
-
 <p>在grep搜索结果中包括或者排除指定文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#只在目录中所有的.php和.html文件中递归搜索字符&quot;main()&quot;</span><br><span class="line">grep &quot;main()&quot; . -r --include *.&#123;php,html&#125;</span><br><span class="line"></span><br><span class="line">#在搜索结果中排除所有README文件</span><br><span class="line">grep &quot;main()&quot; . -r --exclude &quot;README&quot;</span><br><span class="line"></span><br><span class="line">#在搜索结果中排除filelist文件列表里的文件</span><br><span class="line">grep &quot;main()&quot; . -r --exclude-from filelist</span><br></pre></td></tr></table></figure>
-
 <p>使用0值字节后缀的grep与xargs：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#测试文件：</span><br><span class="line">echo &quot;aaa&quot; &gt; file1</span><br><span class="line">echo &quot;bbb&quot; &gt; file2</span><br><span class="line">echo &quot;aaa&quot; &gt; file3</span><br><span class="line"></span><br><span class="line">grep &quot;aaa&quot; file* -lZ | xargs -0 rm</span><br><span class="line"></span><br><span class="line">#执行后会删除file1和file3，grep输出用-Z选项来指定以0值字节作为终结符文件名（\0），xargs -0 读取输入并用0值字节终结符分隔文件名，然后删除匹配文件，-Z通常和-l结合使用。</span><br></pre></td></tr></table></figure>
-
 <p><strong>grep静默输出：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grep -q &quot;test&quot; filename</span><br><span class="line"></span><br><span class="line">#不会输出任何信息，如果命令运行成功返回0，失败则返回非0值。一般用于条件测试。</span><br></pre></td></tr></table></figure>
-
 <p>==打印出匹配文本之前或者之后的行：==</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#显示匹配某个结果之后的3行，使用 -A 选项：</span><br><span class="line">seq 10 | grep &quot;5&quot; -A 3</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line"></span><br><span class="line">#显示匹配某个结果之前的3行，使用 -B 选项：</span><br><span class="line">seq 10 | grep &quot;5&quot; -B 3</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line"></span><br><span class="line">#显示匹配某个结果的前三行和后三行，使用 -C 选项：</span><br><span class="line">seq 10 | grep &quot;5&quot; -C 3</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line"></span><br><span class="line">#如果匹配结果有多个，会用“--”作为各匹配结果之间的分隔符：</span><br><span class="line">echo -e &quot;a\nb\nc\na\nb\nc&quot; | grep a -A 1</span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">--</span><br><span class="line">a</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
-
 <h2 id="ls命令（显示列表）"><a href="#ls命令（显示列表）" class="headerlink" title="ls命令（显示列表）"></a>ls命令（显示列表）</h2><p>ls命令用来显示目标列表。 ls命令的输出信息可以进行彩色加亮显示，以区分不同类型的文件</p>
 <p><strong>语法</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls(选项)(参数)</span><br></pre></td></tr></table></figure>
-
 <p><strong>选项</strong></p>
 <ul>
 <li>-a：显示所有档案及目录（ls内定将档案名或目录名称为“.”的视为影藏，不会列出）；</li>
@@ -460,7 +440,7 @@
 <li>-d：仅显示目录名，而不显示目录下的内容列表。显示符号链接文件本身，而不显示其所指向的目录列表；</li>
 <li>-f：此参数的效果和同时指定“aU”参数相同，并关闭“lst”参数的效果；</li>
 <li>-i：显示文件索引节点号（inode）。一个索引节点代表一个文件；</li>
-<li>–file-type：与“-F”选项的功能相同，但是不显示“*”；<br>-k：以KB（千字节）为单位显示文件大小；</li>
+<li>—file-type：与“-F”选项的功能相同，但是不显示“*”；<br>-k：以KB（千字节）为单位显示文件大小；</li>
 <li>-l：以长格式显示目录下的内容列表。输出的信息从左到右依次包括文件名，文件类型、权限模式、硬连接数、所有者、组、文件大小和文件的最后修改时间等；</li>
 <li>-m：用“,”号区隔每个文件和目录的名称；</li>
 <li>-n：以用户识别码和群组识别码替代其名称；</li>
@@ -469,27 +449,23 @@
 <li>-t：用文件和目录的更改时间排序；</li>
 <li>-L：如果遇到性质为符号链接的文件或目录，直接列出该链接所指向的原始文件或目录；</li>
 <li>-R：递归处理，将指定目录下的所有文件及子目录一并处理；</li>
-<li>–full-time：列出完整的日期与时间；</li>
-<li>–color[=WHEN]：使用不同的颜色高亮显示不同类型的。</li>
+<li>—full-time：列出完整的日期与时间；</li>
+<li>—color[=WHEN]：使用不同的颜色高亮显示不同类型的。</li>
 </ul>
 <p><strong>参数</strong></p>
 <p>指定要显示列表的目录，也可以是具体的文件</p>
 <p><strong>实例</strong></p>
 <p>显示当前目录下非隐藏文件和目录</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
-
 <p>显示当前目录下包括隐藏文件在内的所有文件列表</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -a</span><br></pre></td></tr></table></figure>
-
 <p>输出长格式列表</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l</span><br></pre></td></tr></table></figure>
-
 <p>显示文件的inode信息。</p>
 <blockquote>
 <p>inode是索引节点，具有相同的索引节点号的两个文本本质上是同一个文件（除文件名不同外）</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -i -l   文件1  文件2</span><br></pre></td></tr></table></figure>
-
 <p>水平输出文件列表</p>
 <p>ls -m</p>
 <p>修改最后一次编辑的文件【最近修改的文件显示在最上面】</p>
@@ -511,13 +487,13 @@
 <p>按照特殊字符对文件 进行分类</p>
 <p>ls -F</p>
 <p>列出文件并标记颜色分类</p>
-<p>ls –color=auto</p>
+<p>ls —color=auto</p>
 <h2 id="pwd命令（显示路径）"><a href="#pwd命令（显示路径）" class="headerlink" title="pwd命令（显示路径）"></a>pwd命令（显示路径）</h2><p>==pwd命令以绝对路径的方式显示用户当前工作目录==。命令将当前目录的全路径名称（根目录）写入标准输出。全部目录使用==/== 分隔。第一个==/==表示根目录，最后一个目录是当前目录。执行pwd命令课立刻获取绝对目录。</p>
 <p><strong>语法</strong></p>
 <p>pwd (选项)</p>
 <p><strong>选项</strong></p>
-<p>–help: 显示帮助信息</p>
-<p>–version ： 显示版本信息</p>
+<p>—help: 显示帮助信息</p>
+<p>—version ： 显示版本信息</p>
 <h2 id="mv命令（重命名）"><a href="#mv命令（重命名）" class="headerlink" title="mv命令（重命名）"></a>mv命令（重命名）</h2><p>mv命令用来对文件或目录重新命令，或者将文件从一个目录移到另一个目录中。source表示源文件或目录，target表示目标文件或目录。如果将一个文件移到一个已经存在的目标文件中，则目标文件的内容将被覆盖。</p>
 <p>mv命令可以用来将源文件移至一个目标文件中，或将一组文件移至一个目标目录中。源文件被移至目标文件有两种不同的结果：</p>
 <ol>
@@ -529,17 +505,14 @@
 <p>mv (选项)（参数）</p>
 <p><strong>选项</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">--backup=&lt;备份模式&gt;： 若需覆盖文件，则覆盖前先行备份；</span><br><span class="line">-b：                 当文件存在时，覆盖前，为其创建一个备份；</span><br><span class="line">-f：            若目标文件或目录与现有的文件或目录重复，则直接覆盖现有的文件或目录；</span><br><span class="line">-i：            交互式操作，覆盖前先行询问用户，如果源文件与目标文件或目标目录中的文件同名，则询问用户是否覆盖目标文件。用户输入”y”，表示将覆盖目标文件；输入”n”，表示取消对源文件的移动。这样可以避免误将文件覆盖。</span><br><span class="line">--strip-trailing-slashes：删除源文件中的斜杠“/”；</span><br><span class="line">-S&lt;后缀&gt;：为备份文件指定后缀，而不使用默认的后缀；</span><br><span class="line">--target-directory=&lt;目录&gt;：指定源文件要移动到目标目录；</span><br><span class="line">-u：当源文件比目标文件新或者目标文件不存在时，才执行移动操作。</span><br></pre></td></tr></table></figure>
-
 <p><strong>参数</strong></p>
 <p>源文件：源文件列表</p>
 <p>目标文件：如果”目标文件“是文件名则在移动文件的同时，将其改名为”目标文件“；如果”目标文件“是目录名则将源文件移动到”目标文件“下。</p>
 <p><strong>实例</strong></p>
 <p>将ex3改名为new1</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv ex3 new1</span><br></pre></td></tr></table></figure>
-
 <p>将目录/usr/men 中的所有文件移到当前目录（用==.==表示）中：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/men/* .</span><br></pre></td></tr></table></figure>
-
 <h2 id="rm命令（删除）"><a href="#rm命令（删除）" class="headerlink" title="rm命令（删除）"></a>rm命令（删除）</h2><p>rm命令可以删除一个目录中的一个或多个文件或目录，也可以将某个目录及其子目录均删除掉。对于链接文件，只是删除整个链接文件，而原有文件保持不变</p>
 <p>注意：使用rm命令要格外小心。==因为一旦删除了一个文件，就无法再恢复它。所以，在删除文件之前，最好再看一下文件的内容，确定是否真要删除。==rm命令可以用-i选项，这个选项在使用文件扩展名字符删除多个文件时特别有用。使用这个选项，系统会要求你逐一确定是否要删除。这时，必须输入y并按Enter键，才能删除文件。如果仅按Enter键或其他字符，文件不会被删除。</p>
 <p><strong>语法</strong></p>
@@ -550,7 +523,7 @@
 <li>-f：强制删除文件或目录；</li>
 <li>-i：删除已有文件或目录之前先询问用户；</li>
 <li>-r或-R：递归处理，将指定目录下的所有文件与子目录一并处理；</li>
-<li>–preserve-root：不对根目录进行递归操作；</li>
+<li>—preserve-root：不对根目录进行递归操作；</li>
 <li>-v：显示指令的详细执行过程</li>
 </ul>
 <p><strong>参数</strong></p>
@@ -558,10 +531,8 @@
 <p><strong>实例</strong></p>
 <p>交互式删除当前目录下的文件test和example</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rm -i test example</span><br><span class="line">Remove test ？n (不删除文件test)</span><br><span class="line">Remove example ? y   (删除文件example)</span><br><span class="line">#选项-i，删除前询问是否删除</span><br></pre></td></tr></table></figure>
-
 <p>删除当前目录下除隐含文件之外的所有文件和子目录==[很危险]==</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r *</span><br></pre></td></tr></table></figure>
-
 <h2 id="chmod命令（更改文件权限）"><a href="#chmod命令（更改文件权限）" class="headerlink" title="chmod命令（更改文件权限）"></a>chmod命令（更改文件权限）</h2><p>==chmod命令用来变更文件或目录的权限。==在UNIX系统家族中，文件或目录权限的控制分别以读取，写入，执行3种一般权限来区分，另有3种特殊权限可供运用。用户可以使用chmod指令去变更文件和目录的权限，设置方式采用文字或数字代号皆可。符号链接的权限无法变更，如果用户对符号连接修改权限，其改变会作用在被连接的原始文件。</p>
 <p>权限范围的表示法如下：</p>
 <ul>
@@ -578,23 +549,19 @@
 <p><strong>语法</strong> ：  chmod  (选项)（参数）</p>
 <p><strong>选项</strong>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-c或——changes：        效果类似“-v”参数，但仅回报更改的部分；</span><br><span class="line">-f或--quiet或——silent：不显示错误信息；</span><br><span class="line">-R或——recursive：      递归处理，将指令目录下的所有文件及子目录一并处理；</span><br><span class="line">-v或——verbose：        显示指令执行过程；</span><br><span class="line">--reference=&lt;参考文件或目录&gt;：把指定文件或目录的所属群组全部设成和参考文件或目录的所属群组相同；</span><br><span class="line">&lt;权限范围&gt;+&lt;权限设置&gt;：开启权限范围的文件或目录的该选项权限设置；</span><br><span class="line">&lt;权限范围&gt;-&lt;权限设置&gt;：关闭权限范围的文件或目录的该选项权限设置；</span><br><span class="line">&lt;权限范围&gt;=&lt;权限设置&gt;：指定权限范围的文件或目录的该选项权限设置；</span><br></pre></td></tr></table></figure>
-
 <p><strong>参数</strong></p>
 <p>权限模式：指定文件的权限模式</p>
 <p>文件：要改变权限的文件</p>
 <p><strong>知识拓展和实例</strong> ：</p>
 <p>Linux用 户分为：==拥有者、组群(Group)、其他（other），==Linux系统中，预设的情況下，系统中所有的帐号与一般身份使用者，以及root的相关信 息， 都是记录在<code>/etc/passwd</code>文件中。每个人的密码则是记录在<code>/etc/shadow</code>文件下。 此外，所有的组群名称记录在<code>/etc/group</code>內！</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">chmod u+x,g+w f01   //为文件f01设置自己可以执行，组员可以写入的权限</span><br><span class="line">chmod u=rwx,g=rw,o=r f01  //设置自己可以读写执行，组员读写，其他人只能读的权限</span><br><span class="line">chmod 764 f01</span><br><span class="line">chmod a+x f01  //对f01文件的u,g,o都设置可执行属性</span><br></pre></td></tr></table></figure>
-
 <p>文件的属主和属组属性设置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chown user:market f01   把文件f01给user,添加到marker组</span><br><span class="line">ll -d f1   查看目录f1的属性</span><br></pre></td></tr></table></figure>
-
 <h2 id="touch命令（更新文件标签时间-amp-创建空文件）"><a href="#touch命令（更新文件标签时间-amp-创建空文件）" class="headerlink" title="touch命令（更新文件标签时间&amp;创建空文件）"></a>touch命令（更新文件标签时间&amp;创建空文件）</h2><p>touch命令有两个功能 ：一是用于把一存在的 文件标签更新为 系统当前时间（默认方式），它们的数据将原封不动的保留下来，二是用来创建新的空文件。</p>
 <p><strong>语法</strong></p>
 <p>touch  (选项)（参数）</p>
 <p><strong>选项</strong> </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-a：或--time=atime或--time=access或--time=use  只更改存取时间；</span><br><span class="line">-c：或--no-create  不建立任何文件；</span><br><span class="line">-d：&lt;时间日期&gt; 使用指定的日期时间，而非现在的时间；</span><br><span class="line">-f：此参数将忽略不予处理，仅负责解决BSD版本touch指令的兼容性问题；</span><br><span class="line">-m：或--time=mtime或--time=modify  只更该变动时间；</span><br><span class="line">-r：&lt;参考文件或目录&gt;  把指定文件或目录的日期时间，统统设成和参考文件或目录的日期时间相同；</span><br><span class="line">-t：&lt;日期时间&gt;  使用指定的日期时间，而非现在的时间；</span><br><span class="line">--help：在线帮助；</span><br><span class="line">--version：显示版本信息。</span><br></pre></td></tr></table></figure>
-
 <p><strong>参数</strong> </p>
 <p>文件：指定要设置时间属性的文件列表。</p>
 <p><strong>实例</strong></p>
@@ -606,33 +573,26 @@
 <p>cp(选项)（参数）</p>
 <p><strong>选项</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">-a：此参数的效果和同时指定<span class="string">"-dpR"</span>参数相同；</span><br><span class="line">-d：当复制符号连接时，把目标文件或目录也建立为符号连接，并指向与源文件或目录连接的原始文件或目录；</span><br><span class="line"><span class="comment">#-f：强行复制文件或目录，不论目标文件或目录是否已存在；</span></span><br><span class="line"><span class="comment">#-i：覆盖既有文件之前先询问用户；</span></span><br><span class="line">-l：对源文件建立硬连接，而非复制文件；</span><br><span class="line">-p：保留源文件或目录的属性；</span><br><span class="line"><span class="comment">#-R/r：递归处理，将指定目录下的所有文件与子目录一并处理；</span></span><br><span class="line">-s：对源文件建立符号连接，而非复制文件；</span><br><span class="line">-u：使用这项参数后只会在源文件的更改时间较目标文件更新时或是名称相互对应的目标文件并不存在时，才复制文件；</span><br><span class="line">-S：在备份文件时，用指定的后缀“SUFFIX”代替文件的默认后缀；</span><br><span class="line">-b：覆盖已存在的文件目标前将目标文件备份；</span><br><span class="line">-v：详细显示命令执行的操作。</span><br></pre></td></tr></table></figure>
-
 <p><strong>参数</strong> </p>
 <p>源文件：指定源文件列表。默认情况下，cp命令不能复制目录，如果要复制目录，必须使用-R选项</p>
 <p>目标文件：指定目标文件。当“源文件”为多个文件时，要求“目标文件”为指定的目录</p>
 <p><strong>实例</strong></p>
 <p>如果把一个文件复制到一个目标文件中 ，而目标文件已经存在。==那该目标文件的内容将被破坏==。此命令所有参数既可以是绝对路径名，也可以是相对路径名。通常会用到点==.==或者==..==的 形式。例如下面的命令将指定文件复制到当前目录下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ../mary/homework/assign .</span><br></pre></td></tr></table></figure>
-
 <p>==所有目标文件指定的目录必须是已经存在的，cp命令不能创建目录。==如果没有文件复制的权限，则系统会显示出错信息/</p>
 <p>将文件file复制到目录/user/men/tmp下，并改名为file1</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp file /user/men/tmp/file1</span><br></pre></td></tr></table></figure>
-
 <p>将目录/user/men下的所有文件及其子目录复制到目录/user/zh中</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r /user/men /user/zh</span><br></pre></td></tr></table></figure>
-
 <p>==交互式的将目录/user/men中的以m打头的所有.c文件复制到目录/user/zh中==</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -i /user/men m*.c /user/zh</span><br></pre></td></tr></table></figure>
-
 <p>覆盖同名文件，需要不停的按Y来确定执行覆盖。以下是另一种方法</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cp aaa/* /bbb</span><br><span class="line"><span class="comment">#复制目录aaa下所有到bbb目录下，这时如果/bbb目录下有和aaa同名的文件，需要按Y来确认并且会忽略aaa目录下的子目录</span></span><br><span class="line"></span><br><span class="line">cp -r aaa/* /bbb</span><br><span class="line"><span class="comment">#还是要按Y来确认操作，但是没有忽略子目录</span></span><br><span class="line">cp -r -a aaa/* /bbb</span><br><span class="line"><span class="comment">#依然需要按Y来确认操作，并且把aaa目录下以及子目录和文件属性也传递到了/bbb</span></span><br><span class="line">\cp -r -a aaa/* /bbb</span><br><span class="line">没有提示按Y，传递了目录属性，没有忽略目录</span><br></pre></td></tr></table></figure>
-
 <h2 id="find命令-查找文件"><a href="#find命令-查找文件" class="headerlink" title="find命令(查找文件)"></a>find命令(查找文件)</h2><p>find命令用来在指定目录下查找文件。<strong>任何位于参数之前的字符串都将被视为欲查找的目录名</strong>。如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录和文件。并且将查找到的子目录和文件全部进行显示。</p>
 <p><strong>语法</strong> </p>
 <p>find(选项)（参数）</p>
 <p><strong>选项</strong> </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">-amin&lt;分钟&gt;：查找在指定时间曾被存取过的文件或目录，单位以分钟计算；</span><br><span class="line">-anewer&lt;参考文件或目录&gt;：查找其存取时间较指定文件或目录的存取时间更接近现在的文件或目录；</span><br><span class="line">-atime&lt;<span class="number">24</span>小时数&gt;：查找在指定时间曾被存取过的文件或目录，单位以<span class="number">24</span>小时计算；</span><br><span class="line">-cmin&lt;分钟&gt;：查找在指定时间之时被更改过的文件或目录；</span><br><span class="line">-cnewer&lt;参考文件或目录&gt;查找其更改时间较指定文件或目录的更改时间更接近现在的文件或目录；</span><br><span class="line">-ctime&lt;<span class="number">24</span>小时数&gt;：查找在指定时间之时被更改的文件或目录，单位以<span class="number">24</span>小时计算；</span><br><span class="line">-daystart：从本日开始计算时间；</span><br><span class="line">-depth：从指定目录下最深层的子目录开始查找；</span><br><span class="line">-expty：寻找文件大小为<span class="number">0</span> Byte的文件，或目录下没有任何子目录或文件的空目录；</span><br><span class="line">-<span class="keyword">exec</span>&lt;执行指令&gt;：假设find指令的回传值为<span class="literal">True</span>，就执行该指令；</span><br><span class="line">-false：将find指令的回传值皆设为<span class="literal">False</span>；</span><br><span class="line">-fls&lt;列表文件&gt;：此参数的效果和指定“-ls”参数类似，但会把结果保存为指定的列表文件；</span><br><span class="line">-follow：排除符号连接；</span><br><span class="line">-fprint&lt;列表文件&gt;：此参数的效果和指定“-<span class="keyword">print</span>”参数类似，但会把结果保存成指定的列表文件；</span><br><span class="line">-fprint0&lt;列表文件&gt;：此参数的效果和指定“-print0”参数类似，但会把结果保存成指定的列表文件；</span><br><span class="line">-fprintf&lt;列表文件&gt;&lt;输出格式&gt;：此参数的效果和指定“-printf”参数类似，但会把结果保存成指定的列表文件；</span><br><span class="line">-fstype&lt;文件系统类型&gt;：只寻找该文件系统类型下的文件或目录；</span><br><span class="line">-gid&lt;群组识别码&gt;：查找符合指定之群组识别码的文件或目录；</span><br><span class="line">-group&lt;群组名称&gt;：查找符合指定之群组名称的文件或目录；</span><br><span class="line">-help或——help：在线帮助；</span><br><span class="line">-ilname&lt;范本样式&gt;：此参数的效果和指定“-lname”参数类似，但忽略字符大小写的差别；</span><br><span class="line">-iname&lt;范本样式&gt;：此参数的效果和指定“-name”参数类似，但忽略字符大小写的差别；</span><br><span class="line">-inum&lt;inode编号&gt;：查找符合指定的inode编号的文件或目录；</span><br><span class="line">-ipath&lt;范本样式&gt;：此参数的效果和指定“-path”参数类似，但忽略字符大小写的差别；</span><br><span class="line">-iregex&lt;范本样式&gt;：此参数的效果和指定“-regexe”参数类似，但忽略字符大小写的差别；</span><br><span class="line">-links&lt;连接数目&gt;：查找符合指定的硬连接数目的文件或目录；</span><br><span class="line">-iname&lt;范本样式&gt;：指定字符串作为寻找符号连接的范本样式；</span><br><span class="line">-ls：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出；</span><br><span class="line">-maxdepth&lt;目录层级&gt;：设置最大目录层级；</span><br><span class="line">-mindepth&lt;目录层级&gt;：设置最小目录层级；</span><br><span class="line">-mmin&lt;分钟&gt;：查找在指定时间曾被更改过的文件或目录，单位以分钟计算；</span><br><span class="line">-mount：此参数的效果和指定“-xdev”相同；</span><br><span class="line">-mtime&lt;<span class="number">24</span>小时数&gt;：查找在指定时间曾被更改过的文件或目录，单位以<span class="number">24</span>小时计算；</span><br><span class="line"><span class="comment">#-name&lt;范本样式&gt;：指定字符串作为寻找文件或目录的范本样式；</span></span><br><span class="line">-newer&lt;参考文件或目录&gt;：查找其更改时间较指定文件或目录的更改时间更接近现在的文件或目录；</span><br><span class="line">-nogroup：找出不属于本地主机群组识别码的文件或目录；</span><br><span class="line">-noleaf：不去考虑目录至少需拥有两个硬连接存在；</span><br><span class="line">-nouser：找出不属于本地主机用户识别码的文件或目录；</span><br><span class="line">-ok&lt;执行指令&gt;：此参数的效果和指定“-<span class="keyword">exec</span>”类似，但在执行指令之前会先询问用户，若回答“y”或“Y”，则放弃执行命令；</span><br><span class="line"><span class="comment">#-path&lt;范本样式&gt;：指定字符串作为寻找目录的范本样式；</span></span><br><span class="line">-perm&lt;权限数值&gt;：查找符合指定的权限数值的文件或目录；</span><br><span class="line">-<span class="keyword">print</span>：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出。格式为每列一个名称，每个名称前皆有“./”字符串；</span><br><span class="line">-print0：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出。格式为全部的名称皆在同一行；</span><br><span class="line">-printf&lt;输出格式&gt;：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出。格式可以自行指定；</span><br><span class="line">-prune：不寻找字符串作为寻找文件或目录的范本样式;</span><br><span class="line">-regex&lt;范本样式&gt;：指定字符串作为寻找文件或目录的范本样式；</span><br><span class="line">-size&lt;文件大小&gt;：查找符合指定的文件大小的文件；</span><br><span class="line">-true：将find指令的回传值皆设为<span class="literal">True</span>；</span><br><span class="line">-typ&lt;文件类型&gt;：只寻找符合指定的文件类型的文件；</span><br><span class="line">-uid&lt;用户识别码&gt;：查找符合指定的用户识别码的文件或目录；</span><br><span class="line">-used&lt;日数&gt;：查找文件或目录被更改之后在指定时间曾被存取过的文件或目录，单位以日计算；</span><br><span class="line">-user&lt;拥有者名称&gt;：查找符和指定的拥有者名称的文件或目录；</span><br><span class="line">-version或——version：显示版本信息；</span><br><span class="line">-xdev：将范围局限在先行的文件系统中；</span><br><span class="line">-xtype&lt;文件类型&gt;：此参数的效果和指定“-type”参数类似，差别在于它针对符号连接检查。</span><br></pre></td></tr></table></figure>
-
 <p><strong>参数</strong></p>
 <p>起始目录：查找文件的起始目录</p>
 <p><strong>实例</strong> </p>
@@ -640,36 +600,27 @@
 <li>根据文件或者正则表达式进行匹配</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find .   //列出当前目录以及子目录下所有文件和文件夹</span><br></pre></td></tr></table></figure>
-
 <p>==在/home目录下查找以.txt结尾的文件名==</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /home -name &quot;*.txt&quot;</span><br></pre></td></tr></table></figure>
-
 <p>同上，但是忽略大小写</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /home -iname &quot;*.txt&quot;</span><br></pre></td></tr></table></figure>
-
 <p>当前目录及子目录下查找所有以.txt和.pdf结尾的文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">find . \( -name &quot;*.txt&quot; -o -name &quot;*.pdf&quot; \)</span><br><span class="line">or</span><br><span class="line">find . -name &quot;*.txt&quot; -o -name &quot;*.pdf&quot;</span><br></pre></td></tr></table></figure>
-
 <p>匹配文件路径或者文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /usr/ -path &quot;*local*&quot;</span><br></pre></td></tr></table></figure>
-
 <p>基于正则表达式匹配文件路径</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -regex &quot;.*\(\.txt|\.pdf\)$&quot;</span><br></pre></td></tr></table></figure>
-
 <p>同上，但是忽略大小写</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -iregex &quot;.*\(\.txt|\.pdf\)$&quot;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
+<ol>
 <li>否定参数</li>
 </ol>
 <p>找出/home下不是以.txt结尾的文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /home ！ -name &quot;*.txt&quot;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
+<ol>
 <li>根据文件类型进行搜索</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type 类型参数</span><br></pre></td></tr></table></figure>
-
 <p>类型参数 ：</p>
 <ul>
 <li>f 普通文件</li>
@@ -680,20 +631,17 @@
 <li>s 套接字</li>
 <li>p Fifo</li>
 </ul>
-<ol start="4">
+<ol>
 <li>基于目录深度搜索</li>
 </ol>
 <p>向下最大深度限制为3</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -maxdepth 3 -type f</span><br></pre></td></tr></table></figure>
-
 <p>搜索除深度距离当前目录至少为2个子目录的所有文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -mindepth 2 -type f</span><br></pre></td></tr></table></figure>
-
-<ol start="5">
+<ol>
 <li>根据文件时间戳进行搜索</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type -f 时间戳</span><br></pre></td></tr></table></figure>
-
 <p>时间戳</p>
 <ul>
 <li>访问时间（-atime/天，-amin/分钟）:用户最近一次访问时间。</li>
@@ -702,104 +650,81 @@
 </ul>
 <p>搜索最近七天内被访问过的所有文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -atime -7</span><br></pre></td></tr></table></figure>
-
 <p>搜索恰好在七天前被访问过的所有文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -atime 7</span><br></pre></td></tr></table></figure>
-
 <p>搜索超过7天被访问的所有 文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -atime +7</span><br></pre></td></tr></table></figure>
-
 <p>搜索访问时间超过10分钟的所有文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -amin +10</span><br></pre></td></tr></table></figure>
-
 <p>找出比file.log修改时间更长的所有文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -newer file.log</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
+<ol>
 <li>根据文件大小进行匹配</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -size 文件大小单元</span><br></pre></td></tr></table></figure>
-
 <p>文件大小单元</p>
 <ul>
-<li>b –块 （512字节）</li>
-<li>c –字节</li>
-<li>w – 字（2字节）</li>
-<li>k –千字节</li>
-<li>M—兆字节</li>
-<li>G  –吉字节</li>
+<li>b —块 （512字节）</li>
+<li>c —字节</li>
+<li>w — 字（2字节）</li>
+<li>k —千字节</li>
+<li>M—-兆字节</li>
+<li>G  —吉字节</li>
 </ul>
 <p>搜索大于10KB的文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -size +10k</span><br></pre></td></tr></table></figure>
-
 <p>搜索小于10KB的文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -size -10k</span><br></pre></td></tr></table></figure>
-
 <p>搜索等于10KB的文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -size 10k</span><br></pre></td></tr></table></figure>
-
-<ol start="7">
+<ol>
 <li>==删除匹配文件==</li>
 </ol>
 <p>删除当前目录下所有.txt文件 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -name &quot;*.txt&quot; -delete</span><br></pre></td></tr></table></figure>
-
-<ol start="8">
+<ol>
 <li>根据文件权限/所有权进行匹配 </li>
 </ol>
 <p>当前目录下搜索出权限为777的文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -perm 777</span><br></pre></td></tr></table></figure>
-
 <p>找出当前目录下权限不是644的<a href="http://man.linuxde.net/php" target="_blank" rel="noopener">php</a>文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -name &quot;*.php&quot; ! -perm 644</span><br></pre></td></tr></table></figure>
-
 <p>找出当前目录用户tom拥有的所有文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -user tom</span><br></pre></td></tr></table></figure>
-
 <p>找出当前目录用户组sunk拥有的所有文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -group sunk</span><br></pre></td></tr></table></figure>
-
-<ol start="9">
+<ol>
 <li>借助<code>-exec</code>选项与其他命令结合使用 </li>
 </ol>
 <p>找出当前目录下所有root的文件，并把所有权更改为用户tom</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find .-type f -user root -exec chown tom &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-
 <p>上例中，<strong>{}</strong> 用于与<strong>-exec</strong>选项结合使用来匹配所有文件，然后会被替换为相应的文件名。</p>
 <p>==找出自己家目录下所有的.txt文件并删除==</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find $HOME/. -name &quot;*.txt&quot; -ok rm &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-
 <p>上例中，<strong>-ok</strong>和<strong>-exec</strong>行为一样，不过它会给出提示，是否执行相应的操作。</p>
 <p>==查找当前目录下所有.txt文件并把他们拼接起来写入到all.txt文件中==</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -name &quot;*.txt&quot; -exec cat &#123;&#125; \;&gt; all.txt</span><br></pre></td></tr></table></figure>
-
 <p>将30天前的.log文件移动到old目录中</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -mtime +30 -name &quot;*.log&quot; -exec cp &#123;&#125; old \;</span><br></pre></td></tr></table></figure>
-
 <p>找出当前目录下所有.txt文件并以“File:文件名”的形式打印出来</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -name &quot;*.txt&quot; -exec printf &quot;File: %s\n&quot; &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-
 <p>因为单行命令中-exec参数中无法使用多个命令，以下方法可以实现在-exec之后接受多条命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-exec ./text.sh &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-
-<ol start="10">
+<ol>
 <li>搜索但跳出指定的目录 </li>
 </ol>
 <p>==查找当前目录或者子目录下所有.txt文件，但是跳过子目录sk==</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -path &quot;./sk&quot; -prune -o -name &quot;*.txt&quot; -print</span><br></pre></td></tr></table></figure>
-
-<ol start="11">
+<ol>
 <li>ind其他技巧收集 </li>
 </ol>
 <p>==要列出所有长度为零的文件==</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -empty</span><br></pre></td></tr></table></figure>
-
 <h2 id="wc命令（计算文件大小）"><a href="#wc命令（计算文件大小）" class="headerlink" title="wc命令（计算文件大小）"></a>wc命令（计算文件大小）</h2><p>wc命令用来计算数字。利用wc指令我们可以计算文件的byte数，字数或者是列数，若不指定文件名称，或是所给予的文件名为”-“，则wc指令会从标准输入设备读取数据。</p>
 <p><strong>语法</strong> </p>
 <p>wc(选项)（参数）</p>
 <p><strong>选项</strong> </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-c或--bytes或——chars：只显示Bytes数；</span><br><span class="line">-l或——lines：只显示列数；</span><br><span class="line">-w或——words：只显示字数。</span><br></pre></td></tr></table></figure>
-
 <p><strong>参数</strong> </p>
 <p>文件：需要统计的文件列表</p>
 <h2 id="head命令（显示文件开头内容）"><a href="#head命令（显示文件开头内容）" class="headerlink" title="head命令（显示文件开头内容）"></a>head命令（显示文件开头内容）</h2><p>head命令用来显示文件的开头的内容。在默认情况下，head命令显示文件的头10行内容</p>
@@ -807,7 +732,6 @@
 <p>head(选项)（参数）</p>
 <p><strong>选项</strong> </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-n&lt;数字&gt;：指定显示头部内容的行数；</span><br><span class="line">-c&lt;字符数&gt;：指定显示头部内容的字符数；</span><br><span class="line">-v：总是显示文件名的头信息；</span><br><span class="line">-q：不显示文件名的头信息。</span><br></pre></td></tr></table></figure>
-
 <p><strong>参数</strong></p>
 <p>文件列表：指定显示头部内容的文件列表</p>
 <h2 id="tail命令（显示文件末尾内容）"><a href="#tail命令（显示文件末尾内容）" class="headerlink" title="tail命令（显示文件末尾内容）"></a>tail命令（显示文件末尾内容）</h2><p>tail命令用于输入文件中的尾部内容。tail命令默认在屏幕上显示指定文件的末尾10行。如果给定的文件不止一个，则在显示的每个文件前面加一个文件名标题。如果没有指定文件或文件名为”-“，则读标准输入。</p>
@@ -815,12 +739,10 @@
 <p><strong>语法</strong> ：tail(选项)(参数)</p>
 <p><strong>选项</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">--retry：即是在tail命令启动时，文件不可访问或者文件稍后变得不可访问，都始终尝试打开文件。使用此选项时需要与选项“——follow=name”连用；</span><br><span class="line">-c&lt;N&gt;或——bytes=&lt;N&gt;：输出文件尾部的N（N为整数）个字节内容；</span><br><span class="line">-f&lt;name/descriptor&gt;或；--follow&lt;nameldescript&gt;：显示文件最新追加的内容。“name”表示以文件名的方式监视文件的变化。“-f”与“-fdescriptor”等效；</span><br><span class="line">-F：与选项“-follow=name”和“--retry&quot;连用时功能相同；</span><br><span class="line">-n&lt;N&gt;或——line=&lt;N&gt;：输出文件的尾部N（N位数字）行内容。</span><br><span class="line">--pid=&lt;进程号&gt;：与“-f”选项连用，当指定的进程号的进程终止后，自动退出tail命令；</span><br><span class="line">-q或——quiet或——silent：当有多个文件参数时，不输出各个文件名；</span><br><span class="line">-s&lt;秒数&gt;或——sleep-interal=&lt;秒数&gt;：与“-f”选项连用，指定监视文件变化时间隔的秒数；</span><br><span class="line">-v或——verbose：当有多个文件参数时，总是输出各个文件名；</span><br><span class="line">--help：显示指令的帮助信息；</span><br><span class="line">--version：显示指令的版本信息。</span><br></pre></td></tr></table></figure>
-
 <p><strong>参数</strong> </p>
 <p>文件列表：指定要显示尾部内容的文件列表</p>
 <p><strong>实例</strong> </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tail file  (显示文件fail的最后10行)</span><br><span class="line">tail +20 file (显示文件file的内容，从第20行至文件末尾)</span><br><span class="line">tail -c 10 file   (显示文件file的最后10个字符)</span><br></pre></td></tr></table></figure>
-
 <h2 id="ps命令（报告系统进程状态）"><a href="#ps命令（报告系统进程状态）" class="headerlink" title="ps命令（报告系统进程状态）"></a>ps命令（报告系统进程状态）</h2><p>ps命令用于报告当前系统的进程状态。可以搭配kill指令随时中断，删除不必要的程序。ps命令是最基本也是非常强大的进程查看命令，使用该命令可以确定有那些进程正在运行和运行的状态，进程是否结束，进程有没有僵死，那些进程占用了过多的资源等等。总之大部分信息都是可以通过执行该命令得到的。</p>
 <p><strong>语法</strong> :ps(选项)</p>
 <p><strong>选项</strong> </p>
@@ -866,90 +788,75 @@
 <li>x：显示所有程序，不以终端机来区分。</li>
 <li>X：采用旧式的Linux i386登陆格式显示程序状况。</li>
 <li>-y：配合选项”-l”使用时，不显示F(flag)栏位，并以RSS栏位取代ADDR栏位　。<br>-&lt;程序识别码&gt;：此选项的效果和指定”p”选项相同。</li>
-<li>–cols&lt;每列字符数&gt;：设置每列的最大字符数。</li>
-<li>–columns&lt;每列字符数&gt;：此选项的效果和指定”–cols”选项相同。</li>
-<li>–cumulative：此选项的效果和指定”S”选项相同。</li>
-<li>–deselect：此选项的效果和指定”-N”选项相同。</li>
-<li>–forest：此选项的效果和指定”f”选项相同</li>
-<li>–headers：重复显示标题列。</li>
-<li>–help：在线帮助。</li>
-<li>–info：显示排错信息。</li>
-<li>–lines&lt;显示列数&gt;：设置显示画面的列数。</li>
-<li>–no-headers：此选项的效果和指定”h”选项相同，只在列表格式方面稍有差异。</li>
-<li>–group&lt;群组名称&gt;：此选项的效果和指定”-G”选项相同。</li>
-<li>–Group&lt;群组识别码&gt;：此选项的效果和指定”-G”选项相同。</li>
-<li>–pid&lt;程序识别码&gt;：此选项的效果和指定”-p”选项相同。</li>
-<li>–rows&lt;显示列数&gt;：此选项的效果和指定”–lines”选项相同。</li>
-<li>–sid&lt;阶段作业&gt;：此选项的效果和指定”-s”选项相同。</li>
-<li>–tty&lt;终端机编号&gt;：此选项的效果和指定”-t”选项相同。</li>
-<li>–user&lt;用户名称&gt;：此选项的效果和指定”-U”选项相同。</li>
-<li>–User&lt;用户识别码&gt;：此选项的效果和指定”-U”选项相同。</li>
-<li>–version：此选项的效果和指定”-V”选项相同。</li>
-<li>–widty&lt;每列字符数&gt;：此选项的效果和指定”-cols”选项相同。</li>
+<li>—cols&lt;每列字符数&gt;：设置每列的最大字符数。</li>
+<li>—columns&lt;每列字符数&gt;：此选项的效果和指定”—cols”选项相同。</li>
+<li>—cumulative：此选项的效果和指定”S”选项相同。</li>
+<li>—deselect：此选项的效果和指定”-N”选项相同。</li>
+<li>—forest：此选项的效果和指定”f”选项相同</li>
+<li>—headers：重复显示标题列。</li>
+<li>—help：在线帮助。</li>
+<li>—info：显示排错信息。</li>
+<li>—lines&lt;显示列数&gt;：设置显示画面的列数。</li>
+<li>—no-headers：此选项的效果和指定”h”选项相同，只在列表格式方面稍有差异。</li>
+<li>—group&lt;群组名称&gt;：此选项的效果和指定”-G”选项相同。</li>
+<li>—Group&lt;群组识别码&gt;：此选项的效果和指定”-G”选项相同。</li>
+<li>—pid&lt;程序识别码&gt;：此选项的效果和指定”-p”选项相同。</li>
+<li>—rows&lt;显示列数&gt;：此选项的效果和指定”—lines”选项相同。</li>
+<li>—sid&lt;阶段作业&gt;：此选项的效果和指定”-s”选项相同。</li>
+<li>—tty&lt;终端机编号&gt;：此选项的效果和指定”-t”选项相同。</li>
+<li>—user&lt;用户名称&gt;：此选项的效果和指定”-U”选项相同。</li>
+<li>—User&lt;用户识别码&gt;：此选项的效果和指定”-U”选项相同。</li>
+<li>—version：此选项的效果和指定”-V”选项相同。</li>
+<li>—widty&lt;每列字符数&gt;：此选项的效果和指定”-cols”选项相同。</li>
 </ul>
 <h2 id="kill命令-删除执行中的程序或工作"><a href="#kill命令-删除执行中的程序或工作" class="headerlink" title="kill命令(删除执行中的程序或工作)"></a>kill命令(删除执行中的程序或工作)</h2><p>kill命令用来删除执行中的程序或工作。kill可将指定的信息送至程序。预设的信息为SIGTERM（15）,可将指定程序终止。若仍无法终止该程序，可使用SIFKILL(9)信息尝试强制删除程序。程序或工作的编号可以利用ps指令或job指令查看。</p>
 <p><strong>语法</strong> ：kill(选项)（参数）</p>
 <p><strong>选项</strong> ：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-a：当处理当前进程时，不限制命令名和进程号的对应关系；</span><br><span class="line">-l &lt;信息编号&gt;：若不加&lt;信息编号&gt;选项，则-l参数会列出全部的信息名称；</span><br><span class="line">-p：指定kill 命令只打印相关进程的进程号，而不发送任何信号；</span><br><span class="line">-s &lt;信息名称或编号&gt;：指定要送出的信息；</span><br><span class="line">-u：指定用户。</span><br></pre></td></tr></table></figure>
-
 <p><strong>参数</strong> ：进程或作业识别号，指定要删除的进程或作业</p>
 <p><strong>实例</strong></p>
 <p>列出所有的信号名称</p>
 <p>kill -l</p>
 <p>只有第9种信号(SIGKILL)才可以无条件终止进程，其他信号进程都有权利忽略，下面是常用的信号</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">HUP     1    终端断线</span><br><span class="line">INT     2    中断（同 Ctrl + C）</span><br><span class="line">QUIT    3    退出（同 Ctrl + \）</span><br><span class="line">TERM   15    终止</span><br><span class="line">KILL    9    强制终止</span><br><span class="line">CONT   18    继续（与STOP相反， fg/bg命令）</span><br><span class="line">STOP   19    暂停（同 Ctrl + Z）</span><br></pre></td></tr></table></figure>
-
 <p>先用ps查找进程，然后用kill杀掉</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep vim</span><br><span class="line">root      3268  2884  0 16:21 pts/1    00:00:00 vim install.log</span><br><span class="line">root      3370  2822  0 16:21 pts/0    00:00:00 grep vim</span><br><span class="line"></span><br><span class="line">kill 3268</span><br><span class="line">kill 3268</span><br><span class="line">-bash: kill: (3268) - 没有那个进程</span><br></pre></td></tr></table></figure>
-
 <h2 id="df命令-显示磁盘分区可使用的空间"><a href="#df命令-显示磁盘分区可使用的空间" class="headerlink" title="df命令(显示磁盘分区可使用的空间)"></a>df命令(显示磁盘分区可使用的空间)</h2><p>df命令用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。</p>
 <p><strong>语法</strong> :df(选项)（参数）</p>
 <p><strong>选项</strong> ：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#-a或--all：包含全部的文件系统；</span></span><br><span class="line">--block-size=&lt;区块大小&gt;：以指定的区块大小来显示区块数目；</span><br><span class="line"><span class="comment">#-h或--human-readable：以可读性较高的方式来显示信息；</span></span><br><span class="line">-H或--si：与-h参数相同，但在计算时是以<span class="number">1000</span> Bytes为换算单位而非<span class="number">1024</span> Bytes；</span><br><span class="line">-i或--inodes：显示inode的信息；</span><br><span class="line">-k或--kilobytes：指定区块大小为<span class="number">1024</span>字节；</span><br><span class="line"><span class="comment">#-l或--local：仅显示本地端的文件系统；</span></span><br><span class="line"><span class="comment">#-m或--megabytes：指定区块大小为1048576字节；</span></span><br><span class="line">--no-sync：在取得磁盘使用信息前，不要执行sync指令，此为预设值；</span><br><span class="line">-P或--portability：使用POSIX的输出格式；</span><br><span class="line">--sync：在取得磁盘使用信息前，先执行sync指令；</span><br><span class="line">-t&lt;文件系统类型&gt;或--type=&lt;文件系统类型&gt;：仅显示指定文件系统类型的磁盘信息；</span><br><span class="line"><span class="comment">#-T或--print-type：显示文件系统的类型；</span></span><br><span class="line">-x&lt;文件系统类型&gt;或--exclude-type=&lt;文件系统类型&gt;：不要显示指定文件系统类型的磁盘信息；</span><br><span class="line">--help：显示帮助；</span><br><span class="line">--version：显示版本信息。</span><br></pre></td></tr></table></figure>
-
 <p><strong>参数</strong></p>
 <p>文件：指定文件系统上的文件</p>
 <p><strong>实例</strong> ：</p>
 <p>查看系统磁盘设备，默认是KB为单位：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@LinServ-1 ~]# df</span><br><span class="line">文件系统               1K-块        已用     可用 已用% 挂载点</span><br><span class="line">/dev/sda2            146294492  28244432 110498708  21% /</span><br><span class="line">/dev/sda1              1019208     62360    904240   7% /boot</span><br><span class="line">tmpfs                  1032204         0   1032204   0% /dev/shm</span><br><span class="line">/dev/sdb1            2884284108 218826068 2518944764   8% /data1</span><br></pre></td></tr></table></figure>
-
 <p>使用-h选项以KB以上的单位来显示，可读性高</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@LinServ-1 ~]# df -h</span><br><span class="line">文件系统              容量  已用 可用 已用% 挂载点</span><br><span class="line">/dev/sda2             140G   27G  106G  21% /</span><br><span class="line">/dev/sda1             996M   61M  884M   7% /boot</span><br><span class="line">tmpfs                1009M     0 1009M   0% /dev/shm</span><br><span class="line">/dev/sdb1             2.7T  209G  2.4T   8% /data1</span><br></pre></td></tr></table></figure>
-
 <p>查看全部文件系统</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -a</span><br></pre></td></tr></table></figure>
-
 <h2 id="du命令-查看使用空间"><a href="#du命令-查看使用空间" class="headerlink" title="du命令(查看使用空间)"></a>du命令(查看使用空间)</h2><p>du命令也是查看使用空间的，但是与df命令不同的是linux du命令是对文件和目录磁盘的使用的空间的查看，还是和df命令有区别的。</p>
 <p><strong>语法</strong> :du [选项] [文件]</p>
 <p><strong>选项</strong> ：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">-a或-all 显示目录中个别文件的大小。</span><br><span class="line">-b或-bytes 显示目录或文件大小时，以byte为单位。</span><br><span class="line">-c或--total 除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和。</span><br><span class="line">-k或--kilobytes 以KB(1024bytes)为单位输出。</span><br><span class="line">-m或--megabytes 以MB为单位输出。</span><br><span class="line">-s或--summarize 仅显示总计，只列出最后加总的值。</span><br><span class="line">-h或--human-readable 以K，M，G为单位，提高信息的可读性。</span><br><span class="line">-x或--one-file-xystem 以一开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过。</span><br><span class="line">-L&lt;符号链接&gt;或--dereference&lt;符号链接&gt; 显示选项中所指定符号链接的源文件大小。</span><br><span class="line">-S或--separate-dirs 显示个别目录的大小时，并不含其子目录的大小。</span><br><span class="line">-X&lt;文件&gt;或--exclude-from=&lt;文件&gt; 在&lt;文件&gt;指定目录或文件。</span><br><span class="line">--exclude=&lt;目录或文件&gt; 略过指定的目录或文件。</span><br><span class="line">-D或--dereference-args 显示指定符号链接的源文件大小。</span><br><span class="line">-H或--si 与-h参数相同，但是K，M，G是以1000为换算单位。</span><br><span class="line">-l或--count-links 重复计算硬件链接的文件。</span><br></pre></td></tr></table></figure>
-
 <p><strong>实例</strong> </p>
 <p>显示目录或者文件所占空间</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">du</span><br><span class="line">608 ./test6</span><br><span class="line">308 ./test4</span><br><span class="line">4 ./scf/lib</span><br><span class="line">4 ./scf/service/deploy/product</span><br><span class="line">4 ./scf/service/deploy/info</span><br><span class="line">12 ./scf/service/deploy</span><br><span class="line">16 ./scf/service</span><br><span class="line">4 ./scf/doc</span><br><span class="line">4 ./scf/bin</span><br><span class="line">32 ./scf</span><br><span class="line">8 ./test3</span><br><span class="line">1288 .</span><br></pre></td></tr></table></figure>
-
 <p>只显示当前目录下面的子目录的目录大小和当前目录的总的大小，最下面的1288为当前目录的总 大小。</p>
 <p>显示指定文件所占空间：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du log2012.log</span><br></pre></td></tr></table></figure>
-
 <p>查看指定目录的所占空间</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du scf</span><br></pre></td></tr></table></figure>
-
 <p>显示多个文件所占的空间：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du log30.tar.gz log31.tar.gz</span><br></pre></td></tr></table></figure>
-
 <p>只显示总和的大小</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -s</span><br></pre></td></tr></table></figure>
-
 <h2 id="ifconfig命令-配置网卡"><a href="#ifconfig命令-配置网卡" class="headerlink" title="ifconfig命令(配置网卡)"></a>ifconfig命令(配置网卡)</h2><p>ifconfig命令被用于配置和显示linux内核中网络接口的网络参数。用ifconfig命令配置的网卡信息，，在网卡重启后机器重启后，配置就不存在。要想将上述的配置信息永远的存在电脑里，就ua修改网卡的配置文件了。</p>
 <p><strong>语法</strong> ：ifconfig（参数）</p>
 <p><strong>参数</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">add&lt;地址&gt;：设置网络设备IPv6的ip地址；</span><br><span class="line">del&lt;地址&gt;：删除网络设备IPv6的IP地址；</span><br><span class="line">down：关闭指定的网络设备；</span><br><span class="line">&lt;hw&lt;网络设备类型&gt;&lt;硬件地址&gt;：设置网络设备的类型与硬件地址；</span><br><span class="line">io_addr&lt;I/O地址&gt;：设置网络设备的I/O地址；</span><br><span class="line">irq&lt;IRQ地址&gt;：设置网络设备的IRQ；</span><br><span class="line">media&lt;网络媒介类型&gt;：设置网络设备的媒介类型；</span><br><span class="line">mem_start&lt;内存地址&gt;：设置网络设备在主内存所占用的起始地址；</span><br><span class="line">metric&lt;数目&gt;：指定在计算数据包的转送次数时，所要加上的数目；</span><br><span class="line">mtu&lt;字节&gt;：设置网络设备的MTU；</span><br><span class="line">netmask&lt;子网掩码&gt;：设置网络设备的子网掩码；</span><br><span class="line">tunnel&lt;地址&gt;：建立IPv4与IPv6之间的隧道通信地址；</span><br><span class="line">up：启动指定的网络设备；</span><br><span class="line">-broadcast&lt;地址&gt;：将要送往指定地址的数据包当成广播数据包来处理；</span><br><span class="line">-pointopoint&lt;地址&gt;：与指定地址的网络设备建立直接连线，此模式具有保密功能；</span><br><span class="line">-promisc：关闭或启动指定网络设备的promiscuous模式；</span><br><span class="line">IP地址：指定网络设备的IP地址；</span><br><span class="line">网络设备：指定网络设备的名称。</span><br></pre></td></tr></table></figure>
-
 <p><strong>实例</strong> </p>
 <p>显示网络设备信息（激活状态的）：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ifconfig</span><br><span class="line">eth0      Link encap:Ethernet  HWaddr 00:16:3E:00:1E:51  </span><br><span class="line">          inet addr:10.160.7.81  Bcast:10.160.15.255  Mask:255.255.240.0</span><br><span class="line">          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1</span><br><span class="line">          RX packets:61430830 errors:0 dropped:0 overruns:0 frame:0</span><br><span class="line">          TX packets:88534 errors:0 dropped:0 overruns:0 carrier:0</span><br><span class="line">          collisions:0 txqueuelen:1000</span><br><span class="line">          RX bytes:3607197869 (3.3 GiB)  TX bytes:6115042 (5.8 MiB)</span><br><span class="line"></span><br><span class="line">lo        Link encap:Local Loopback  </span><br><span class="line">          inet addr:127.0.0.1  Mask:255.0.0.0</span><br><span class="line">          UP LOOPBACK RUNNING  MTU:16436  Metric:1</span><br><span class="line">          RX packets:56103 errors:0 dropped:0 overruns:0 frame:0</span><br><span class="line">          TX packets:56103 errors:0 dropped:0 overruns:0 carrier:0</span><br><span class="line">          collisions:0 txqueuelen:0</span><br><span class="line">          RX bytes:5079451 (4.8 MiB)  TX bytes:5079451 (4.8 MiB)</span><br></pre></td></tr></table></figure>
-
 <p>说明：</p>
 <p><strong>eth0</strong>表示第一块网卡，其中<code>HWaddr</code>表示网卡的物理地址，可以看到目前这个网卡的物理地址(MAC地址）是<code>00:16:3E:00:1E:51</code>。</p>
 <p><strong>inet addr</strong>用来表示网卡的IP地址，此网卡的IP地址是<code>10.160.7.81</code>，广播地址<code>Bcast:10.160.15.255</code>，掩码地址<code>Mask:255.255.240.0</code>。</p>
@@ -963,29 +870,23 @@
 </ul>
 <p><strong>启动关闭指定网卡：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 up</span><br><span class="line">ifconfig eth0 down</span><br></pre></td></tr></table></figure>
-
 <p><code>ifconfig eth0 up</code>为启动网卡eth0，<code>ifconfig eth0 down</code>为关闭网卡eth0。<a href="http://man.linuxde.net/ssh" target="_blank" rel="noopener">ssh</a>登陆linux服务器操作要小心，关闭了就不能开启了，除非你有多网卡。</p>
 <p><strong>为网卡配置和删除IPv6地址：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 add 33ffe:3240:800:1005::2/64    #为网卡eth0配置IPv6地址</span><br><span class="line">ifconfig eth0 del 33ffe:3240:800:1005::2/64    #为网卡eth0删除IPv6地址</span><br></pre></td></tr></table></figure>
-
 <p><strong>用ifconfig修改MAC地址：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 hw ether 00:AA:BB:CC:dd:EE</span><br></pre></td></tr></table></figure>
-
 <p><strong>配置IP地址：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ifconfig eth0 192.168.2.10</span><br><span class="line">[root@localhost ~]# ifconfig eth0 192.168.2.10 netmask 255.255.255.0</span><br><span class="line">[root@localhost ~]# ifconfig eth0 192.168.2.10 netmask 255.255.255.0 broadcast 192.168.2.255</span><br></pre></td></tr></table></figure>
-
 <p><strong>启用和关闭arp协议：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 arp    #开启网卡eth0 的arp协议</span><br><span class="line">ifconfig eth0 -arp   #关闭网卡eth0 的arp协议</span><br></pre></td></tr></table></figure>
-
 <p><strong>设置最大传输单元：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 mtu 1500    #设置能通过的最大数据包大小为 1500 bytes</span><br></pre></td></tr></table></figure>
-
 <h2 id="tac命令（反序输出）"><a href="#tac命令（反序输出）" class="headerlink" title="tac命令（反序输出）"></a>tac命令（反序输出）</h2><p>tac命令用于把文件已行为单位的反序输出，也就是第一行最后显示，最后一行先显示。</p>
 <p><strong>语法</strong> ：tac(选项)（参数）</p>
 <p><strong>选项</strong> </p>
 <ul>
-<li>-a或者–append   ：将内容追加到文件的末尾</li>
-<li>-i或者–ignore-intertupts:忽略中断信号</li>
+<li>-a或者—append   ：将内容追加到文件的末尾</li>
+<li>-i或者—ignore-intertupts:忽略中断信号</li>
 </ul>
 <p><strong>参数</strong> </p>
 <p>文件列表：指定要保存内容的文件列表</p>

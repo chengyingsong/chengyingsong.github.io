@@ -87,12 +87,12 @@
 <meta property="og:site_name" content="柠檬笔记">
 <meta property="og:description" content="turtle库 引入模块 import turtle turtle.setup(a,b,c,d)  a,b决定绘制界面的长和宽，，c,d决定绘图界面出现在屏幕的位置，若无设置默认为出现在屏幕中央。  turtle坐标体系  绝对坐标，在绘图界面中的坐标系的坐标  turtle.goto()     线性绝对坐标的移动    空间坐标（海龟坐标），以海龟的视角，前后左右方向的坐标  turtle.b">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="file:///E:%5C%E5%9B%BE%E7%89%87%5Cpython%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8%5C31006.png">
+<meta property="og:image" content="file:///E:/图片/python库的使用/31006.png">
 <meta property="og:updated_time" content="2019-07-13T09:42:06.705Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python库的使用">
 <meta name="twitter:description" content="turtle库 引入模块 import turtle turtle.setup(a,b,c,d)  a,b决定绘制界面的长和宽，，c,d决定绘图界面出现在屏幕的位置，若无设置默认为出现在屏幕中央。  turtle坐标体系  绝对坐标，在绘图界面中的坐标系的坐标  turtle.goto()     线性绝对坐标的移动    空间坐标（海龟坐标），以海龟的视角，前后左右方向的坐标  turtle.b">
-<meta name="twitter:image" content="file:///E:%5C%E5%9B%BE%E7%89%87%5Cpython%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8%5C31006.png">
+<meta name="twitter:image" content="file:///E:/图片/python库的使用/31006.png">
 
 
 
@@ -366,53 +366,56 @@
 <li>turtle.right(angle) 海龟向右移动angle角</li>
 </ul>
 <a id="more"></a>
-
 <p><strong>turtle色彩体系</strong> </p>
 <p>常用颜色</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">紫色</th>
-<th align="center">purple</th>
+<th style="text-align:center">紫色</th>
+<th style="text-align:center">purple</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">番茄色</td>
-<td align="center">tomato</td>
+<tbody>
+<tr>
+<td style="text-align:center">番茄色</td>
+<td style="text-align:center">tomato</td>
 </tr>
 <tr>
-<td align="center">洋红</td>
-<td align="center">magenta</td>
+<td style="text-align:center">洋红</td>
+<td style="text-align:center">magenta</td>
 </tr>
 <tr>
-<td align="center">青色</td>
-<td align="center">cyan</td>
+<td style="text-align:center">青色</td>
+<td style="text-align:center">cyan</td>
 </tr>
 <tr>
-<td align="center">蓝色</td>
-<td align="center">blue</td>
+<td style="text-align:center">蓝色</td>
+<td style="text-align:center">blue</td>
 </tr>
 <tr>
-<td align="center">黑色</td>
-<td align="center">black</td>
+<td style="text-align:center">黑色</td>
+<td style="text-align:center">black</td>
 </tr>
 <tr>
-<td align="center">海贝色</td>
-<td align="center">seashell</td>
+<td style="text-align:center">海贝色</td>
+<td style="text-align:center">seashell</td>
 </tr>
 <tr>
-<td align="center">金色</td>
-<td align="center">gold</td>
+<td style="text-align:center">金色</td>
+<td style="text-align:center">gold</td>
 </tr>
 <tr>
-<td align="center">粉红色</td>
-<td align="center">pink</td>
+<td style="text-align:center">粉红色</td>
+<td style="text-align:center">pink</td>
 </tr>
 <tr>
-<td align="center">棕色</td>
-<td align="center">blown</td>
+<td style="text-align:center">棕色</td>
+<td style="text-align:center">blown</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>turtle.colormode(mode)</strong> 转换为使用整数表示颜色，（默认使用小数）</p>
 <p><strong>库引用方法</strong> </p>
 <p><strong>可以使用from turtle import * ，来直接引用turtle库中的函数</strong></p>
@@ -421,7 +424,7 @@
 <li>import turtle as t 可以将turtle等同于t，写起来方便。</li>
 </ul>
 <p><strong>turtle 画笔控制函数</strong></p>
-<p>*<em>画笔控制函数一般成对出现 *</em></p>
+<p><strong>画笔控制函数一般成对出现 </strong></p>
 <ol>
 <li>turtle.penup()  [turtle.pu()]抬起画笔，让海龟飞起来</li>
 <li>turtle.pendown() [turtle.pd()]  让画笔落下，海龟爬行</li>
@@ -434,14 +437,13 @@
 <li>turtle.circle（r，angle） 画弧形，默认圆心在海龟左侧r处</li>
 </ol>
 <h2 id="time库"><a href="#time库" class="headerlink" title="time库"></a>time库</h2><p><strong>时间的获取</strong> </p>
-<p>*<em>time()  *</em>          获取计算机内部时间值，浮点数</p>
+<p><strong>time()  </strong>          获取计算机内部时间值，浮点数</p>
 <p><strong>ctime()</strong>           获取当前时间并以易读方式表示，返回字符串</p>
 <p><strong>gmtime()</strong>      获取当前时间，表示为计算机课处理的时间格式</p>
 <p><strong>时间格式化</strong> </p>
 <p><strong>strftime(tpl，ts)</strong></p>
 <p>tpl是格式化模板字符串，用来定义输出效果，ts是计算机内部时间类型变量</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line">t = time.gmtime()</span><br><span class="line">time.sreftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>,t)</span><br><span class="line">输出<span class="string">'2018-01-26 12:55:20'</span></span><br></pre></td></tr></table></figure>
-
 <p>格式化控制符</p>
 <p>%b 月份名称缩写</p>
 <p>%B 月份名称<br>%A 星期</p>
@@ -489,6 +491,7 @@
 <p>b = frombuffer(‘foo’,dtype=uint8)   从数据中读入，并指定类型</p>
 <p>   Numpy 类型</p>
 <p>具体如下：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -497,7 +500,8 @@
 <th>备注</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>布尔型</td>
 <td><code>bool</code></td>
 <td>占1个字节</td>
@@ -540,9 +544,10 @@
 <tr>
 <td>时间</td>
 <td><code>datetime64, timedelta64</code></td>
-<td></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>还可以构造任意类型的数组</p>
 <p>a = array([1,1,2,’hello’.[10,20,30]],dtype = object)  【有点类似matlab中的单元矩阵】</p>
 <p>a *2  结果为[2,2,4,’hellohello’,[10,20,30,10,20,30]]</p>
@@ -552,7 +557,6 @@
 </blockquote>
 <p><strong>astype</strong>方法返回一个数组，即强制类型转换后的数组，不会改变原来数组的值，返回是数组的一个复制</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a =  array([[<span class="number">1.5</span>,<span class="number">-3</span>]])</span><br><span class="line">b = a.astype(uint8)</span><br><span class="line">b  = [[<span class="number">1</span> , <span class="number">253</span>]]  <span class="comment">#uint8的范围是0到255</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>view方法</strong> ：view会将a在内存中的表示看成是uint8进行解析，也就是一个字节一个字节的看，返回是共享内存的数组</p>
 <h3 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h3><p><strong>求和</strong> :sum(a), 对所有元素求和  sum(a, axis=0/1/-1)  沿着第一维/第二维/最后一维求和</p>
 <p><strong>求积</strong> ：a.prod()和sum类似</p>
@@ -594,7 +598,6 @@
 <p><strong>atleast_xd函数</strong> ：保证数组至少有x维，x可取1，2，3</p>
 <p><strong>从数组中选择元素</strong>： 可以使用矩阵把条件值记录下来</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">b &gt;= <span class="number">0</span></span><br><span class="line">mask = b&gt;= <span class="number">0</span></span><br><span class="line">plot(a[mask],b[mask],<span class="string">'ro'</span>)</span><br></pre></td></tr></table></figure>
-
 <p>矩阵条件判断是对每个元素进行判断，如果符合为Ture，不符合为False。而对于a[mask]只有为真的值会被取出。而‘ro’就是绘图选项，代表红色圈圈</p>
 <h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p><strong>索引与切片</strong> ：a[0],取一维数组的第一个元素</p>
 <p>修改元素直接  a[0] =10 .支持负索引</p>
@@ -606,10 +609,8 @@
 <p><strong>花式索引</strong> ：</p>
 <p>指定索引位置</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">indices = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">-3</span>]</span><br><span class="line">y = a [indices]</span><br></pre></td></tr></table></figure>
-
 <p>还可以使用布尔数组来花式索引：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mask = array([<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],dtype = bool)</span><br><span class="line">a[mask]</span><br></pre></td></tr></table></figure>
-
 <p><strong>二维花式索引</strong> a[(0,1,2,3,4),(1,2,3,4,5)]</p>
 <blockquote>
 <p>前面是行号，后面是列号，对应成点</p>
@@ -620,7 +621,6 @@
 <p><strong>三维花式索引</strong> ：和二维类似，就是多加了一个维度</p>
 <p><strong>where语句</strong> ： where(array) 返回所有非零函数的索引</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = array([0, 12, 5, 20])</span><br><span class="line">indices = where(a &gt; 10)</span><br><span class="line">indices = indices[0]</span><br><span class="line">indices</span><br></pre></td></tr></table></figure>
-
 <h2 id="Matplotlib库"><a href="#Matplotlib库" class="headerlink" title="Matplotlib库"></a>Matplotlib库</h2><p>基本类似matlab画图。画图选项是一样的。</p>
 <p><strong>散点图</strong>： 可以使用==scatter(x,sin(x))== </p>
 <p>colorbar()  显示颜色条</p>
@@ -629,7 +629,6 @@
 <p><strong>添加数据</strong> ：默认多次plot会叠加在同一幅图上，也可以使用hold(False)关掉，这样子新图会将原图覆盖。</p>
 <p><strong>标签</strong> 在plot中加入label，使用legend()加上图例</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">plot(x,label = <span class="string">'sin'</span>)</span><br><span class="line">plot(y,label = <span class="string">'cos'</span>)</span><br><span class="line">legend()</span><br><span class="line"><span class="comment">#也可以</span></span><br><span class="line">plot(x)</span><br><span class="line">plot(y)</span><br><span class="line">legend([<span class="string">'sin'</span>,<span class="string">'cos'</span>])</span><br></pre></td></tr></table></figure>
-
 <p><strong>坐标轴，标题，网格</strong> </p>
 <p>xlabel(‘radians’)  x轴</p>
 <p>也可以设置字体大小 如： ylabel(‘amplitube’,fontsize = ‘large’)</p>
@@ -648,29 +647,26 @@
 <p><strong>使用fill方法设定初始值</strong> ： </p>
 <h2 id="pandas库"><a href="#pandas库" class="headerlink" title="pandas库"></a>pandas库</h2><h3 id="Series-和DataFrame"><a href="#Series-和DataFrame" class="headerlink" title="Series 和DataFrame"></a>Series 和DataFrame</h3><p>首先import数据类型</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
-
 <h4 id="Series"><a href="#Series" class="headerlink" title="Series"></a>Series</h4><p>Series如同列表和字典的统合，每个数据对应一个索引值。从某种意义上来说Series就是竖起来的list。==同时和list一样，series中元素的数据类型可以任意指定，不需要相同== 。</p>
 <p><strong>创建Series</strong></p>
 <ol>
 <li>如果不指定索引，Series和list并不什么区别</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">s = Series([<span class="number">100</span>,<span class="string">"python"</span>,<span class="string">"soochow"</span>,<span class="string">"Qiwsir"</span>])</span><br><span class="line">s</span><br><span class="line">OUT：</span><br><span class="line"><span class="number">0</span>        <span class="number">100</span></span><br><span class="line"><span class="number">1</span>     python</span><br><span class="line"><span class="number">2</span>    soochow</span><br><span class="line"><span class="number">3</span>     Qiwsir</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
+<ol>
 <li>list式创建(自定义索引)</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s = Series([<span class="number">100</span>,<span class="string">"python"</span>,<span class="string">"soochow"</span>,<span class="string">"Qiwisir"</span>],index=[<span class="string">"mark"</span>,<span class="string">"title"</span>,<span class="string">"university"</span>,<span class="string">"name"</span>])</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
+<ol>
 <li>dict式创建</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sd = &#123;<span class="string">"python"</span>:<span class="number">8000</span>,<span class="string">"c++"</span>:<span class="number">8100</span>,<span class="string">"c#"</span>:<span class="number">4000</span>&#125;</span><br><span class="line">s = Series(sd)</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>自动对齐</p>
 <p>在dict创建时仍然可以自定义索引，如果自定义了索引，自定的索引就会自动寻找原来的索引，如果一样的，就取原来索引对应的值。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; s2 = Series(sd,index=[<span class="string">"java"</span>,<span class="string">"python"</span>,<span class="string">"c++"</span>,<span class="string">"c#"</span>])</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
+<p>&gt;</p>
 <blockquote>
 <p>sd中无java，但是索引参数中有，于是其自动赋值为NaN。==在pandas中，如果没有值都对齐赋给NaN。==</p>
 </blockquote>
@@ -687,14 +683,11 @@
 <h4 id="DataFrame"><a href="#DataFrame" class="headerlink" title="DataFrame"></a>DataFrame</h4><p>DataFrame是一种二维的数据结构，接近表格。竖行为columns,横行是index。</p>
 <p>定义DataFrame对象常常使用dict定义，字典的“键”就是columns的值。如果没有指定索引（index），按照惯例，就是从0开始的整数。从上面的结果中明显表示是二维的数据结构</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">data = &#123;<span class="string">"name"</span>:[<span class="string">"yahoo"</span>,<span class="string">"google"</span>,<span class="string">"facebook"</span>],<span class="string">"mark"</span>:[<span class="number">200</span>,<span class="number">400</span>,<span class="number">800</span>],<span class="string">"price"</span>:[<span class="number">9</span>,<span class="number">3</span>,<span class="number">7</span>]&#125;</span><br><span class="line">f1 = DataFrame(data)</span><br><span class="line">f1</span><br><span class="line">OUT:</span><br><span class="line">    marks   name   price</span><br><span class="line"><span class="number">0</span>   <span class="number">200</span>     yahoo    <span class="number">9</span></span><br><span class="line"><span class="number">1</span>   <span class="number">400</span>     google   <span class="number">3</span></span><br><span class="line"><span class="number">2</span>   <span class="number">800</span>     facebook <span class="number">7</span></span><br></pre></td></tr></table></figure>
-
 <p>columns的顺序可以被规定，index可以被指定</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f2 = DataFrame(data,colums=[<span class="string">"name"</span>,<span class="string">"price"</span>,<span class="string">"marks"</span>],index=[<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>])</span><br></pre></td></tr></table></figure>
-
 <p>==要保证维数一致，index的维数要和colums对应的竖元素一致==，而colums中没有对应元素的会被赋值为NaN。</p>
 <p>还可以使用字典套字典的方式定义DataFrame</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">newdata = &#123;<span class="string">"lang"</span>:&#123;<span class="string">"fristline"</span>:<span class="string">"python"</span>,<span class="string">"secondline"</span>:<span class="string">"java"</span>&#125;,<span class="string">"price"</span>:&#123;<span class="string">"fristline"</span>:<span class="number">8000</span>&#125;&#125;</span><br><span class="line">f4 = DataFrame(newdagta)</span><br><span class="line">f4</span><br><span class="line">             lang    price</span><br><span class="line">  fristline  python  <span class="number">8000</span></span><br><span class="line">  secondline java    NaN</span><br></pre></td></tr></table></figure>
-
 <p>同样可以额外定义索引Index</p>
 <p><strong>方法和属性</strong></p>
 <ul>
@@ -704,39 +697,32 @@
 </ul>
 <p>点对点赋值[自动对齐]</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sdebt = Series([<span class="number">2.2</span>,<span class="number">3.3</span>],index=[<span class="string">"a"</span>,<span class="string">"c"</span>])</span><br><span class="line">f[<span class="string">"debt"</span>]=sdebt</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>f[“price”] [“c”]  精确索引 </li>
 <li>f.sort(column=” “)   对某一列排序</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>marks[:<span class="number">1</span>]</span><br><span class="line">     name  physics  python  math  english</span><br><span class="line"><span class="number">0</span>  Google      <span class="number">100</span>     <span class="number">100</span>    <span class="number">25</span>       <span class="number">12</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>marks[<span class="number">1</span>:<span class="number">2</span>]</span><br><span class="line">       name  physics  python  math  english</span><br><span class="line"><span class="number">1</span>  Facebook       <span class="number">45</span>      <span class="number">54</span>    <span class="number">44</span>       <span class="number">88</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>marks[<span class="string">"physics"</span>]</span><br><span class="line"><span class="number">0</span>    <span class="number">100</span></span><br><span class="line"><span class="number">1</span>     <span class="number">45</span></span><br><span class="line"><span class="number">2</span>     <span class="number">54</span></span><br><span class="line"><span class="number">3</span>     <span class="number">54</span></span><br><span class="line">Name: physics</span><br></pre></td></tr></table></figure>
-
 <h3 id="读取csv文件"><a href="#读取csv文件" class="headerlink" title="读取csv文件"></a>读取csv文件</h3><p>csv是一种通用的，相对简单的文件格式，在表格类型的数据中用途很广泛，很多关系型数据库都支持这种类型文件的导入导出，并且excel这种常用的数据表格也可以csv文件之间转换。</p>
 <blockquote>
 <p>逗号分隔值（逗号分隔值，CSV，有时也称为字符分隔值，因为分隔字符也可以不是逗号），其文件以纯文本形式存储表格数据（数字和文本）。纯文本意味着该文件是一个字符序列，不含必须像二进制数字那样被解读的数据。CSV文件由任意数据的记录组成，记录间以某种换行符分隔；每条记录由字段组成，字段间的分隔符是其他字符或字符串，最常见的是逗号或制表符。通常，所有记录都有完全相同的字段序列。</p>
 </blockquote>
 <p>重点要解读出“字段间分隔符”，“最常见的是逗号或者制表符”，当然，这种 分隔符也可以自行指定。比如下面的marks.csv文件，就是用逗号（必须是半角的）作为分隔符</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name,physics,python,math,english</span><br><span class="line">Google,100,100,25,12</span><br><span class="line">Facebook,45,54,44,88</span><br><span class="line">Twitter,54,76,13,91</span><br><span class="line">Yahoo,54,452,26,100</span><br></pre></td></tr></table></figure>
-
 <p>其实就是下图</p>
-<p><img src="file:///E:%5C%E5%9B%BE%E7%89%87%5Cpython%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8%5C31006.png" alt="img"></p>
+<p><img src="file:///E:\图片\python库的使用\31006.png" alt="img"></p>
 <ol>
 <li>普通方法读取</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">"./marks.csv"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> f:</span><br><span class="line">        print(line)</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
+<ol>
 <li>利用csv标准库</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line">csv_reader = csv.reader(open(<span class="string">"./marks.csv"</span>))</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> scv_reader:</span><br><span class="line">    print(row)</span><br><span class="line">    </span><br><span class="line">OUT</span><br><span class="line">[<span class="string">"name"</span>,<span class="string">"physics"</span>,<span class="string">"python"</span>,<span class="string">"math"</span>,<span class="string">"english"</span>]</span><br><span class="line">[<span class="string">"Google"</span>,<span class="string">"100"</span>,<span class="string">"100"</span>,<span class="string">"25"</span>,<span class="string">"12"</span>]</span><br><span class="line">[<span class="string">"Facebook"</span>,<span class="string">"45"</span>,<span class="string">"54"</span>,<span class="string">"44"</span>,<span class="string">"88"</span>]</span><br><span class="line">[<span class="string">"Twitter"</span>,<span class="string">"54"</span>,<span class="string">"76"</span>,<span class="string">"13"</span>,<span class="string">"91"</span>]</span><br><span class="line">[<span class="string">"Yahoo"</span>,<span class="string">"54"</span>,<span class="string">"452"</span>,<span class="string">"26"</span>,<span class="string">"100"</span>]</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
+<ol>
 <li>利用pandas读取</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">marks = pd.read_csv(<span class="string">"./marks.csv"</span>)</span><br><span class="line">marks</span><br><span class="line"></span><br><span class="line">OUT</span><br><span class="line">       name      physics  python  math  english</span><br><span class="line"> <span class="number">0</span>     Google    <span class="number">100</span>      <span class="number">100</span>     <span class="number">25</span>    <span class="number">12</span></span><br><span class="line"> <span class="number">1</span>     Facebook  <span class="number">45</span>       <span class="number">54</span>      <span class="number">44</span>    <span class="number">88</span></span><br><span class="line"> <span class="number">2</span>     Twitter   <span class="number">54</span>       <span class="number">76</span>      <span class="number">13</span>    <span class="number">91</span></span><br><span class="line"> <span class="number">3</span>     Yahoo     <span class="number">54</span>       <span class="number">452</span>     <span class="number">26</span>    <span class="number">100</span></span><br></pre></td></tr></table></figure>
-
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pd.read_table(<span class="string">"./marks.csv"</span>,sep=<span class="string">","</span>)</span><br><span class="line"><span class="comment">#结果与上面相同</span></span><br></pre></td></tr></table></figure>
-
 
       
     </div>
