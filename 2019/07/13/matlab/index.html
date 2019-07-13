@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="语言,笔记,matlab,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="第一章  基础知识1.1 数值数据数据类型：整型，浮点型，复数型 整型  无符号整数：8位，16位，32位，64位。 带符号整数：8位，16位，32位，64位。   类似C语言的符号位，所有无符号的最大值大一倍。这里的位数是bit位的意思  强制类型转换函数 ：int8,  uint8;【后边的位数可以改变，主要是有无符号位】 ==强制类型转换如果范围超出，取所转换范围的最大值==  x=int8">
+<meta name="keywords" content="语言,笔记,matlab">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MATLAB">
+<meta property="og:url" content="http://yoursite.com/2019/07/13/matlab/index.html">
+<meta property="og:site_name" content="柠檬笔记">
+<meta property="og:description" content="第一章  基础知识1.1 数值数据数据类型：整型，浮点型，复数型 整型  无符号整数：8位，16位，32位，64位。 带符号整数：8位，16位，32位，64位。   类似C语言的符号位，所有无符号的最大值大一倍。这里的位数是bit位的意思  强制类型转换函数 ：int8,  uint8;【后边的位数可以改变，主要是有无符号位】 ==强制类型转换如果范围超出，取所转换范围的最大值==  x=int8">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="file:///E:%5Cblog%5Chexo%5Csource_posts%5Cimages%5Cmatlab1.png">
+<meta property="og:image" content="file:///E:%5Cblog%5Chexo%5Csource_posts%5Cimages%5Cmatlab2.png">
+<meta property="og:image" content="file:///E:%5Cblog%5Chexo%5Csource_posts%5Cimages%5Cmatlab3.png">
+<meta property="og:image" content="file:///E:%5Cblog%5Chexo%5Csource_posts%5Cimages%5Cmatlab4.png">
+<meta property="og:image" content="file:///E:%5Cblog%5Chexo%5Csource_posts%5Cimages%5Cmatlab5.png">
+<meta property="og:image" content="file:///E:%5Cblog%5Chexo%5Csource_posts%5Cimages%5Cmatlab6.png">
+<meta property="og:updated_time" content="2019-07-13T13:02:07.423Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MATLAB">
+<meta name="twitter:description" content="第一章  基础知识1.1 数值数据数据类型：整型，浮点型，复数型 整型  无符号整数：8位，16位，32位，64位。 带符号整数：8位，16位，32位，64位。   类似C语言的符号位，所有无符号的最大值大一倍。这里的位数是bit位的意思  强制类型转换函数 ：int8,  uint8;【后边的位数可以改变，主要是有无符号位】 ==强制类型转换如果范围超出，取所转换范围的最大值==  x=int8">
+<meta name="twitter:image" content="file:///E:%5Cblog%5Chexo%5Csource_posts%5Cimages%5Cmatlab1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/07/13/matlab/">
+
+
+
+
+
+  <title>MATLAB | 柠檬笔记</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">柠檬笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">柠檬树上柠檬果，柠檬树下只有我</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/13/matlab/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="莫久">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/title.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柠檬笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">MATLAB</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-13T20:57:20+08:00">
+                2019-07-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab/" itemprop="url" rel="index">
+                    <span itemprop="name">matlab</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="第一章-基础知识"><a href="#第一章-基础知识" class="headerlink" title="第一章  基础知识"></a>第一章  基础知识</h2><h3 id="1-1-数值数据"><a href="#1-1-数值数据" class="headerlink" title="1.1 数值数据"></a>1.1 数值数据</h3><p><strong>数据类型</strong>：整型，浮点型，复数型</p>
+<p><strong>整型</strong></p>
+<ul>
+<li>无符号整数：8位，16位，32位，64位。</li>
+<li>带符号整数：8位，16位，32位，64位。</li>
+</ul>
+<blockquote>
+<p>类似C语言的符号位，所有无符号的最大值大一倍。这里的位数是bit位的意思</p>
+</blockquote>
+<p><strong>强制类型转换函数</strong> ：int8,  uint8;【后边的位数可以改变，主要是有无符号位】</p>
+<p>==强制类型转换如果范围超出，取所转换范围的最大值==</p>
+<blockquote>
+<p>x=int8(129)      结果为x=127</p>
+</blockquote>
+<p><strong>浮点型</strong></p>
+<ul>
+<li>single函数：强制转换为单精度数据</li>
+<li>double函数：强制转换为双精度数据</li>
+</ul>
+<p>单精度single型4个字节，双精度8个字节。</p>
+<p>==MATLAB中数据默认为双精度double类型==</p>
+<blockquote>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; class(<span class="number">4</span>)</span><br><span class="line">&gt; <span class="built_in">ans</span> =</span><br><span class="line">&gt; double</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>复数类型</strong></p>
+<p>复数类型包括实部和虚部两个部分，两个部分都默认为双精度类型，虚部使用i和j来表示；</p>
+<ul>
+<li>real函数：求复数的实部</li>
+<li>imag函数：求复数的虚部</li>
+</ul>
+<p><strong>数值数据的输出格式*</strong> </p>
+<p>==format命令的格式： format  格式符==</p>
+<p>format 命令只是设置输出格式，不改变内部存储和计算</p>
+<p><strong>常用数学函数</strong></p>
+<p>函数的调用格式为：   函数名（函数自变量的值）</p>
+<p>函数在运算时是将函数逐项作用于矩阵的每个元素上，所以最后运算的结构就是一个与自变量同型的矩阵。</p>
+<p>常用函数的应用</p>
+<ol>
+<li>三角函数默认以弧度为单位，以角度为单位要在函数名后加d,</li>
+</ol>
+<blockquote>
+<p>sind(90)==1</p>
+</blockquote>
+<ol start="2">
+<li>abs函数可以求实数的绝对值，复数的模，字符串的ASCII码值</li>
+<li>用于取整的函数有fix,floor,ceil,round.</li>
+</ol>
+<ul>
+<li>fix         靠近0取整，就是直接取整，不管是正数复数</li>
+<li>floor     向下取整</li>
+<li>ceil        向向取整</li>
+<li>round   四舍五入</li>
+</ul>
+<h3 id="1-2-变量及其操作"><a href="#1-2-变量及其操作" class="headerlink" title="1.2 变量及其操作"></a>1.2 变量及其操作</h3><p><strong>变量名</strong>：==以字母开头== ，后接字母，数字或者下划线的字符序列，最多63个字符。大小写敏感。</p>
+<p>出现的函数</p>
+<ul>
+<li>sqrt()     求平方根</li>
+<li>exp()     以e为底的指数</li>
+</ul>
+<p><strong>预定义变量</strong> ：预定义变量是在MATLAB工作空间中驻留，由系统本身定义的变量</p>
+<ol>
+<li>ans是默认赋值变量</li>
+<li>I和j表示虚数单位</li>
+<li>pi表示圆周率</li>
+<li>NaN代表非数</li>
+</ol>
+<p><strong>变量的管理</strong></p>
+<ol>
+<li>通过工作区选中变量进行管理</li>
+<li>使用who和whos命令</li>
+</ol>
+<blockquote>
+<p>who命令给出工作区的变量名，而whos函数给出详细信息</p>
+</blockquote>
+<p><strong>内存变量文件</strong>：用于 保存MATLAB工作区变量的文件叫做内存变量文件，其扩展名为.mat，也叫MAT文件【是二进制文件】</p>
+<ul>
+<li>save命令：创建内存变量文件</li>
+<li>load命令：装入内存变量文件</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">save mydata a x </span><br><span class="line">load mydata</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-矩阵的表示"><a href="#1-3-矩阵的表示" class="headerlink" title="1.3 矩阵的表示"></a>1.3 矩阵的表示</h3><p><strong>矩阵的建立</strong></p>
+<ol>
+<li>利用直接输入法建立矩阵：将矩阵的元素用中括号括起来，按矩阵行的顺序输入各元素，同一行的各元素之间用<strong>逗号或者空格</strong>分隔，不同行的元素之间用<strong>分号</strong>分隔。</li>
+<li>利用已建好的矩阵建立更好的矩阵：==一个大矩阵可以由已经建立好的小矩阵拼接而成==</li>
+</ol>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>;<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line">B = [<span class="number">-1</span>,<span class="number">-2</span>,<span class="number">-3</span>;<span class="number">-4.</span><span class="number">-5.</span><span class="number">-6</span>;<span class="number">-7.</span><span class="number">-8.</span><span class="number">-9</span>];</span><br><span class="line">C = [A,B;B,A]</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>可以用实部矩阵和虚部矩阵构成复数矩阵</li>
+</ol>
+<p><strong>冒号表达式</strong></p>
+<p>格式：e1:e2:e3   初始值：步长：终止值   </p>
+<blockquote>
+<p>省略步长e2，则步长为1。</p>
+</blockquote>
+<p>==linspace(a,b,n)==： a第一个元素，b最后一个元素，n元素总数</p>
+<blockquote>
+<p>当n省略时，自动产生100个元素。</p>
+</blockquote>
+<p><strong>结构矩阵和单元矩阵</strong></p>
+<ol>
+<li>结构矩阵：由结构数据构成的矩阵就是结构矩阵，结构矩阵里的每个元素就是<strong>结构数据类型</strong></li>
+</ol>
+<blockquote>
+<p>格式为：结构矩阵元素.成员名=表达式</p>
+</blockquote>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a(<span class="number">1</span>).x1=<span class="number">10</span>;a(<span class="number">1</span>).x2=<span class="string">'liu'</span>;a(<span class="number">1</span>).x3=[<span class="number">11</span>,<span class="number">21</span>;<span class="number">34</span>,<span class="number">78</span>]</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>单元矩阵：建立单元矩阵和一般矩阵相似，直接输入就可以了，只是单元矩阵元素用大括号括起来。</li>
+</ol>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;b=&#123;<span class="number">10</span>,<span class="string">'liu'</span>,[<span class="number">11</span>,<span class="number">21</span>;<span class="number">34</span>,<span class="number">78</span>];<span class="number">12</span>,<span class="string">'wang'</span>,[<span class="number">34</span>,<span class="number">191</span>;<span class="number">27</span>,<span class="number">578</span>];<span class="number">14</span>,<span class="string">'cai'</span>,[<span class="number">13</span>,<span class="number">890</span>;<span class="number">67</span>,<span class="number">231</span>]&#125;</span><br><span class="line">b =</span><br><span class="line">  <span class="number">3</span>×<span class="number">3</span> cell 数组</span><br><span class="line">    [<span class="number">10</span>]    <span class="string">'liu'</span>     [<span class="number">2</span>×<span class="number">2</span> double]</span><br><span class="line">    [<span class="number">12</span>]    <span class="string">'wang'</span>    [<span class="number">2</span>×<span class="number">2</span> double]</span><br><span class="line">    [<span class="number">14</span>]    <span class="string">'cai'</span>     [<span class="number">2</span>×<span class="number">2</span> double]</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-矩阵元素的引用"><a href="#1-4-矩阵元素的引用" class="headerlink" title="1.4 矩阵元素的引用"></a>1.4 矩阵元素的引用</h3><ol>
+<li>通过下标来引用矩阵的元素</li>
+</ol>
+<p><strong>注意：如果给出的行下标或列下标大于原来矩阵的行数和列数，那么matlab将自动扩展原来的矩阵，并将扩展后没有赋值的矩阵元素置为0</strong></p>
+<ol start="2">
+<li>通过序号来引用</li>
+</ol>
+<ul>
+<li>在MATLAB中，矩阵元素按列存储，即首先存储矩阵的第一列元素，然后存储第二列元素，…，一直到矩阵的最后一列元素</li>
+<li>矩阵元素的序号就是矩阵元素在内存中的排列顺序。</li>
+</ul>
+<p><strong>sub2ind函数</strong> ：将矩阵中指定元素的行，列下标转换成存储的序号.调用格式为：D=sub2ind(S,I,J)</p>
+<blockquote>
+<p>D序号，S 行数和列数组成的向量【矩阵的规模】，I 转换矩阵的行下标，J 转换矩阵的列标</p>
+</blockquote>
+<p><strong>ind2sub函数</strong> ：将把矩阵元素的序号转换成对应的下标，其调用格式：[I,J]=ind2sub(S,D)</p>
+<blockquote>
+<p>I行下标   J 列下标   S行数和列数组成的向量， D序号向量</p>
+</blockquote>
+<p><strong>利用冒号表达式获得子矩阵</strong> ：子矩阵是指由矩阵中的一部分元素构成的矩阵</p>
+<ul>
+<li>A(i,:)                                              第i行的全部元素</li>
+<li>A(:,j)                                              第j列的全部元素</li>
+<li>A(i:i+m,k:k+m)                            第i~i+m行内且在第 k ~k+m列中的所有元素</li>
+<li>A(i:i+m,:)                                      第i~i+m行的全部元素                                      </li>
+</ul>
+<p>end运算符：表示某一维的末尾元素下标。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A(end,:)    #最后一行全部元素</span><br><span class="line">A([1,4],3:end) #在第一行第四行且在第3列到最后一列</span><br></pre></td></tr></table></figure>
+
+<p><strong>利用空矩阵删除矩阵的元素</strong>： 空矩阵是没有任何元素的矩阵。 x=[]。可以将矩阵的行或者列赋值为空矩阵，来删除行和列。</p>
+<p><strong>改变矩阵的形状</strong>： reshape(A,m,n);在矩阵总元素不变的前提下，将矩阵A重新排列成m行n列的二维矩阵，==但是 不改变原矩阵的元素个数和存储顺序【存储按列顺序存储】==</p>
+<p><strong>A(:)</strong> :将矩阵A的每一列元素堆叠起来，成为一个列向量</p>
+<blockquote>
+<p>等价于reshape(A,m*n,1)</p>
+</blockquote>
+<h3 id="1-5-基本运算"><a href="#1-5-基本运算" class="headerlink" title="1.5 基本运算"></a>1.5 基本运算</h3><p><strong>算术运算</strong></p>
+<ol>
+<li>基本算术运算：加减，乘，/右除，\左除  ^乘方</li>
+</ol>
+<ul>
+<li>算术运算实在矩阵意义下进行的，即都是矩阵加减乘除，标量是特殊矩阵</li>
+</ul>
+<p>加减运算</p>
+<ul>
+<li>加减运算需要矩阵同型，对应元素相加减</li>
+<li>一个标量也可以和矩阵进行加减运算，这时候把标量和矩阵每一个元素进行加减运算，结果是一个矩阵</li>
+</ul>
+<p>乘法运算</p>
+<ul>
+<li>矩阵乘法运算要求矩阵可乘。也叫维数和大小相容</li>
+</ul>
+<p>除法运算</p>
+<ul>
+<li>如果A矩阵是非奇异矩阵，即A可逆，则B/A等效于B*inv(A), A\B等效于inv(A) *B</li>
+</ul>
+<blockquote>
+<p>就是除法运算符倾向的一方转为逆。</p>
+</blockquote>
+<p>乘方运算</p>
+<ul>
+<li>要求乘方运算中A^x，A为矩阵，x为标量</li>
+</ul>
+<p><strong>点运算</strong> ：.*   ./   .\  和.^     【就是乘除乘方前加点.】</p>
+<blockquote>
+<p>点运算要求两个矩阵同型</p>
+</blockquote>
+<p>点运算就是矩阵的对应元素进行相关运算。</p>
+<p><strong>关系运算</strong></p>
+<p>关系运算符：&lt;     &lt;=       &gt;       &gt;=   ==   ~=</p>
+<blockquote>
+<p>当两个比较量是标量时，直接比较两数的大小，若关系成立为1，否则为0</p>
+</blockquote>
+<blockquote>
+<p>当比较两个同型矩阵时，是比较对应位置的元素，并且返回值是一个矩阵，每个元素是对应标量比较结果，由0和1组成</p>
+</blockquote>
+<p><strong>逻辑运算</strong>        &amp;    |     ~</p>
+<blockquote>
+<p>逻辑运算的规则和C相同</p>
+</blockquote>
+<h3 id="1-7-字符串处理"><a href="#1-7-字符串处理" class="headerlink" title="1.7 字符串处理"></a>1.7 字符串处理</h3><p><strong>字符串的表示</strong> ：在MATLAB中，字符串是用单引号括起来的字符序列</p>
+<blockquote>
+<p>若字符串中的字符含有单引号，则该单引号字符要用两个单引号来表示。</p>
+</blockquote>
+<p>建立多行字符串，形成字符串矩阵。</p>
+<p>ch=[‘abcdef’,’123456’]</p>
+<p>==revch=ch(end:-1;1)  将字符串倒过来重新排列==</p>
+<p>find()         参数是一个条件表达式，返回值是满足条件的元素的序号</p>
+<p><strong>find()</strong>         参数是一个条件表达式，返回值是满足条件的元素的序号</p>
+<p><strong>length()</strong>    求长度。 </p>
+<p><strong>字符串的操作</strong>   格式： eval(s)       将s字符串当作命令执行</p>
+<p><strong>字符串与数值之间的转换</strong> ：</p>
+<ul>
+<li>abs和double函数都可以用来获取字符串矩阵所对应的ASCLL码数值矩阵。</li>
+<li>char函数可以把ASCLL码矩阵转换为字符串矩阵。</li>
+</ul>
+<p><strong>字符串的比较</strong> ：利用关系运算符或字符串比较函数</p>
+<p><strong>关系运算符比较</strong> ：两个字符串里的每个字符依次==按ASCII值大小==逐个进行比较，比较的结果是一个数值向量，向量中的元素要么是1，要么是0.</p>
+<p>字符串比较函数用于判断字符串是否相等，有4种比较方式，函数如下</p>
+<ul>
+<li>strcmp(s1,s2)：用来比较字符串s1和s2是否相等，如果相等，返回结果为1，否则返回0</li>
+<li>strncmp(s1,s2,n)：用来比较两个字符串前n个字符是否相等，如果相等，返回1，否则返回0</li>
+<li>strcmpi(s1,s2): 在忽略字母大小写前提下，比较字符串s1和s2是否相等，如果相等，返回1，否则返回0。</li>
+<li>strncmpi(s1,s2,n): 在忽略字符串大小写前提下，比较两个字符串前n个字符是否相等，如果相等，返回1，否则返回0.</li>
+</ul>
+<blockquote>
+<p>i是忽略大小写，n是比较前n个字符</p>
+</blockquote>
+<p><strong>字符串的查找与替换</strong> </p>
+<ul>
+<li>findstr(s1,s2) : 返回短字符串在长字符串中的开始位置</li>
+<li>strrep(s1,s2,s3) : 将字符串s1中的所有字符串s2替换为字符串s3</li>
+</ul>
+<h2 id="第二章-矩阵处理"><a href="#第二章-矩阵处理" class="headerlink" title="第二章 矩阵处理"></a>第二章 矩阵处理</h2><h3 id="2-1-特殊矩阵"><a href="#2-1-特殊矩阵" class="headerlink" title="2.1 特殊矩阵"></a>2.1 特殊矩阵</h3><p><strong>通用矩阵</strong></p>
+<ul>
+<li>zeros函数  ： 产生全0矩阵，即零矩阵</li>
+<li>ones函数   ： 产生全1矩阵，即幺矩阵</li>
+<li>eye函数     ： 产生对角线为1的矩阵，当矩阵是方阵时，得到一个单位矩阵</li>
+<li>rand函数   ： 产生（0，1）区间均匀分布的随机矩阵</li>
+<li>randn函数 ： 产生均值为0，方差为1的标准正态分布随机矩阵。</li>
+</ul>
+<p>zeros函数的调用格式：</p>
+<ol>
+<li>zeros(m)         :      产生m*m零矩阵</li>
+<li>zeros(m,n)      :      产生m*n零矩阵</li>
+<li>zeros(size(A)) ：   产生与矩阵A同样大小的零矩阵</li>
+</ol>
+<p><strong>特殊矩阵</strong> </p>
+<ol>
+<li>魔方矩阵【幻方矩阵】magic(n)  </li>
+</ol>
+<p>产生每行每列对角线的数相加为定值的矩阵，且元素为1到$n^2$ </p>
+<blockquote>
+<p>n&gt;2时有很多不同的n阶魔方阵，MATLAB函数magic（n）产生一个特定的魔方阵</p>
+</blockquote>
+<ol start="2">
+<li>范德蒙矩阵   vander(V)</li>
+</ol>
+<p>对于向量v=[$v_1,v_2,…,v_n$],范德蒙矩阵的一般形式是：</p>
+<p>从$v^T$ 的n-1次方到0次方。一共n列。所以最后一列全为1，即向量v各元素的0次方，倒数第二列为指定的向量v，即向量v各元素的一次方，其他各列是其后列与倒数第二列的点乘积。</p>
+<ol start="3">
+<li>希尔伯特矩阵  hilb(n)</li>
+</ol>
+<p>n阶希尔伯特(Hilbert)矩阵的一般形式为 : H(i,j) = 1/(i+j-1)</p>
+<blockquote>
+<p>希尔伯特矩阵是著名的病态矩阵，即任何一个元素发生较小的变动，整个矩阵的值和逆矩阵都会发生很大变化。病态程度和矩阵的阶数相关，随着阶数的增加病态越严重</p>
+</blockquote>
+<ol start="4">
+<li>伴随矩阵   compan(p)  p是系数向量，高次幂在前</li>
+</ol>
+<p>设多项式p(x)为$a_nx^n+a_{n-1}x ^{n-1}+…+a_1x+a_0$ ,则多项式的伴随矩阵，p(x)称为A的特征多项式，方程p(x)=0的根称为A的特征值。</p>
+<ol start="5">
+<li>帕斯卡矩阵</li>
+</ol>
+<ul>
+<li>根据二项式定理，$（x+y)^n$ 展开后的系数随着n的增大组成一个三角形表，这个三角形称为杨辉三角形。</li>
+<li>把二项式系数依次填写在矩阵的左侧对角线上，然后提取左侧的n行n列元素即为n阶帕斯卡矩阵 </li>
+</ul>
+<p>就是把对角线看作竖直，出现的杨辉三角。</p>
+<h3 id="2-2-矩阵变换"><a href="#2-2-矩阵变换" class="headerlink" title="2.2 矩阵变换*"></a>2.2 矩阵变换*</h3><p><strong>对角阵</strong> ：只有对角线上有非零元素的矩阵。</p>
+<p>数量矩阵：对角线上的元素相等的对角矩阵 。</p>
+<p>单位矩阵：对角线上的元素都为1的对角矩阵</p>
+<ol>
+<li>提取矩阵的对角线元素</li>
+</ol>
+<ul>
+<li>diag(A):提取==矩阵A== 的主对角线元素，产生一个列向量</li>
+<li>diag(A,k): 提取矩阵A第k条对角线的元素，产生一个列向量</li>
+</ul>
+<p>矩阵的对角线：主对角线为0，上为正，下为负</p>
+<ol start="2">
+<li>构造对角阵</li>
+</ol>
+<ul>
+<li>diag(V):以==向量V==为主对角线元素，产生对角矩阵 </li>
+<li>diag(V,k):以向量V为第k条对角线元素，产生对角矩阵</li>
+</ul>
+<p><strong>三角阵</strong></p>
+<ul>
+<li>triu(A)：提取矩阵A的主对角线及以上的元素</li>
+<li>triu(A，k): 提取矩阵A的第k条对角线及以上的元素。</li>
+</ul>
+<p>下三角==tril==函数用法相同</p>
+<p><strong>矩阵的转置</strong> ：转置运算符是小数点后面接单引号（.’）</p>
+<blockquote>
+<p>共轭转置：其运算符是单引号，他在转置的基础上还要取每个数的复共轭。【实数的复共轭还是原来的数】</p>
+</blockquote>
+<p><strong>矩阵的旋转</strong>： rot90(A,k):将矩阵A逆时针方向旋转90度的k倍，当k为1时可以省略</p>
+<p><strong>矩阵的翻转</strong>：对矩阵实施左右翻转是将原矩阵的第一列和最后一列调换，第二列和倒数第二列调换，。。。，以此类推。</p>
+<ul>
+<li>fliplr(A):对矩阵A 进行左右翻转</li>
+<li>flipud(A):对矩阵A实施上下翻转</li>
+</ul>
+<p><strong>矩阵的求逆</strong>：inv(A)</p>
+<h3 id="2-3-矩阵求值"><a href="#2-3-矩阵求值" class="headerlink" title="2.3  矩阵求值*"></a>2.3  矩阵求值*</h3><p><strong>方阵的行列式</strong>：把一个方阵看作一个行列式，并对其按行列式的规则求值，这个值就称为所对应的行列式的值         【det(A)】</p>
+<p><strong>矩阵的秩</strong> ：矩阵线性无关的行数或列数称为矩阵的秩。                                       【rank(A)】</p>
+<p><strong>矩阵的迹</strong>： 矩阵的迹等于矩阵的对角线元素之和，也等于矩阵的特征值之和。【trace(A)】</p>
+<p><strong>向量和矩阵的范数</strong>： 矩阵或向量的范数用来度量矩阵或向量在某种意义下的长度</p>
+<p><strong>向量的3种常用范数</strong> </p>
+<ul>
+<li>向量1—范数：向量元素的绝对值之和                $||V||<em>1=\sum</em>{i=1}^n|v_i|$</li>
+<li>向量2—范数：向量元素平方和的平方根。        $||V||<em>2=\sqrt{\sum</em>{i=1}^nv_i^2}$</li>
+<li>向量无穷—范数：所有向量元素绝对值中的最大值    $||V||<em>{无穷}=max</em>{1&lt;=i&lt;=n}{v_i}$</li>
+</ul>
+<p>在MATLAB中，求<strong>向量范数的函数</strong>  为：norm</p>
+<ul>
+<li>norm(V)或norm(V,2)：计算向量V的2—范数</li>
+<li>norm(V,1):  计算向量V的1–范数</li>
+<li>norm(V,inf)：计算向量V的无穷范数</li>
+</ul>
+<p><strong>矩阵的范数</strong> ：</p>
+<ul>
+<li>矩阵A的I-范数：所有矩阵列元素绝对值之和的最大值</li>
+<li>矩阵A的2—范数：  $A^TA$矩阵的最大特征值的平方根。</li>
+<li>矩阵A的无穷范数：所有矩阵行元素绝对值之和的最大值。</li>
+</ul>
+<p><strong>矩阵的条件数</strong>：</p>
+<ul>
+<li>矩阵A的条件数等于A的范数与A的逆矩阵的范数的乘积。</li>
+<li>条件数越接近于1，矩阵的性能越好。反之，矩阵的性能越差</li>
+</ul>
+<ol>
+<li>cond(A,1):计算A的1—范数下的条件数</li>
+<li>cond(A)或者cond(A,2)： 计算A的2—范数数下的条件数</li>
+<li>cond(A，inf): 计算A的无穷范数的条件数</li>
+</ol>
+<h3 id="2-4-矩阵的特征值"><a href="#2-4-矩阵的特征值" class="headerlink" title="2.4 矩阵的特征值*"></a>2.4 矩阵的特征值*</h3><p><strong>矩阵特征值的数学定义</strong>： 设A是n阶方阵，如果存在常数$\lambda$和n维非零列向量x，使得等式Ax=$\lambda x$ 成立</p>
+<p>则称$\lambda$为A的特征值，x是对应特征值$\lambda$的特征向量 </p>
+<p><strong>求矩阵的特征值与特征向量</strong> ：</p>
+<ul>
+<li>E=eig(A)　　　:　求矩阵A的全部特征值，构成向量E。</li>
+<li>[X,D]=eig(A)　　: 求矩阵A的全部特征值，构成对角阵D，并产生矩阵X，X各列是相应的特征向量</li>
+</ul>
+<h3 id="2-5-稀疏矩阵"><a href="#2-5-稀疏矩阵" class="headerlink" title="2.5 稀疏矩阵"></a>2.5 稀疏矩阵</h3><p>  <strong>矩阵的存储方式</strong>： </p>
+<ol>
+<li>完全存储方式：将矩阵的全部元素按列存储</li>
+<li>稀疏存储方式：置存储矩阵的非零元素的值及其位置，即行号和列号。</li>
+</ol>
+<blockquote>
+<p>稀疏存储时，矩阵元素的存储顺序并没有改变，也是按列的顺序进行存储</p>
+</blockquote>
+<p><strong>稀疏存储方式的产生</strong> </p>
+<ol>
+<li>完全存储方式与稀疏存储方式之间的转化</li>
+</ol>
+<ul>
+<li>A=sparse(S) : 将矩阵S转化为稀疏存储方式的矩阵A</li>
+<li>S=full(A) :       将矩阵A转化为完全存储方式的矩阵S。</li>
+</ul>
+<ol start="2">
+<li>直接建立稀疏存储矩阵</li>
+</ol>
+<ul>
+<li>sparse(m,n) : 生成一个m*n的所有元素都是零的稀疏矩阵</li>
+<li>sparse(u,v,S)  : 其中,u.v,S 是3个等长的向量。S是要建立的稀疏存储矩阵的非零元素，ｕ（ｉ），ｖ（ｉ）分别是S（i）的行和列下标</li>
+</ul>
+<p>使用spconvert函数直接建立稀疏存储矩阵，其调用格式为：Ｂ＝spconvert(A)</p>
+<p>其中，A为一个m<em>3或者m</em> *4的矩阵，其每行表示一个非零元素，m是非零元素的个数</p>
+<ul>
+<li>A（i，1）表示第i个非零元素所在的行</li>
+<li>A（i，2）表示第i个非零元素值的实部</li>
+<li>A（i，3）表示第i个非零元素值的实部</li>
+<li>A（i，4）表示第i个非零元素的虚部</li>
+</ul>
+<blockquote>
+<p>若是实数矩阵，则不需要第四列</p>
+</blockquote>
+<ol start="3">
+<li>带状稀疏矩阵的稀疏存储</li>
+</ol>
+<ul>
+<li>稀疏矩阵有两种基本类型：无规则结构的稀疏矩阵与有有规则的稀疏矩阵</li>
+<li>带状稀疏矩阵就是一种十分典型的具有规则结构的稀疏矩阵，它是指所有非零元素集中在对角线上的矩阵</li>
+</ul>
+<p>[B,d] = spdiags(A)  : 从带状稀疏矩阵A中提取全部非零对角线元素赋给矩阵B及其这些非零对角线的位置向量d。</p>
+<p>A = spdiags(B,d,m,n) : 产生带状稀疏矩阵的稀疏存储矩阵A，其中m，n为原带状稀疏矩阵的行数和列数，矩阵B的第i列即为原带状稀疏矩阵的第i条非零对角线。向量d为原带状稀疏矩阵所有非零对角线的位置。</p>
+<p><strong>单位矩阵的稀疏存储</strong> :speye(m,n)返回一个m*n的稀疏存储单位矩阵</p>
+<h2 id="第三章-程序流程控制"><a href="#第三章-程序流程控制" class="headerlink" title="第三章 程序流程控制"></a>第三章 程序流程控制</h2><p><strong>脚本程序和函数文件</strong>：</p>
+<ul>
+<li>脚本文件是在命令行窗口直接执行的文件，也叫命令文件【主程序】</li>
+<li>函数文件是定义一个函数，不能直接执行，而必须以函数调用的方式来调用它</li>
+</ul>
+<p><strong>文件的建立</strong>：</p>
+<ol>
+<li>用命令按钮创建文件，在主页选项中有新建脚本</li>
+<li>使用edit命令创建文件。【edit test】</li>
+</ol>
+<p><strong>顺序结构</strong></p>
+<ol>
+<li>数据的输入   A=input(‘请输入变量A的值：’)【类似python】</li>
+<li>数据的输出， ==disp(输出项)== </li>
+<li>程序的暂停      pause(延迟秒数)</li>
+</ol>
+<h3 id="3-1-选择结构"><a href="#3-1-选择结构" class="headerlink" title="3.1 选择结构"></a>3.1 选择结构</h3><p><strong>单分支if语句</strong> </p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 条件</span><br><span class="line">   语句组</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当条件结果是标量时，非零表示条件成立，零表示条件不成立</li>
+<li>当条件结构是矩阵时，如果矩阵为非空，且不包含零元素，则条件成立，否则不成立</li>
+</ul>
+<blockquote>
+<p>即矩阵为空或者矩阵中含有零元素则条件不成立</p>
+</blockquote>
+<p><strong>双分支结构</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 条件</span><br><span class="line">  语句组<span class="number">1</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">   语句组<span class="number">2</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>多分支结构</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 条件<span class="number">1</span></span><br><span class="line">   语句组<span class="number">1</span></span><br><span class="line"><span class="keyword">elseif</span> 条件<span class="number">2</span></span><br><span class="line">   语句组<span class="number">2</span></span><br><span class="line">   ...</span><br><span class="line"><span class="keyword">elseif</span> 条件m</span><br><span class="line">   语句组m</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">   语句组n</span><br></pre></td></tr></table></figure>
+
+<p><strong>swtich语句</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> 表达式</span><br><span class="line">  <span class="keyword">case</span> 结果表<span class="number">1</span></span><br><span class="line">     语句组<span class="number">1</span></span><br><span class="line">  <span class="keyword">case</span> 结果表<span class="number">2</span></span><br><span class="line">     语句组<span class="number">2</span></span><br><span class="line">     ...</span><br><span class="line">  <span class="keyword">case</span> 结果表m</span><br><span class="line">     语句组m</span><br><span class="line"> <span class="keyword">otherwise</span></span><br><span class="line">     语句组n</span><br><span class="line"> <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>和C不同，只执行一个语句组</p>
+</blockquote>
+<ul>
+<li>switch表达式应该是一个其值可以列举的表达式</li>
+<li>case结果表为switch表达式的取值，当取值有多个时，用==单元数据==表示</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">x=input(<span class="string">'x=?'</span>);</span><br><span class="line"><span class="keyword">switch</span> <span class="built_in">fix</span>(x)</span><br><span class="line">   <span class="keyword">case</span> <span class="number">2</span></span><br><span class="line">      <span class="built_in">disp</span>(<span class="number">111</span>);</span><br><span class="line">   <span class="keyword">case</span> <span class="number">2</span></span><br><span class="line">      <span class="built_in">disp</span>(<span class="number">222</span>);</span><br><span class="line">   <span class="keyword">case</span> &#123;<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;</span><br><span class="line">      <span class="built_in">disp</span>(<span class="number">333</span>);</span><br><span class="line">   <span class="keyword">otherwise</span></span><br><span class="line">      <span class="built_in">disp</span>(<span class="number">444</span>);</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">x=<span class="number">2</span></span><br><span class="line">  <span class="number">111</span></span><br><span class="line">x=<span class="number">4</span></span><br><span class="line">   <span class="number">333</span></span><br><span class="line">x= <span class="number">8</span></span><br><span class="line">  <span class="number">444</span></span><br></pre></td></tr></table></figure>
+
+<p>num2cell函数：将数值矩阵转换为单元矩阵</p>
+<h3 id="3-2-循环结构"><a href="#3-2-循环结构" class="headerlink" title="3.2 循环结构"></a>3.2 循环结构</h3><p><strong>for循环</strong>：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> 循环变量=表达式<span class="number">1</span>：表达式<span class="number">2</span>：表达式<span class="number">3</span></span><br><span class="line">   循环体语句</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>for循环循环变量针对向量中的每一个元素执行一次循环体，退出循环之后，循环变量的值就是向量中的最后的元素值。当向量为空时，循环一次都不执行</p>
+</blockquote>
+<p>更加一般的表达式为</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> 循环变量 = 矩阵表达式</span><br><span class="line">    循环体语句</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>执行过程是依次将矩阵的==各列==元素赋给循环变量，然后执行循环体语句，直到各列元素处理完毕 循环结束</p>
+<blockquote>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">for</span> k=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]   执行<span class="number">4</span>次，<span class="number">1</span>行四列</span><br><span class="line">&gt; <span class="keyword">for</span> k=[<span class="number">1</span>;<span class="number">2</span>;<span class="number">3</span>;<span class="number">4</span>]   执行<span class="number">1</span>次，<span class="number">4</span>行<span class="number">1</span>列</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>while循环</strong>：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> 条件</span><br><span class="line">    循环体语句</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>可以使用break  and continue </p>
+<h3 id="3-3-函数文件的定义和调用"><a href="#3-3-函数文件的定义和调用" class="headerlink" title="3.3 函数文件的定义和调用"></a>3.3 函数文件的定义和调用</h3><p><strong>函数文件的基本结构</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> 输出形参表=函数名（输入形参表）</span></span><br><span class="line">   注释说明部分</span><br><span class="line">   函数体语句</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>当输出参数多于一个时，应该用方括号括起来，构成一个输出矩阵</p>
+</blockquote>
+<ul>
+<li>函数文件名通常由函数名再加上扩展名.m组成，==函数文件名与函数名也可以不相同，当函数文件名与函数名不相同时，MATLAB将忽略函数名，调用时使用函数文件名==</li>
+<li>return语句表示结束函数的执行，通常，在函数文件中可以不使用return语句，那么被调用的函数执行完成后会自动返回</li>
+</ul>
+<p><strong>函数的调用</strong></p>
+<p>[输出实参表] = 函数名（输入实参表）</p>
+<p><strong>匿名函数</strong>【类似python的lambda函数】</p>
+<p>函数句柄变量=@（匿名函数输入参数）匿名函数表达式</p>
+<p>==@是函数句柄的运算符==</p>
+<p>调用时直接使用句柄变量</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;f=@(x,y) x^<span class="number">2</span>+y^<span class="number">2</span></span><br><span class="line">f = </span><br><span class="line">   @(x,y) x^<span class="number">2</span>+y^<span class="number">2</span></span><br><span class="line">&gt;&gt; f(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">    <span class="number">25</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-4-函数的递归调用"><a href="#3-4-函数的递归调用" class="headerlink" title="3.4 函数的递归调用"></a>3.4 函数的递归调用</h3><ol>
+<li>直接递归调用</li>
+<li>间接递归调用</li>
+</ol>
+<p>和C没什么不同</p>
+<h3 id="3-5-函数参数和变量的作用域"><a href="#3-5-函数参数和变量的作用域" class="headerlink" title="3.5 函数参数和变量的作用域"></a>3.5 函数参数和变量的作用域</h3><p><strong>函数参数的可调性</strong></p>
+<ul>
+<li>nargin ———输入实参的个数</li>
+<li>natgout——–输出实参的个数</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fout</span>=<span class="title">test</span><span class="params">(a,b,c)</span></span></span><br><span class="line"><span class="keyword">if</span> nargin==<span class="number">1</span></span><br><span class="line">   fout=a;</span><br><span class="line"><span class="keyword">elseif</span> nargin==<span class="number">2</span></span><br><span class="line">   fout=a+b</span><br><span class="line"><span class="keyword">elseif</span> nargin==<span class="number">3</span></span><br><span class="line">   fout=(a*b*c)/<span class="number">2</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>全局变量和局部变量</strong></p>
+<p>全局变量的定义格式：global 变量名  【类似python】</p>
+<p>需要在函数文件中定义全局模式并且在调用前在主进程中声明全局变量并进行初始化</p>
+<h2 id="第四章-绘图"><a href="#第四章-绘图" class="headerlink" title="第四章 绘图"></a>第四章 绘图</h2><h3 id="4-1-二维曲线"><a href="#4-1-二维曲线" class="headerlink" title="4.1 二维曲线"></a>4.1 二维曲线</h3><ul>
+<li>plot函数</li>
+</ul>
+<p><strong>基本用法</strong> </p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(x,y)</span><br></pre></td></tr></table></figure>
+
+<p>其中，x和y分别用于存储x坐标和y坐标数据。通常，xy为长度相同的向量【一条曲线】并且x和y的对应位置元素成为一组点</p>
+<p>调用形式1： plot(x)</p>
+<p>这时x是纵坐标，横坐标就是x中的元素个数，即[1:len(x)]</p>
+<p>当x是复数向量时，则分别以该元素实部和虚部为横纵坐标绘制处一条曲线。</p>
+<blockquote>
+<p>复数变量也可以用complex函数构建，即cx = complex(x,y)</p>
+</blockquote>
+<p><strong>参数变化形式</strong>：plot(x,y)</p>
+<ol>
+<li>当x是向量，y是矩阵时</li>
+</ol>
+<blockquote>
+<p>即y的维数匹配x的维数</p>
+</blockquote>
+<ul>
+<li>如果矩阵的列数等于x的长度，则以向量x为横坐标，==以y的每个行向量为纵坐标绘制曲线==，曲线的条数等于y的行数。【即把y分解成若干个行向量】</li>
+<li>如果矩阵的行数等于x的长度，则以向量x为横坐标，==以y的每个列向量为纵坐标绘制曲线==，曲线的条数等于y的列数。</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = linspace(0 , 2*pi , 100);  #x是一个范围0到2*pi，有100个元素的行向量</span><br><span class="line">y = [sin(x) ; sin(2*x) ; sin(0.5*x)] #利用其他矩阵来构造矩阵，这里是三行100列的矩阵</span><br><span class="line">plot(x,y)  #矩阵y的列数和x相同，所以是3条以x为横坐标，y的行向量为纵坐标的曲线</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>当x和y是同型矩阵时</li>
+</ol>
+<p>以x，y的对应列元素为横，纵坐标分别绘图线，曲线条数等于矩阵的列数。【即以矩阵分解为对应列】</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">t = 0: 0.01 :2*pi ;    #t是一个范围0到2*pi，间隔0.01的行向量 </span><br><span class="line">t1 = t' ;              #t1是t的转置，即列向量</span><br><span class="line">x = [t1 , t1 , t1];    #x是一个3列的矩阵，每列都是t1</span><br><span class="line">y = [sin(t1) , sin(2*t1) , sin(0.5*t1)];  #y和x同型</span><br><span class="line">plot(x,y)   #绘制三条图形，每条以x和y的对应列作为横纵坐标绘制曲线</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>含多个输入参数的plot函数  :plot(x1 ,y1 , x2 , y2, … , xn,.yn)</p>
+<p>其中，每一个向量对构成一组数据点的横纵坐标，绘制一条曲线。【也就是x1,y1一组】</p>
+</li>
+<li><p><strong>含有选项的plot函数</strong>:plot(x,y,选项)</p>
+</li>
+</ol>
+<p>其中，选项用于指定曲线的线型，颜色和数据点标记。</p>
+<p>线型：  ‘ - ’   ：实线     ‘ :  ‘     :虚线    ’  -.  ‘  :点划线   ’–‘  双划线</p>
+<p>颜色    ‘r’   ： 红色     ‘g’   ：绿色    ‘b’  ：蓝色      ’w’  ：白色    ‘k’  ：黑色</p>
+<blockquote>
+<p>除了黑色，其他颜色都是英文首字母 </p>
+</blockquote>
+<p>数据点标记： ‘*‘   ：星号     ’o’  ：圆圈    ‘s’ ：方块    ’p’  ：五角星     ‘^’  ： 朝上三角符号</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x = (0:pi/50:2*pi)' ;   #x是一个转置矩阵为列向量，元素范围0到2*pi，间隔pi/50</span><br><span class="line">y1 = 2*exp(-0.5*x)*[1,-1];    #y1做了一个矩阵乘法，有两列互为相反数       </span><br><span class="line">y2 = 2*exp(-0.5*x).*sin(2*pi*x); #y2是点乘，是一个和x同型的列向量，元素是两者对应相乘</span><br><span class="line">x1 = 0:0.5:6;         #x1和y3和y2类似，其实就是取y2的特定点</span><br><span class="line">y3 = <span class="number">2</span>*<span class="built_in">exp</span>(<span class="number">-0.5</span>*x1).*<span class="built_in">sin</span>(<span class="number">2</span>*<span class="built_in">pi</span>*x1);     </span><br><span class="line"><span class="built_in">plot</span>(x,y1,<span class="string">'k:'</span>, x,y2,<span class="string">'b--'</span>,x1,y3,<span class="string">'rp'</span>)  </span><br><span class="line">#第一个选择项是黑色虚线，第二个是蓝色双划线，第三个是红色五角星</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>fplot函数</li>
+</ul>
+<p>如果函数在不同区间频率特性差别大，这时候我们选择特定间隔就不符合实际了。这时候我们可以使用fplot函数，如绘制sin(1/x)</p>
+<ol>
+<li>基本用法：fplot(f,lims,选项)</li>
+</ol>
+<p>其中f表示一个函数，通常是采用函数句柄的方式，lims为x轴的取值范围，用二元向量[xmin,xmax]描述，默认值为[-5,5] .选项和plot相同</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fplot(@(x) <span class="built_in">sin</span>(<span class="number">1.</span>/x),[<span class="number">0.0</span><span class="number">.2</span>],<span class="string">'b'</span>)</span><br><span class="line">#第一项函数是采用了点除，第二个范围是0到0.2，第三个是选项代表蓝色</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>双输入函数参数的用法【参数方程】</li>
+</ol>
+<p>​            fplot(funx,funy,tlims,选项)</p>
+<p>其中，funx，funy代表函数，通常采用函数句柄的形式。tlims为参数函数funx和funy的自变量的取值范围，用二元向量[tmin,tmax]描述 </p>
+<p>如绘制参数方程【x= t*sint   y=t  *cost’】</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fplot(@(t)t.*<span class="built_in">sin</span>(t),@(t)t.*<span class="built_in">cos</span>(t),[<span class="number">0</span>,<span class="number">10</span>*<span class="built_in">pi</span>],<span class="string">'r'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>==一般fplot函数不标记点==</p>
+<h3 id="4-2-辅助操作"><a href="#4-2-辅助操作" class="headerlink" title="4.2 辅助操作"></a>4.2 辅助操作</h3><p><strong>图形标注</strong> </p>
+<ul>
+<li>title(标题，属性名，属性值)，可以title({‘MATLAB’,’y=sin(x)’}，‘Color’,’r’) ，即显示两行标题，红色</li>
+</ul>
+<blockquote>
+<p>在图形标题中使用LaTeX格式控制符【类似markdown】来写一些特殊数学符号，受LaTeX格式控制的部分要用大括号括起来</p>
+</blockquote>
+<p>格式控制符【写在大括号里】”\bf” :加粗，’\it’  :斜体   “\rm”： 正体</p>
+<blockquote>
+<p>属性名，Color,FontSize。颜色字号</p>
+</blockquote>
+<ol start="2">
+<li>xlabel函数和ylabel函数，标记x轴和y轴</li>
+<li>text(x,y,说明)和gtext(说明)</li>
+</ol>
+<p>在前面的图形中添加文字说明，说明可以和标题一样使用LaTex格式，用大括号括起来。</p>
+<ol start="4">
+<li>legend(图例1，图例2…):添加图例</li>
+</ol>
+<p><strong>坐标控制</strong> </p>
+<ol>
+<li>axis（[xmin,xmax,ymin,ymax,zmin,zmax]）给出坐标轴的范围</li>
+</ol>
+<p>其他用法：</p>
+<ul>
+<li>axis equal  :   纵横坐标轴采用等长刻度</li>
+<li>axis square：产生正方形坐标系（默认为矩形）</li>
+<li>axis auto:       使用默认设置</li>
+<li>axis off：        取消坐标轴</li>
+<li>axis on ：       显示坐标轴</li>
+</ul>
+<ol start="2">
+<li>添加网格，边框</li>
+</ol>
+<p>grid on \grid off  网格</p>
+<p>box on \box off 边框</p>
+<ol start="3">
+<li>图形保持  hold on\hold off </li>
+</ol>
+<p>画完一个图形后保持图形接着画下一个图形</p>
+<ol start="4">
+<li>图形窗口的分隔【多图】  subplot（m,n,p)</li>
+</ol>
+<blockquote>
+<p>m,n将图形窗口分成m*n个绘图区，p指定当前活动的绘图区</p>
+</blockquote>
+<p>除了完全平分所有的区域，可以把绘图区每次任意切分只要没有重叠部分就好。</p>
+<p><img src="file:///E:%5Cblog%5Chexo%5Csource_posts%5Cimages%5Cmatlab1.png" alt="img"></p>
+<h3 id="4-3-其他形式的二维曲线"><a href="#4-3-其他形式的二维曲线" class="headerlink" title="4.3 其他形式的二维曲线"></a>4.3 其他形式的二维曲线</h3><p><strong>其他坐标系下的二维曲线图</strong></p>
+<ol>
+<li>对数坐标图</li>
+</ol>
+<ul>
+<li>semilogx(x1,y1,选项1，x2,y2，选项2，。。。)</li>
+<li>semilogy(x1,y1,选项1，x2,y2，选项2，。。。)</li>
+<li>loglog(x1,y1,选项1，x2,y2，选项2，。。。)</li>
+</ul>
+<p>其中，第一个x轴为常用对数刻度，y轴为线性刻度。第二个类似，loglog的坐标轴都采用常用对数刻度</p>
+<ol start="2">
+<li>极坐标图 polar(theta,rho,选项)</li>
+</ol>
+<blockquote>
+<p>其中，theta为极角，rho为极径，选项内容和plot相同</p>
+</blockquote>
+<p><strong>统计图</strong> </p>
+<ol>
+<li>条形图</li>
+</ol>
+<ul>
+<li><p>bar函数，绘制垂直条形图 ，</p>
+<p>bar(y,style)，参数y是数据，选项style用于指定分组排列方式，”grouped”簇状分组，“stacked”堆积分组y中每行表述一蔟或者一堆，其中y中每行中的值为该位置的条形高度</p>
+<p>bar(x,y,style)，x存储横坐标，表示每蔟下面的坐标，其他一样。y的行数必须和向量x的长度相同</p>
+</li>
+<li><p>barh函数，绘制水平条形图</p>
+</li>
+</ul>
+<ol start="2">
+<li>直方图</li>
+</ol>
+<ul>
+<li>hist函数：绘制直角坐标系下的直方图</li>
+</ul>
+<p>hist(y)\hist(x,y)  其中y是数据，x用于指定区间的划分方式，若x是标量，则统计区间均分为x个小区间，若x是向量，则向量x中的每一个数指定分组中心值，元素的个数为数据分组数，x缺省时，默认按10个等分区间进行统计。</p>
+<ul>
+<li>rose函数:绘制极坐标系下的直方图   </li>
+</ul>
+<p>rose(theta[,x])其中参数theta用于确定每一区间与原点的角度，选项x用于指定区间的划分方式。</p>
+<ol start="3">
+<li>扇形图和面积图</li>
+</ol>
+<ul>
+<li>扇形图：pie（x,explode)  x存储数据，explode控制图块的显示模式</li>
+<li><img src="file:///E:%5Cblog%5Chexo%5Csource_posts%5Cimages%5Cmatlab2.png" alt="img"></li>
+<li>面积图： area</li>
+</ul>
+<ol start="4">
+<li>散点类图形 scatter(x,y,选项，’filled’)</li>
+</ol>
+<p>其中，x,y用于定位数据点，选项用于指定线型，颜色，数据点标记。如果数据点标记是封闭图形，可以用选项filled指定填充数据点标记。该选项省略时，数据点是空心的。</p>
+<ol start="5">
+<li>矢量类图形</li>
+</ol>
+<ul>
+<li>compass函数：罗盘图</li>
+<li>feather : 羽毛图</li>
+<li>quiver函数：箭头图</li>
+</ul>
+<p>quiver(x,y,u,v)，（x,y）是矢量起点，(u,v)是矢量终点，所有参数是同型矩阵或者大小相同的向量。如果省略x,y则在平面上均匀取若干个点作为起点。</p>
+<h3 id="4-4-三维曲线"><a href="#4-4-三维曲线" class="headerlink" title="4.4 三维曲线"></a>4.4 三维曲线</h3><p><strong>plot3函数</strong> ：plot3(x,y,z)，其中参数向量x,y,z组成一组曲线的坐标</p>
+<p>变化形式：plot3(X,Y,Z) </p>
+<p>当参数X,Y,Z是同型矩阵时，以X，Y，Z对应列元素绘制曲线。当参数中有向量也有矩阵时，向量的长度应该与矩阵相符</p>
+<p>plot3(x1,y1,z1,x2,y2,z2,…,xn,yn,zn)每一组向量构成一组数据点的坐标，绘制一条曲线</p>
+<blockquote>
+<p>可以添加选项</p>
+</blockquote>
+<p><strong>fplot3函数</strong> ：fplot3(funx,funy,funz,tlims)  参数函数</p>
+<p>其中，前三个是坐标函数，通常采用函数句柄的形式。tlims为参数函数自变量的取值范围，用二元向量[tmin,tmax]描述，默认为[-5，5]，也可以用选项控制颜色等属性</p>
+<h3 id="4-5-三维曲面"><a href="#4-5-三维曲面" class="headerlink" title="4.5 三维曲面"></a>4.5 三维曲面</h3><p><strong>平面网格数据的生成</strong>：用矩阵X，Y分别存储每一个小矩形顶点的x坐标和y坐标，矩阵X，Y就是该矩形区域的xy平面网格坐标矩阵，X，Y相同位置的元素，X中Y中第i行第j列的元素，就是区域中第i行第j列的网格点的坐标。</p>
+<ul>
+<li>利用meshgrid函数生成平面网格数据    [X,Y] = meshgrid(x,y);</li>
+</ul>
+<p>其中，参数x,y为向量，存储网格点坐标的为X，Y矩阵，可以xy相同只给一个参数</p>
+<p><strong>绘制三维曲面</strong> ：</p>
+<ul>
+<li>mesh(x,y,z,c)</li>
+<li>surf(x ,y, z, c)</li>
+</ul>
+<p>其中x,y是网格坐标矩阵，z是网格点上的高度矩阵，c用于指定不同高度下的曲面颜色，缺省时颜色设定正比于图形高度。两个函数颜色有区别，</p>
+<blockquote>
+<p>plot3函数就是画出若干三维曲线，这两个函数中间填充网格点</p>
+</blockquote>
+<p>==当x,y省略时，z矩阵的第二维下标当作x轴，第一维当作y轴== </p>
+<ul>
+<li>带等高线的三维网格曲面函数meshc</li>
+<li>带底座的三维网格曲面函数meshz</li>
+<li>具有等高线的曲面函数surfc</li>
+<li>具有光照效果的曲面函数surfl</li>
+</ul>
+<p><img src="file:///E:%5Cblog%5Chexo%5Csource_posts%5Cimages%5Cmatlab3.png" alt="img"></p>
+<p><strong>标准三维曲面</strong> </p>
+<ol>
+<li><p>sphere函数  [x,y,z] = sphere(n)</p>
+<p>产生3个n+1阶的方阵，采用这3个矩阵可以绘制出圆心位于原点，半径为1的单位球体</p>
+</li>
+<li><p>cylinder函数：[x,y,z] = cylinder(R,n)</p>
+</li>
+</ol>
+<p>​        其中，参数R是一个向量，存放组柱面各个等间隔高度上的半径，n表示在圆柱圆周上有n个间隔点，默认有20个间隔点。</p>
+<ol start="3">
+<li>peaks函数</li>
+</ol>
+<ul>
+<li>peaks（n)   </li>
+<li>peaks (V)</li>
+<li>peaks(x,y)</li>
+<li>peaks</li>
+</ul>
+<ol start="4">
+<li>fmesh函数和fsurf函数</li>
+</ol>
+<p>用于绘制参数方程定义的曲面 fsurf(funx,funy,funz,uvlims)另外的类似</p>
+<h2 id="第五章-数据分析"><a href="#第五章-数据分析" class="headerlink" title="第五章 数据分析"></a>第五章 数据分析</h2><h3 id="5-1-数据统计分析"><a href="#5-1-数据统计分析" class="headerlink" title="5.1 数据统计分析"></a>5.1 数据统计分析</h3><p><strong>求最大元素和最小元素</strong></p>
+<ul>
+<li>y = max(X) : 返回向量X的最大值存入y。如果X中包含复数元素，则取模最大的</li>
+<li>[y,k]  = max(X) :返回向量X的最大值存入y， 最大值元素的序号存入k，如果包含复数元素，则按模取最大值</li>
+</ul>
+<p>当参数为矩阵时，函数有三种调用形式：</p>
+<ol>
+<li>max(A):返回一个行向量，向量的第i个元素是矩阵A的第i列上的最大值【即按列求值并返回】</li>
+<li>[Y,U] = max(A):返回行向量Y和U，Y向量记录A中每列的最大值，U向量记录每列最大值元素的行号【即在记录最大值的同时，记录位置】</li>
+<li>max(A,[],dim)：dim取1或2，dim取1时，该函数的功能和max（A）完全相同，取2时。返回列向量，按行返回最大值</li>
+</ol>
+<blockquote>
+<p>将原矩阵转置再按列求最大值就和原矩阵按行求最大值的效果相同</p>
+</blockquote>
+<blockquote>
+<p>一般求整个矩阵的最大值，需要调用两次max，也可以max(A(:))，即把原矩阵堆叠成列向量求最大值</p>
+</blockquote>
+<p><strong>求矩阵的平均值和最大值</strong></p>
+<ul>
+<li>平均值：算术平均数，mean()</li>
+<li>median():   求中值</li>
+</ul>
+<p><strong>求和和求积</strong></p>
+<ul>
+<li>sum()：求和函数</li>
+<li>prod():  求积函数</li>
+</ul>
+<p><strong>累加和与累加积</strong>、</p>
+<ul>
+<li>cumsum():累加和函数</li>
+<li>cumprod()：累乘积函数</li>
+</ul>
+<blockquote>
+<p>累乘积和累加和都是生成一个新向量，第i位元素是原向量的前i项元素之和或者之积</p>
+</blockquote>
+<p><strong>标准差与相关系数</strong></p>
+<p>标准查用于计算数据偏离平均数的距离的平均值，其计算公式<br>$$<br>S_1 = \sqrt{\frac1{N-1}\sum_{i=1}^N(x_i-x^-)^2}<br>$$<br>或者<br>$$<br>S_2 = \sqrt{\frac1N\sum_{n=1}^N(x_i-x^-)^2}<br>$$<br>计算标准差函数是std()，其调用格式为：</p>
+<ol>
+<li>std（X):计算向量X的标准差</li>
+<li>std(A): 计算矩阵A的各列的标准差</li>
+<li>std(A,flag,dim)： flag取0或者1，当flag取0时，按S1所列公式计算样本标准方差，为1时使用S2计算总体标准方差。在默认情况下，flag为0，dim为1.</li>
+</ol>
+<blockquote>
+<p>dim还是按行列求标准差。</p>
+</blockquote>
+<p><strong>相关系数</strong></p>
+<ol>
+<li>corrcoef(A): 返回由矩阵A所形成的一个相关系数矩阵，其中，第i行第j列的元素表示原矩阵A中第i列和第j列的相关系数</li>
+<li>corrcoef(X,Y)：在这里，X，Y是向量。</li>
+</ol>
+<p><strong>排序</strong></p>
+<ol>
+<li>sort(X):对向量X按升序排序</li>
+<li>[Y , I ] =sort(A,dim,mode), 其中dim指明对A的列还是行进行排序，mode指明按升序还是降序排序，如果取“ascend”，则按升序；若取”descend“，则按降序，默认为升序。输出参数中，Y是排序后的矩阵。而I记录Y中的元素在A中位置。</li>
+</ol>
+<h3 id="5-2-多项式计算"><a href="#5-2-多项式计算" class="headerlink" title="5.2 多项式计算"></a>5.2 多项式计算</h3><p><strong>多项式的表示</strong> ： 多项式按照幂次把系数排列</p>
+<p>即$p(x) = a_nx^n+…+a_0$ ,则其多项式的 表示为$[a_n,a_{n-1},..,a_0]$</p>
+<blockquote>
+<ol>
+<li>多项式系数向量的顺序是从高到低</li>
+<li>多项式系数向量包含0次项系数</li>
+<li>有的项没有的话，系数相应位置为0.</li>
+</ol>
+</blockquote>
+<p><strong>多项式的四则运算</strong>： </p>
+<ol>
+<li>多项式的加减运算需要同型，对于最高次数不同的多项式要前面补0</li>
+<li>多项式乘法： conv(P1,P2),</li>
+<li>多项式除法： [Q,r] = deconv(P1,P2):多项式相除，其中Q返回多项式P1除以P2的商式，r返回P1除以P2的余式。这里，Q和r仍是多项式系数向量。deconv是conv的逆函数，因此  P1 = conv(Q,P2) +r</li>
+</ol>
+<p><strong>多项式的求导</strong> ：</p>
+<ol>
+<li>p = polyder(P) :求多项式p的导函数</li>
+<li>p = polyder(P,Q): 求P*Q的导函数</li>
+<li>[p,q] = polyder(P,Q) : 求P/Q的导函数，导函数的分子存入p，分母存入q</li>
+</ol>
+<p><strong>多项式的求值</strong>：</p>
+<ul>
+<li>polyval(p,x) :代数多项式求值，其中，p为多项式系数向量，x可以是标量，向量或者矩阵。若x是标量，则求多项式在该点的值；若x为向量或矩阵，则对向量或者矩阵中的每个元素求多项式的值</li>
+</ul>
+<blockquote>
+<p>就是把x向量中的每个数分别带入p多项式求值</p>
+</blockquote>
+<ul>
+<li>polyvalm( p,x ):矩阵多项式求值，其调用格式与polyval相同，但是含义不同，polyvalm要求x为方阵，做矩阵的乘法运算，而前者是标量的带入点乘运算。</li>
+</ul>
+<blockquote>
+<p>是把x作为咦个方阵整体，带入多项式，做矩阵的乘法</p>
+</blockquote>
+<p><strong>多项式求根</strong> </p>
+<p>在MATLAB中，多项式求根的函数是roots(p), 其中p为多项式的系数向量。求全部实根和共轭复数根</p>
+<p>若已经知道多项式的全部根，则可以用poly函数建立起该多项式， p = poly(x)</p>
+<h3 id="5-3数据插值"><a href="#5-3数据插值" class="headerlink" title="5.3数据插值"></a>5.3数据插值</h3><p>数据插值就是在只有离散数据点的情况下，对中间的数据进行预测插值，以便拟合出合适的曲线</p>
+<p><strong>y1 = interpl(x,y,x1,’spline’)</strong></p>
+<blockquote>
+<p>参数x,y是离散数据点，x1是要进行插值的数据横坐标，’spline’是插值函数的选择函数</p>
+</blockquote>
+<p>从数学上说，数据插值就是一种函数逼近的方法。</p>
+<p>method参数</p>
+<ol>
+<li>linear：线性插值，默认方法。即把靠近的两个数据点用直线连接，然后在直线上选取对应插值点的数据</li>
+<li>nearest：最近点插值。选择最近样本点的值作为插值数据。会出现阶梯形图形</li>
+<li>pchip:分段三次二欸米尔特插值。采用分段三次多项式，除了满足插值条件，还需要满足在若干节点上的响铃段插值节==一阶导数相等==，使得曲线光滑的同时，还具有保形性。</li>
+<li>spline:三次样条插值，每个分段内构造一个三次多项式，使其插值函数除了满足插值条件之外，还要求在个节点处具有==连续的一阶和二阶导数。==</li>
+</ol>
+<blockquote>
+<p>不使用高次多项式是防止震荡，过拟合</p>
+</blockquote>
+<p><strong>四种插值函数的比较</strong></p>
+<ul>
+<li>线性插值和最近点插值方法简单，其中线性插值方法的计算量和样本点n无关，n越大，误差越小</li>
+<li>3次欸米尔特插值和3次样条插值都能保持曲线的光滑性。相比较而言，3次欸米尔特插值具有保形性。而3次样条插值要求其二阶导数也连续，所以插值函数的性态更好</li>
+</ul>
+<p><strong>二维插值函数</strong> </p>
+<p>Z1 = interp2(X,Y,Z,X1,Y1,method)</p>
+<p>和一维没有什么不同，只有二维不支持pchip方法。</p>
+<h3 id="5-4-曲线拟合"><a href="#5-4-曲线拟合" class="headerlink" title="5.4 曲线拟合"></a>5.4 曲线拟合</h3><ol>
+<li>P = polyfit (X, Y, m)</li>
+<li>[P, S] = polyfit (X,Y,m)</li>
+<li>[P, S,mu] = polyfit (X,Y, m):根据样本数据X和Y，==产生一个m次多项式== P以及其在采样点误差数据S，mu是一个二元向量，mu（1）是X的均值，mu（2）是X的标准差</li>
+</ol>
+<blockquote>
+<p>使用曲线拟合数据的时候可以适当采用分段拟合，还要设置合适的次数。</p>
+</blockquote>
+<h2 id="第六章-数值微积分与方程求解"><a href="#第六章-数值微积分与方程求解" class="headerlink" title="第六章 数值微积分与方程求解"></a>第六章 数值微积分与方程求解</h2><h3 id="6-1-数值微分与数值积分"><a href="#6-1-数值微分与数值积分" class="headerlink" title="6.1 数值微分与数值积分"></a>6.1 数值微分与数值积分</h3><p><strong>数值微分</strong> </p>
+<ol>
+<li>数值差分和差商</li>
+</ol>
+<p>微积分中，任意函数f(x)在X0点的导数是通过极限定义的：</p>
+<p><img src="file:///E:%5Cblog%5Chexo%5Csource_posts%5Cimages%5Cmatlab4.png" alt="img"></p>
+<p>函数的微分接近于函数在该点的差分，导数接近于函数在该点的差商。</p>
+<ol start="2">
+<li>数值微分的实现</li>
+</ol>
+<ul>
+<li>dx = diff(x): 计算向前差分，dx(i) = x(i+1) - x(i), i= 1,2,…n-1</li>
+<li>dx = diff(x,n) :计算向量x的n阶向前差分</li>
+<li>dx = diff(A, n, dim) :计算矩阵A的n阶差分，dim=1时，（默认状态）,按列计算差分。dim =2，按行计算差分</li>
+</ul>
+<p>注意：==diff函数计算的是向量元素间的差分，故差分向量元素的个数比原向量少了一个。同样，对于矩阵来说，差分后的矩阵比原矩阵少了一行或者一列。==</p>
+<p>另外，计算差分之后，可以用函数在某点处的差商作为其导数的近视值。</p>
+<p><strong>数值积分</strong></p>
+<p>求定积分的数值方法多种多样，如梯形法，希普森法，高斯求积公式等。它们的基本思想都是把积分区间【a,b】分成n个子区间$[x_i,x_{i+1}]$  i =1,2,…n,。在每一个的子区间上定积分的值可以近似求得，从而避免了牛顿—莱布尼兹公式在寻找原函数的困难</p>
+<p><strong>数值积分的实现</strong>：</p>
+<ul>
+<li>基于自适应辛普森方法：[ I , n ] = quad (filename ,a,b,tol,trace)</li>
+<li>基于自适应Gauss-Lobatto方法，[I , n] = quadl(filename , a ,b, tol , trace)</li>
+</ul>
+<p>其中，filename是被积函数名：a和b分别是定积分的下限和上限，积分限[a, b]必须是有限的，不能为无穷大（Inf），tol用来控制积分精度，默认时取$tol =10^{-6}$ ;trace控制是否展现积分过程，若取非0则展现积分过程，取0则不展现，默认时取trace = 0；返回参数I即定积分的值，n为被积函数的调用次数。</p>
+<ul>
+<li>基于全局自适应积分方法 I =intergral(filename,a,b)</li>
+</ul>
+<p>其中，I是计算得到的积分；filename是被积函数，a和b分别是定积分的下限和上限，积分限可以为无穷大。</p>
+<ul>
+<li>基于自适应高斯-克朗罗德方法 [I ,err] = quadgk(filename , a, b)</li>
+</ul>
+<p>其中，err返回近似误差范围，其它参数的含义和用法与quad函数相同。积分上下限可以是无穷大，也可以是复数，如果积分上下限是复数，则quadgk函数在复平面上求积分。</p>
+<ul>
+<li>基于梯形积分法  I = trapz(x,y)</li>
+</ul>
+<p>其中，向量x，y定义函数关系 y = f(x)</p>
+<p>trapz函数采用梯形积分法则，积分的近似值为，$I =\sum_{i=1}^{n-1}h_i\frac{y_{i+1}+y_i}2$ 其中，$h_i = x_{i+1} - x_i$  .</p>
+<p><strong>多重定积分的数值求解</strong> </p>
+<ul>
+<li><p>求二重积分的数值解：</p>
+<p>I = intergral2(filename, a, b, c, d)</p>
+<p>I = quad2d(filename, a, b, c, d)</p>
+<p>I = dblquad(filename, a, b, c, d, tol)</p>
+</li>
+<li><p>求三重积分的数值解</p>
+<p>I = intergral3(filename,a ,b ,c,d,e,f)</p>
+<p>I = triplequad(filename,a,b,c,d,e,f,tol)</p>
+</li>
+</ul>
+<h3 id="6-2-线性方程组求解"><a href="#6-2-线性方程组求解" class="headerlink" title="6.2 线性方程组求解"></a>6.2 线性方程组求解</h3><ul>
+<li>高斯消元法</li>
+<li>列主元消去法</li>
+<li>矩阵的三角分解法</li>
+</ul>
+<ol>
+<li><p>利用左除运算符“&quot;用于求解线性方程组，它使用列主元消去法，使用起来十分方便，对于线性方程组Ax = b，可以利用左除运算符反斜杠求解，b左除A可以获得线性方程组的数值解x。 Ax =b  –&gt; x = A\b  ==如果A是奇异的或者接近奇异的，则MATLAB会给出警告信息== </p>
+</li>
+<li><p>矩阵分解是设计算法的重要技巧。矩阵分解方法求解线性方程组的优点是运算熟读块，可以节省存储空间。</p>
+<ul>
+<li>LU分解</li>
+<li>QR分解</li>
+<li>Cholesky分解</li>
+</ul>
+<p><strong>LU分解</strong> ：矩阵的LU分解 是将一个n阶矩阵表示为一个下三角矩阵和一个上三角矩阵的乘积，只要方阵是非奇异的，LU分解总是可以进行的。</p>
+<p>Ax = b –&gt;  LUx = b  -&gt;  { Ly = b   Ux = y}</p>
+<p>可以先求解Ly = b，在求解Ux = y </p>
+</li>
+</ol>
+<ul>
+<li>[L, U]  =lu(A) : 产生一个三三角矩阵何以变换形式的下三角矩阵L，使之满足A =LU。==矩阵A必须是方阵==</li>
+<li>[L, U, P]= lu(A)  进行LU变换和产生一个置换矩阵P，使之满足PA = LU。【行变换】</li>
+</ul>
+<p>==使用第一种格式时，矩阵L往往不是一个下三角矩阵，但是可以通过行交换成为一个下三角阵。==</p>
+<p>进行LU分解之后   x = U\ (L\b)    or    x =U\ (L \ p*b)</p>
+<p><strong>线性方程组的迭代解法</strong> </p>
+<p>迭代法是一种不断用变量的原值推出它的新值的过程，是用计算机解决问题的一种基本方法</p>
+<ol>
+<li>雅可比迭代法 (D - L - U) x =b </li>
+</ol>
+<blockquote>
+<p>D 是对角矩阵，L是下三角，U是上三角矩阵</p>
+</blockquote>
+<p>所以  $x = D^{-1}(L + U)x + D^{-1} b$ 迭代式为 $x^{(k+1)}= D^{-1}(L + U)x^{(k)} + D^{-1} b$ </p>
+<p>实例</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[y,n]</span>=<span class="title">jacobi</span> <span class="params">(A,b,x0,ep)</span></span></span><br><span class="line"># y是解，n是迭代次数，A是系数矩阵，b是结果向量，x0是迭代初值，ep是精度</span><br><span class="line">D = <span class="built_in">diag</span>(<span class="built_in">diag</span>(A));</span><br><span class="line">L = -<span class="built_in">tril</span>(A,<span class="number">-1</span>);</span><br><span class="line">U = -<span class="built_in">tril</span>(A ,<span class="number">1</span>);</span><br><span class="line">B = D \(L+U);</span><br><span class="line">f = D\b;</span><br><span class="line">y = B*x0 +f;</span><br><span class="line">n =<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (norm(y-x0)&gt;=ep)</span><br><span class="line">	x0 = y;</span><br><span class="line">	y = B*x0 +f;</span><br><span class="line">	n = n+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>高斯 - 塞尔德迭代法</li>
+</ol>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[y,n]</span>=<span class="title">jacobi</span> <span class="params">(A,b,x0,ep)</span></span></span><br><span class="line">D = <span class="built_in">diag</span>(<span class="built_in">diag</span>(A));</span><br><span class="line">L = -<span class="built_in">tril</span>(A,<span class="number">-1</span>);</span><br><span class="line">U = -<span class="built_in">tril</span>(A ,<span class="number">1</span>);</span><br><span class="line">B = (D-L)\U;  # 迭代规则的改变</span><br><span class="line">f = (D-L)\b;</span><br><span class="line">y = B*x0 +f;</span><br><span class="line">n =<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (norm(y-x0)&gt;=ep)</span><br><span class="line">	x0 = y;</span><br><span class="line">	y = B*x0 +f</span><br><span class="line">	n = n+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>一般用高斯-塞尔德迭代法迭代次数更少，但是有时候可能会不收敛。。实际运用的时候可以都试试</p>
+<p>直接法：占据内存空间比较大，程序实现较为复杂，一般适合求解低阶稠密线性方程组</p>
+<p>迭代法： 从给定的初始值逐步逼近精确解的过程，求解内存占用少，程序设计简单，适用于求解大型稀疏矩阵线性方程组，要考虑算法的收敛性。</p>
+<h3 id="6-3-非线性方程求解和函数极值计算"><a href="#6-3-非线性方程求解和函数极值计算" class="headerlink" title="6.3 非线性方程求解和函数极值计算"></a>6.3 非线性方程求解和函数极值计算</h3><p><strong>非线性方程数值求解</strong> </p>
+<ol>
+<li>单变量非线性方程求解  x = fzero(filename,x0)  其中，filename是待求根方程左端的函数表达式，x0是初始值</li>
+</ol>
+<blockquote>
+<p>一般filename使用函数句柄或者函数文件</p>
+</blockquote>
+<p>==在使用fzero函数时，初值的选择是非常重要的，不同的初值影响不同的解，又是甚至有错误解== fzero函数执行的是一个数值搜索过程，搜索结果依赖于函数特性和指定的初值</p>
+<ol start="2">
+<li>非线性方程组的求解 x =fsolve(filename , x0, option)</li>
+</ol>
+<blockquote>
+<p>其中，x为返回的近似解，filename是待求根方程左端的函数表达式，x0是初值，option用于设置优化工具箱的优化参数，可以调用optimset函数来完成，例如。==Display参数设置为’off’时不显示中间结果== 即 x1 = fsolve(f,-5,optimset(‘Display’,  ‘off’))</p>
+</blockquote>
+<p><strong>多角度分析问题，使用不同函数进行求解，进行分析比较很重要</strong></p>
+<p><strong>函数极值的计算</strong></p>
+<p>MATLAB只考虑最小值问题的计算，如果是要求f的最大值，就可以通过求-f(x)的最小值来解决</p>
+<ol>
+<li>无约束最优化问题</li>
+</ol>
+<ul>
+<li>[xmin, fmin]  = fminbnd(filename , x1 , x2, option)</li>
+<li>[xmin,fmin] = fminsearch(filename , x0 ,option)</li>
+<li>[xmin , fmin] = fminunc(filename, x0,option)</li>
+</ul>
+<blockquote>
+<p>xmin是极小值点，fmin是最小值。filename是定义的目标函数。第一个函数的输入变量x1，x2分别表示被研究区间的左，右边界。后两个函数的输入变量x0是一个向量，表示极值点的初值，option为优化参数，可以通过optimset函数来设置</p>
+</blockquote>
+<ol start="2">
+<li>有约束最优化问题</li>
+</ol>
+<p>约束条件可以分为，线性不等式约束，线性等式约束，非线性不等式约束，非线性等式约束以及x的下界和上界。</p>
+<p>[xmin,fmin]  =fmincon(filename , x0, A, b ,Aeq,beq,Lbnd,Ubnd ,NonF , option)</p>
+<blockquote>
+<p>其中，xmin，fmin，filename,x0和option的含义和求最小值函数相同，其余参数为约束条件，包括线性不等式约束A，b，线性等式约束Aeq,beq，x的下界和上界Lbnd,Ubnd以及定义非线性约束的函数，如果某个约束不存在，则用空矩阵表示</p>
+</blockquote>
+<h3 id="6-4-常微分方程数值求解"><a href="#6-4-常微分方程数值求解" class="headerlink" title="6.4 常微分方程数值求解"></a>6.4 常微分方程数值求解</h3><ul>
+<li>单步法：在计算$y_{n+1}$时只用到前一步的$y_n$,因此在有了初值之后就可以逐步往下计算，其代表是龙格-库塔法。</li>
+<li>多步法：在计算$y_{n+1}$时，除了用到前一步的值之外，还要用到前面k步的值，代表是亚当斯法</li>
+</ul>
+<p>[t , y] = solver(filename , tspan , y0, option)</p>
+<blockquote>
+<p>其中，t和y分别给出时间向量和相应的数值解，solver为求常微分方程数值解的函数，filename是定义f（t,y)的函数名，==该函数必须返回一个列向量== 。tspan形式为[t0 ,tf]，表示求解区间，y0是初始状态向量。option是可选参数，用于设置求解属性，常用的属性包括相对误差值RelTol（默认值是0.001）和绝对误差值AbsTol（默认值是$10^{-6}$ ）</p>
+</blockquote>
+<p>常微分方程数值求解函数的统一命名格式：odennxx</p>
+<ul>
+<li>ode是常微分方程的缩写</li>
+<li>nn是数字，代表所用方法的阶数，例如，0de23是采用2阶龙格-库塔算法，用三阶公式做误差估计来调节步长，具有低等精度</li>
+<li>xx是字母，用于标注方法的专门特征，例如ode15s,ode23s中的s代表Stiff,表示函数适用于刚性方程</li>
+</ul>
+<p><img src="file:///E:%5Cblog%5Chexo%5Csource_posts%5Cimages%5Cmatlab5.png" alt="img"></p>
+<ol start="3">
+<li>刚性问题</li>
+</ol>
+<p>有一类常微分方程，其解的分量有的变化很快，有的变化很慢，而且相差悬殊，这就是所谓的刚性问题。对于刚性问题，数值解算法必须取很小步长才能获得满意结果，导致计算量会大大增加。</p>
+<p>tic,toc；记时。tic启动计时器，使用toc函数显示从计时器启动到当前所经历的时间。</p>
+<p>对于刚性问题，我们需要改变求解算法，选择以‘s’结尾的函数，他们专门用于求解刚性方程，计算时间大大缩短。</p>
+<h2 id="第七章-符号计算"><a href="#第七章-符号计算" class="headerlink" title="第七章 符号计算"></a>第七章 符号计算</h2><h3 id="7-1-符号对象"><a href="#7-1-符号对象" class="headerlink" title="7.1 符号对象"></a>7.1 符号对象</h3><p>*<em>符号对象的建立 *</em></p>
+<ol>
+<li>sym函数  用于建立==单个符号对象==，其常用调用格式为”符号对象名 = sym(A)</li>
+</ol>
+<p>将由A来建立符号对象，其中，A可以是一个数值常量，数值矩阵或数值表达式（不加单引号），此时符号对象为一个符号常量。A也可以是一个变量名，（加单引号）。这时符号对象为一个符号变量。   sin(sym(pi/3))</p>
+<p>==符号计算的结果是一个精确的数学表达式，更像是一种数学推导，而数值计算的结果是一个数值==</p>
+<ol start="2">
+<li>syms命令可以一次定义多个符号变量，其一般调用格式如下：syms 符号变量名1，符号变量名2 .。。。符号变量名n</li>
+</ol>
+<blockquote>
+<p>其中变量名不能加单引号，相互之间用空格隔开。syms a b c d</p>
+</blockquote>
+<p><strong>符号对象的计算</strong> </p>
+<ol>
+<li>四则运算</li>
+</ol>
+<p>符号表达式的四则运算与数值运算一样，用+,-,*,/,^运算符实现，其运算结果仍然是一个符号表达式。</p>
+<ol start="2">
+<li>关系运算</li>
+</ol>
+<ul>
+<li>6中关系运算符： &lt; , &lt;=, &gt; ,&gt;= , == , ~= </li>
+<li>对应的6个函数，lt(),le().gt(),ge(),eq(),ne()</li>
+</ul>
+<p>如果参与运算的是符号表达式，其结果是一个符号关系表达式，若参与运算的是符号矩阵，其结果是由符号关系表达式组成的矩阵。</p>
+<p>在进行符号对象的运算前，可用assume函数对符号对象设置值域，函数调用格式为”assume(conditon)  or assume(expr,set)</p>
+<blockquote>
+<p>第一种格式指定变量满足的条件，第二种格式指定表达式expr属于集合set</p>
+</blockquote>
+<p><img src="file:///E:%5Cblog%5Chexo%5Csource_posts%5Cimages%5Cmatlab6.png" alt="img"></p>
+<ol start="3">
+<li>逻辑运算</li>
+</ol>
+<ul>
+<li>3种逻辑运算符， &amp; ,| ,~ </li>
+<li>4个逻辑运算函数  and(a,b)  or(a ,b) .not(a), xor(a,b)</li>
+</ul>
+<ol start="4">
+<li>因式分解和展开运算</li>
+</ol>
+<ul>
+<li>factor(s): 对符号表达式s分解因式</li>
+<li>expand(s) :对符号表达式s进行展开</li>
+<li>collect(s) :对符号表达式s合并同类项</li>
+<li>collect(s,v) : 对符号表达式s按变量v合并同类项</li>
+</ul>
+<p>eval()  显示符号表达式的值</p>
+<ol start="5">
+<li>其他运算</li>
+</ol>
+<ul>
+<li>提取有理分式的分子分母：[n , d] = numden(s)</li>
+<li>提取符号表达式的系数： c = coeffs(s,x)</li>
+<li>符号表达式化简   simplify(s)</li>
+<li>符号多项式和多项式系数向量之间的转换</li>
+</ul>
+<blockquote>
+<p>符号多项式转换成多项式系数向量：p  = sym2poly(s)</p>
+<p>多项式系数向量转换为符号多项式:    s  =  poly2sym(p)</p>
+</blockquote>
+<ol start="6">
+<li>符号运算中的变量的确定</li>
+</ol>
+<ul>
+<li><p>如果没有明确指定自变量，MATLAB将按以下原则确定主变量并对其进行相应运算</p>
+<blockquote>
+<p>寻找除i,j之外，在字母顺序上最接近x的小写字母。</p>
+<p>若表达式中有两个符号变量和x的距离相等，则ASCII码大的优先</p>
+</blockquote>
+</li>
+<li><p>symvar()函数可以用来查找一个符号表达式中的符号变量，函数的调用格式为：symvar(s,n)函数返回符号变量s中的n个符号变量，可以用symvar(s,1)查找表达式s 的主变量。</p>
+</li>
+</ul>
+<p><strong>符号矩阵</strong> </p>
+<p>符号矩阵也是一种符号表达式，所以符号表达式的运算都可以在矩阵意义下进行。</p>
+<p>==注意：这些函数作用于符号矩阵时，是分别作用于矩阵的每一个元素==</p>
+<h3 id="7-2-符号微积分"><a href="#7-2-符号微积分" class="headerlink" title="7.2 符号微积分"></a>7.2 符号微积分</h3><p><strong>符号函数的极限</strong></p>
+<ul>
+<li>limit(f,x,a)  求函数f关于变量x在a点的极限</li>
+<li>limit函数的另一种功能是求单边极限，其调用格式是  limit(f,x,a,’right’) limit(f,x,a,’left’);</li>
+</ul>
+<p><strong>符号函数的导数</strong></p>
+<p>diff(f,x,n)  即求函数f关于变量x的n阶导数，参数x的用法同求极限函数limit，可以缺省，默认值和limit相同，n的默认值是1</p>
+<p><strong>符号函数的积分</strong> </p>
+<ol>
+<li><p>不定积分  int(f,x)，即求函数f对变量x的不定积分</p>
+</li>
+<li><p>定积分 ： int(f,x,a,b)，其中a,b分别表示定积分的上限和下限</p>
+<blockquote>
+<ul>
+<li>当函数f关于变量下在闭区间[a,b]可积时，函数返回一个定积分结果</li>
+<li>当a,b中有一个是inf时，函数返回一个广义积分</li>
+<li>当a,b中有个符号表达式时，函数返回一个符号函数</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<h2 id="外部接口"><a href="#外部接口" class="headerlink" title="外部接口"></a>外部接口</h2><p><strong>将EXcel中的数据导出到AMTLAB工作空间</strong> </p>
+<ol>
+<li>选中要处理的数据</li>
+<li>选择”send data to MATLAB”命令</li>
+<li>在弹出的对话框中填入变量名，单击“确定”按钮完成导出操作</li>
+</ol>
+<blockquote>
+<p>因为选中的各列数据类型不用，所以sale为cell数组</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/语言/" rel="tag"># 语言</a>
+          
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
+          
+            <a href="/tags/matlab/" rel="tag"># matlab</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/13/vim/" rel="next" title="vim">
+                <i class="fa fa-chevron-left"></i> vim
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/title.jpg" alt="莫久">
+            
+              <p class="site-author-name" itemprop="name">莫久</p>
+              <p class="site-description motion-element" itemprop="description">学习笔记</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章-基础知识"><span class="nav-number">1.</span> <span class="nav-text">第一章  基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-数值数据"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 数值数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-变量及其操作"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 变量及其操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-矩阵的表示"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 矩阵的表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-矩阵元素的引用"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 矩阵元素的引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-基本运算"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 基本运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-字符串处理"><span class="nav-number">1.6.</span> <span class="nav-text">1.7 字符串处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章-矩阵处理"><span class="nav-number">2.</span> <span class="nav-text">第二章 矩阵处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-特殊矩阵"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 特殊矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-矩阵变换"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 矩阵变换*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-矩阵求值"><span class="nav-number">2.3.</span> <span class="nav-text">2.3  矩阵求值*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-矩阵的特征值"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 矩阵的特征值*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-稀疏矩阵"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 稀疏矩阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章-程序流程控制"><span class="nav-number">3.</span> <span class="nav-text">第三章 程序流程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-选择结构"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 选择结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-循环结构"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 循环结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-函数文件的定义和调用"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 函数文件的定义和调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-函数的递归调用"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 函数的递归调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-函数参数和变量的作用域"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 函数参数和变量的作用域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章-绘图"><span class="nav-number">4.</span> <span class="nav-text">第四章 绘图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-二维曲线"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 二维曲线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-辅助操作"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 辅助操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-其他形式的二维曲线"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 其他形式的二维曲线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-三维曲线"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 三维曲线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-三维曲面"><span class="nav-number">4.5.</span> <span class="nav-text">4.5 三维曲面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五章-数据分析"><span class="nav-number">5.</span> <span class="nav-text">第五章 数据分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-数据统计分析"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 数据统计分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-多项式计算"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 多项式计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3数据插值"><span class="nav-number">5.3.</span> <span class="nav-text">5.3数据插值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-曲线拟合"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 曲线拟合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六章-数值微积分与方程求解"><span class="nav-number">6.</span> <span class="nav-text">第六章 数值微积分与方程求解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-数值微分与数值积分"><span class="nav-number">6.1.</span> <span class="nav-text">6.1 数值微分与数值积分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-线性方程组求解"><span class="nav-number">6.2.</span> <span class="nav-text">6.2 线性方程组求解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-非线性方程求解和函数极值计算"><span class="nav-number">6.3.</span> <span class="nav-text">6.3 非线性方程求解和函数极值计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-常微分方程数值求解"><span class="nav-number">6.4.</span> <span class="nav-text">6.4 常微分方程数值求解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七章-符号计算"><span class="nav-number">7.</span> <span class="nav-text">第七章 符号计算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-符号对象"><span class="nav-number">7.1.</span> <span class="nav-text">7.1 符号对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-符号微积分"><span class="nav-number">7.2.</span> <span class="nav-text">7.2 符号微积分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外部接口"><span class="nav-number">8.</span> <span class="nav-text">外部接口</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">莫久</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
