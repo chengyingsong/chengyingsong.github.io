@@ -508,16 +508,27 @@
 
       
         
-          
-          turtle库
-引入模块 import turtle
-turtle.setup(a,b,c,d)  a,b决定绘制界面的长和宽，，c,d决定绘图界面出现在屏幕的位置，若无设置默认为出现在屏幕中央。
-
-turtle坐标体系 
-绝对坐标，在绘图界面中的坐标系的坐标
-
-turtle.goto()     
-          ...
+          <h2 id="turtle库"><a href="#turtle库" class="headerlink" title="turtle库"></a>turtle库</h2><ul>
+<li>引入模块 import turtle</li>
+<li>turtle.setup(a,b,c,d)  a,b决定绘制界面的长和宽，，c,d决定绘图界面出现在屏幕的位置，若无设置默认为出现在屏幕中央。</li>
+</ul>
+<p><strong>turtle坐标体系</strong> </p>
+<p>绝对坐标，在绘图界面中的坐标系的坐标</p>
+<ul>
+<li>turtle.goto()     线性绝对坐标的移动  </li>
+</ul>
+<p>空间坐标（海龟坐标），以海龟的视角，前后左右方向的坐标</p>
+<ul>
+<li>turtle.bk(d)  海龟后退d单位</li>
+<li>turtle.fd(d)  海龟前进d单位</li>
+<li>turtle.circle(r,angle)  海龟向左前方以半径r移动angle角度</li>
+</ul>
+<p>绝对角度坐标 以角度为坐标</p>
+<ul>
+<li>turtle.seth(angle) 改变海龟前进的方向角度 （有负角）</li>
+<li>turtle.left（angle) 海龟向左移动angle角</li>
+<li>turtle.right(angle) 海龟向右移动angle角</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/07/12/python pages/#more" rel="contents">
