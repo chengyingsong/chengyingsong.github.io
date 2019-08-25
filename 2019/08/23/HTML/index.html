@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="柠檬笔记">
 <meta property="og:description" content="1234&amp;lt;html&amp;gt; 与 &amp;lt;/html&amp;gt; 之间的文本描述网页&amp;lt;body&amp;gt; 与 &amp;lt;/body&amp;gt; 之间的文本是可见的页面内容&amp;lt;h1&amp;gt; 与 &amp;lt;/h1&amp;gt; 之间的文本被显示为标题&amp;lt;p&amp;gt; 与 &amp;lt;/p&amp;gt; 之间的文本被显示为段落  HTML  HTML基础 HTML（Hyper Text Markup Language">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-23T08:40:56.485Z">
+<meta property="og:updated_time" content="2019-08-25T01:19:54.379Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML">
 <meta name="twitter:description" content="1234&amp;lt;html&amp;gt; 与 &amp;lt;/html&amp;gt; 之间的文本描述网页&amp;lt;body&amp;gt; 与 &amp;lt;/body&amp;gt; 之间的文本是可见的页面内容&amp;lt;h1&amp;gt; 与 &amp;lt;/h1&amp;gt; 之间的文本被显示为标题&amp;lt;p&amp;gt; 与 &amp;lt;/p&amp;gt; 之间的文本被显示为段落  HTML  HTML基础 HTML（Hyper Text Markup Language">
@@ -376,7 +376,7 @@
 <p><strong>空的 HTML 元素</strong></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">没有内容的 HTML 元素被称为空元素。空元素是在开始标签中关闭的。</span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span> 就是没有关闭标签的空元素（<span class="tag">&lt;<span class="name">br</span>&gt;</span> 标签定义换行）。</span><br><span class="line">在 XHTML、XML 以及未来版本的 HTML 中，所有元素都必须被关闭。</span><br><span class="line">在开始标签中添加斜杠，比如 <span class="tag">&lt;<span class="name">br</span> /&gt;</span>，是关闭空元素的正确方法，HTML、XHTML 和 XML 都接受这种方式。</span><br><span class="line">即使 <span class="tag">&lt;<span class="name">br</span>&gt;</span> 在所有浏览器中都是有效的，但使用 <span class="tag">&lt;<span class="name">br</span> /&gt;</span> 其实是更长远的保障。</span><br></pre></td></tr></table></figure>
 <p><strong>提示：最好使用小写标签</strong></p>
-<p><strong>HTML属性</strong> ：属性总是以名称/值对的形式出现： 比如： name = “value”</p>
+<p><strong>HTML属性</strong> ：属性总是以名称/值对的形式出现： 比如： name = “value”</p>
 <p>属性总是在HTML元素的开始标签中规定</p>
 <p>实例： HTML链接由&lt; a&gt;标签定义。链接的地址在href属性中定义</p>
 <p>更多实例：</p>
@@ -435,6 +435,202 @@
 </blockquote>
 <p>改变文字方向</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; <span class="attr">bdo</span> <span class="attr">dir</span>=<span class="string">"rtl"</span>&gt;</span> <span class="tag">&lt;/<span class="name">bdo</span>&gt;</span>  反向输出</span><br></pre></td></tr></table></figure>
+<p>块引用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">blockquote</span>&gt;</span></span><br><span class="line">    长引用</span><br><span class="line"><span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">q</span>&gt;</span></span><br><span class="line">    短引用【加引号】</span><br><span class="line"><span class="tag">&lt;/<span class="name">q</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">cite</span>&gt;</span> 定义引用，引证</span><br><span class="line"><span class="tag">&lt;<span class="name">dfn</span>&gt;</span>  定义一个定义项目<span class="tag">&lt;/<span class="name">dfn</span>&gt;</span></span><br><span class="line">使用blockquote元素的话，浏览器会插入换行和外边距，而q元素不会有任何特殊的呈现。</span><br></pre></td></tr></table></figure>
+<p>删除字效果和插入字效果</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    一打有<span class="tag">&lt;<span class="name">del</span>&gt;</span> 删除字<span class="tag">&lt;/<span class="name">del</span>&gt;</span> <span class="tag">&lt;<span class="name">ins</span>&gt;</span> 下划线<span class="tag">&lt;/<span class="name">ins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>&lt; q&gt;</strong> 用于短的引用，通常会包围引号。</p>
+<p>&lt; blockquote&gt;通常用于长引用，浏览器会对元素进行缩进处理。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>以下内容引用自 WWF 的网站：<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">blockquote</span> <span class="attr">cite</span>=<span class="string">"http://www.worldwildlife.org/who/index.html"</span>&gt;</span></span><br><span class="line">五十年来，WWF 一直致力于保护自然界的未来。</span><br><span class="line">世界领先的环保组织，WWF 工作于 100 个国家，</span><br><span class="line">并得到美国一百二十万会员及全球近五百万会员的支持。</span><br><span class="line"><span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>&lt; abbr&gt;用于缩略词，定义缩写或者首字母缩略语，对缩写进行标记能够为浏览器，翻译系统以及搜索引擎提供有用的信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;abbr title=&quot;World Health Organization&quot;&gt;WHO&lt;/abbr&gt; 成立于 1948 年。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>HTML&lt; address&gt;元素定义文档或者文章的联系信息（作者/拥有者），此元素通常以斜体显示，大多数浏览器会在此元素前后添加折行。</p>
+<p>HTML&lt; cite&gt;元素定义著作的标题，浏览器通常会以斜体显示&lt; cite&gt;元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">cite</span>&gt;</span>The Scream<span class="tag">&lt;/<span class="name">cite</span>&gt;</span> by Edward Munch. Painted in 1893.</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>HTML&lt; bdo&gt;用于双向重写，定义双流向覆盖</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bdo</span> <span class="attr">dir</span>=<span class="string">"rtl"</span>&gt;</span> This test will be written from right to left<span class="tag">&lt;/<span class="name">bdo</span>&gt;</span>  #换个方向</span><br></pre></td></tr></table></figure>
+<p><strong>HTML引文，引用和定义元素</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">标签</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&lt; abbr&gt;</td>
+<td style="text-align:left">定义缩写或首字母缩略语。</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt; address&gt;</td>
+<td style="text-align:left">定义文档作者或拥有者的联系信息。</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt; bdo&gt;</td>
+<td style="text-align:left">定义文本方向。</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt; blockquote&gt;</td>
+<td style="text-align:left">定义从其他来源引用的节。</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt; dfn&gt;</td>
+<td style="text-align:left">定义项目或缩略词的定义。</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt; q&gt;</td>
+<td style="text-align:left">定义短的行内引用。</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt; cite&gt;</td>
+<td style="text-align:left">定义著作的标题。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>HTML计算机代码格式</strong>：&lt; kbd&gt;,&lt; samp&gt;,&lt; code&gt;元素都支持固定的字母尺寸和间距</p>
+<p><strong>HTML键盘格式</strong> ：HTML&lt; kbd&gt;元素定义<strong>键盘输入</strong></p>
+<p>HTML&lt; samp&gt;元素定义<strong>计算机输出示例</strong></p>
+<p>HTML&lt; code&gt;元素定义<strong>编程代码示例</strong></p>
+<p><mark>注释： &lt; code&gt;元素<strong>不保留</strong>多余的空格和折行，要使代码的对齐整洁，必须在&lt; pre&gt;元素中包围代码</mark></p>
+<p>HTML&lt; var&gt;元素定义数学变量：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Einstein wrote:<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">var</span>&gt;</span>E = m c<span class="tag">&lt;<span class="name">sup</span>&gt;</span>2<span class="tag">&lt;/<span class="name">sup</span>&gt;</span><span class="tag">&lt;/<span class="name">var</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>HTML 计算机代码元素</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">标签</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&lt; code&gt;</td>
+<td style="text-align:left">定义计算机代码文本</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt; kbd&gt;</td>
+<td style="text-align:left">定义键盘文本</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt; samp&gt;</td>
+<td style="text-align:left">定义计算机代码示例</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt; var&gt;</td>
+<td style="text-align:left">定义变量</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt; pre&gt;</td>
+<td style="text-align:left">定义预格式化文本</td>
+</tr>
+</tbody>
+</table>
+<p><strong>HTML注释</strong>： &lt; !--  在这里写注释 --&gt;</p>
+<p>在开始标签中有个惊叹号，但是结束标签没有，浏览器不会显示注释，但是能够帮助记录你的HTML文档。可以用注释在HTML中放置通知和提醒信息：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 这是一段注释 --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 记得在此处添加信息 --&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>条件注释</strong> ：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--[if IE 8]&gt;</span></span><br><span class="line"><span class="comment">    .... some HTML here ....</span></span><br><span class="line"><span class="comment">&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
+<p>条件注释定义只有IE执行的HTML标签</p>
+<p><strong>软件程序标签</strong>：各种HTML软件程序也能够生成HTML注释。例如&lt; !-- webbot bot–&gt;标签会被包围在由FrontPage和Expression Web创建的HTML注释中。</p>
+<h3 id="html-css"><a class="markdownIt-Anchor" href="#html-css"></a> HTML CSS</h3>
+<blockquote>
+<p>通过使用HTML4.0，所有的格式化代码都可移出HTML文档，然后移入一个独立的样式表中</p>
+</blockquote>
+<p><strong>实例</strong></p>
+<p>HTML中的样式，添加在&lt; head&gt;部分的样式信息对HTML进行格式化</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-tag">h1</span> &#123;<span class="attribute">color</span>: red&#125;</span></span><br><span class="line"><span class="css"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: blue&#125;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>header 1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>A paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>没有下划线的链接</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=gb2312"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Language"</span> <span class="attr">content</span>=<span class="string">"zh-cn"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/example/html/lastpage.html"</span> <span class="attr">style</span>=<span class="string">"text-decoration:none"</span>&gt;</span></span><br><span class="line">这是一个链接！</span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>链接到一个外部样式表</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"/html/csstest1.css"</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>我通过外部样式表进行格式化。<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我也一样！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>当浏览器读到一个样式表，它就会按照这个样式表来对文档进行格式化。有以下三种方式来插入样式表</p>
+<ol>
+<li><strong>外部 样式表</strong></li>
+</ol>
+<p>当样式需要被应用到很多页面的时候，外部样式表将是理想的选择。使用外部样式表，你就可以通过更改一个文件来改变整个站点的外观。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"mystyle.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><strong>内部样式表</strong></li>
+</ol>
+<p>当单个文件需要特别样式时，就可以使用内部样式表。你可以在head部分通过&lt; style&gt;标签来定义内部样式表</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-tag">body</span> &#123;<span class="attribute">background-color</span>: red&#125;</span></span><br><span class="line"><span class="css"><span class="selector-tag">p</span> &#123;<span class="attribute">margin-left</span>: <span class="number">20px</span>&#125;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><strong>内联样式</strong></li>
+</ol>
+<p>当特殊的样式需要应用到个别元素时，就可以使用内联样式。使用内联样式的方法是在相关的标签中使用样式属性。样式属性可以包含任何CSS属性。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"color: red; margin-left: 20px"</span>&gt;</span></span><br><span class="line">This is a paragraph</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">标签</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/tag_style.asp" target="_blank" rel="noopener">&lt; style&gt;</a></td>
+<td style="text-align:left">定义样式定义。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/tag_link.asp" target="_blank" rel="noopener">&lt; link&gt;</a></td>
+<td style="text-align:left">定义资源引用。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/tag_div.asp" target="_blank" rel="noopener">&lt; div&gt;</a></td>
+<td style="text-align:left">定义文档中的节或区域（块级）。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/tag_span.asp" target="_blank" rel="noopener">&lt; span&gt;</a></td>
+<td style="text-align:left">定义文档中的行内的小块或区域。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/tag_font.asp" target="_blank" rel="noopener">&lt; font&gt;</a></td>
+<td style="text-align:left">规定文本的字体、字体尺寸、字体颜色。不赞成使用。请使用样式。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/tag_basefont.asp" target="_blank" rel="noopener">&lt; basefont&gt;</a></td>
+<td style="text-align:left">定义基准字体。不赞成使用。请使用样式。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/tag_center.asp" target="_blank" rel="noopener">&lt; center&gt;</a></td>
+<td style="text-align:left">对文本进行水平居中。不赞成使用。请使用样式。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>HTML 链接</strong></p>
+<p>HTML使用超级链接与网络上另一个文档相连，几乎可以在所有的网页中找到链接。点击链接可以从一张页面跳转到另一张页面。</p>
+<p>可以使用图像作为链接</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">您也可以使用图像来作链接：</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/example/html/lastpage.html"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">src</span>=<span class="string">"/i/eg_buttonnext.gif"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>有两种使用&lt; a&gt;标签的方式：</p>
+<ul>
+<li>通过使用href属性 - 创建指向另一个文档的链接</li>
+<li>通过使用 name属性- 创建文档内的书签</li>
+</ul>
+<p>链接HTML代码很简单</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"url"</span>&gt;</span> Link test<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><mark>”链接文本“不必一定是文本，图片或其他HTML元素都可以成为链接</mark></p>
+<p><strong>target属性</strong>：定义链接的文档在何处显示</p>
+<p>如在新窗口打开文档</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.w3school.com.cn/"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>Visit W3School<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>name属性</strong>:name属性规定锚(anchor)的名称。你可以使用name属性创建HTML页面中的书签。</p>
+<p>书签不会以任何特殊的方式显示，它对读者是不可见的。</p>
+<p>当使用命名锚（named anchors)时，我们可以创建直接跳至该命名锚（比如页面中某个小节）的链接，这样使用者就无需不停的滚动页面来寻找他们需要的信息了。</p>
+<p><strong>命名锚的语法</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"Label"</span>&gt;</span>锚（显示在页面上的文本<span class="tag">&lt;/<span class="name">a</span>&gt;</span>  #目录效果</span><br></pre></td></tr></table></figure>
+<p><strong>提示</strong>：锚的名称可以是任何你喜欢的名字。</p>
+<p><strong>提示</strong>：您可以使用 id 属性来替代 name 属性，命名锚同样有效</p>
+<p><strong>实例</strong>：</p>
+<p>首先，我们在HTML文档中对锚进行命名（创建一个书签）：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"tips"</span>&gt;</span>基本的注意事项 <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>然后我们在同一个文档中创建指向该锚的链接：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tips"</span>&gt;</span>有用的提示<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>你也可以在其他页面中创建指向该锚的链接“</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.w3school.com.cn/html/html_links.asp#tips"</span>&gt;</span>有用的提示<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在上面的代码中，我们把#符号和锚名称添加在URL的末端，就可以直接链接到tips这个命名锚了。</p>
+<p><strong>注释</strong>: 请始终将正斜杠添加到子文件夹。假如这样书写链接：href=“<a href="http://www.w3school.com.cn/html" target="_blank" rel="noopener">http://www.w3school.com.cn/html</a>”，就会向服务器产生两次 HTTP 请求。这是因为服务器会添加正斜杠到这个地址，然后创建一个新的请求，就像这样：href=“<a href="http://www.w3school.com.cn/html/" target="_blank" rel="noopener">http://www.w3school.com.cn/html/</a>”。</p>
+<p><strong>提示</strong>: 命名锚经常用于在大型文档开始位置上创建目录。可以为每个章节赋予一个命名锚，然后把链接到这些锚的链接放到文档的上部。如果您经常访问百度百科，您会发现其中几乎每个词条都采用这样的导航方式。</p>
+<p><strong>提示</strong>: 假如浏览器找不到已定义的命名锚，那么就会定位到文档的顶端。不会有错误发生。</p>
 
       
     </div>
@@ -607,7 +803,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#html"><span class="nav-number">1.</span> <span class="nav-text"> HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#html基础"><span class="nav-number">1.1.</span> <span class="nav-text"> HTML基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#html元素"><span class="nav-number">1.1.1.</span> <span class="nav-text"> HTML元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html标题"><span class="nav-number">1.1.2.</span> <span class="nav-text"> HTML标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html样式"><span class="nav-number">1.1.3.</span> <span class="nav-text"> HTML样式</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#html"><span class="nav-number">1.</span> <span class="nav-text"> HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#html基础"><span class="nav-number">1.1.</span> <span class="nav-text"> HTML基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#html元素"><span class="nav-number">1.1.1.</span> <span class="nav-text"> HTML元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html标题"><span class="nav-number">1.1.2.</span> <span class="nav-text"> HTML标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html样式"><span class="nav-number">1.1.3.</span> <span class="nav-text"> HTML样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html-css"><span class="nav-number">1.1.4.</span> <span class="nav-text"> HTML CSS</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
