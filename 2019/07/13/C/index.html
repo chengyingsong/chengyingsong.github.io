@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="第一章（了解）  进制转换  由二进制转换为10进制，二进制每一位乘以乘以权值。第n位的权值为2的n-1次方，小数点后第n位为2的-n次方。二进制运算逢2进1，规则与十进制类似 十进制转换为2进制，一直除2，直到值为1，到着取余数，即是2进制值。 二进制与16进制和8进制一般有对应关系，即4位分组法或者3位分组法。   如111，代表8进制的7，而1111，代表16进制的f。   8进制和16进">
+<meta name="description" content="第一章（了解）进制转换 由二进制转换为10进制，二进制每一位乘以乘以权值。第n位的权值为2的n-1次方，小数点后第n位为2的-n次方。二进制运算逢2进1，规则与十进制类似 十进制转换为2进制，一直除2，直到值为1，到着取余数，即是2进制值。 二进制与16进制和8进制一般有对应关系，即4位分组法或者3位分组法。   如111，代表8进制的7，而1111，代表16进制的f。   8进制和16进制转换为">
 <meta name="keywords" content="语言,C,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言">
 <meta property="og:url" content="http://yoursite.com/2019/07/13/C/index.html">
 <meta property="og:site_name" content="柠檬笔记">
-<meta property="og:description" content="第一章（了解）  进制转换  由二进制转换为10进制，二进制每一位乘以乘以权值。第n位的权值为2的n-1次方，小数点后第n位为2的-n次方。二进制运算逢2进1，规则与十进制类似 十进制转换为2进制，一直除2，直到值为1，到着取余数，即是2进制值。 二进制与16进制和8进制一般有对应关系，即4位分组法或者3位分组法。   如111，代表8进制的7，而1111，代表16进制的f。   8进制和16进">
+<meta property="og:description" content="第一章（了解）进制转换 由二进制转换为10进制，二进制每一位乘以乘以权值。第n位的权值为2的n-1次方，小数点后第n位为2的-n次方。二进制运算逢2进1，规则与十进制类似 十进制转换为2进制，一直除2，直到值为1，到着取余数，即是2进制值。 二进制与16进制和8进制一般有对应关系，即4位分组法或者3位分组法。   如111，代表8进制的7，而1111，代表16进制的f。   8进制和16进制转换为">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-07-13T12:49:14.943Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言">
-<meta name="twitter:description" content="第一章（了解）  进制转换  由二进制转换为10进制，二进制每一位乘以乘以权值。第n位的权值为2的n-1次方，小数点后第n位为2的-n次方。二进制运算逢2进1，规则与十进制类似 十进制转换为2进制，一直除2，直到值为1，到着取余数，即是2进制值。 二进制与16进制和8进制一般有对应关系，即4位分组法或者3位分组法。   如111，代表8进制的7，而1111，代表16进制的f。   8进制和16进">
+<meta name="twitter:description" content="第一章（了解）进制转换 由二进制转换为10进制，二进制每一位乘以乘以权值。第n位的权值为2的n-1次方，小数点后第n位为2的-n次方。二进制运算逢2进1，规则与十进制类似 十进制转换为2进制，一直除2，直到值为1，到着取余数，即是2进制值。 二进制与16进制和8进制一般有对应关系，即4位分组法或者3位分组法。   如111，代表8进制的7，而1111，代表16进制的f。   8进制和16进制转换为">
 
 
 
@@ -342,9 +342,7 @@
       
 
       
-        <h2 id="第一章了解"><a class="markdownIt-Anchor" href="#第一章了解"></a> 第一章（了解）</h2>
-<h3 id="进制转换"><a class="markdownIt-Anchor" href="#进制转换"></a> 进制转换</h3>
-<ol>
+        <h2 id="第一章（了解）"><a href="#第一章（了解）" class="headerlink" title="第一章（了解）"></a>第一章（了解）</h2><h3 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h3><ol>
 <li>由二进制转换为10进制，二进制每一位乘以乘以权值。第n位的权值为2的n-1次方，小数点后第n位为2的-n次方。<strong>二进制运算逢2进1，规则与十进制类似</strong></li>
 <li>十进制转换为2进制，一直除2，直到值为1，到着取余数，即是2进制值。</li>
 <li>二进制与16进制和8进制一般有对应关系，即4位分组法或者3位分组法。</li>
@@ -371,8 +369,7 @@
 <p>二进制转换为10进制</p>
 <p>就是按加权乘，只是小数点后的权值为第n位为2的-n次方。</p>
 <p><strong>总结，有2进制8进制16进制其实类似，有对应关系。所以整体可分为2进制转换为10进制和10进制转化为2进制</strong></p>
-<h3 id="数的机器码表示"><a class="markdownIt-Anchor" href="#数的机器码表示"></a> 数的机器码表示</h3>
-<ul>
+<h3 id="数的机器码表示"><a href="#数的机器码表示" class="headerlink" title="数的机器码表示"></a>数的机器码表示</h3><ul>
 <li>原码</li>
 </ul>
 <p>一般来说，把二进制存贮中最高位视为符号位。符号位为0则表示正，为1表示负。将数值存储时分符号位和数值位的方法就是原码。</p>
@@ -388,38 +385,33 @@
 </ul>
 <p>反码对于正数仍然没有影响，与原码补码都相同。对于负数，就是直接在原码上除符号位按位反。</p>
 <p><strong>对于负数，反码+1就是补码</strong></p>
-<h2 id="第二章重要"><a class="markdownIt-Anchor" href="#第二章重要"></a> 第二章（重要）</h2>
-<h3 id="标识符和关键字必考"><a class="markdownIt-Anchor" href="#标识符和关键字必考"></a> 标识符和关键字（必考）</h3>
-<ul>
-<li>
-<p>标识符</p>
+<h2 id="第二章（重要）"><a href="#第二章（重要）" class="headerlink" title="第二章（重要）"></a>第二章（重要）</h2><h3 id="标识符和关键字（必考）"><a href="#标识符和关键字（必考）" class="headerlink" title="标识符和关键字（必考）"></a>标识符和关键字（必考）</h3><ul>
+<li><p>标识符</p>
 <p>标识符是用户定义的常量，变量，数据类型和函数的名字符号</p>
 <p><strong>标识符由字母，数字和下划线组成，但是首字母必须是字母或者下划线。【特殊符号只有下划线】</strong></p>
 <p>且标识符不能使用关键字命名，同时也要避免C语言库中函数和常量的名称。</p>
 <p>标识符的大小写有区别，book和Book是不同的两个标识符。</p>
 </li>
-<li>
-<p>关键字</p>
+<li><p>关键字</p>
 <p>关键字都是小写的。是系统保留的标识符。不可以给普通变量函数等命名，</p>
 <p><strong>但是可以作为宏名，因为预处理在识别标识符之前</strong>。</p>
 </li>
 </ul>
-<p>不常见关键字              default			volatile</p>
-<h3 id="类型常量的表示掌握"><a class="markdownIt-Anchor" href="#类型常量的表示掌握"></a> 类型常量的表示（掌握）</h3>
-<p>类型包括基本类型，导出类型和空类型。基本类型有整型，浮点型和复数类型。整型有各种类型的整型和字符型和布尔型。导出类型有数组，指针，结构和联合等。空类型void</p>
-<p>类型修饰符  signed  unsigned   short  long</p>
+<p>不常见关键字              default            volatile        </p>
+<h3 id="类型常量的表示（掌握）"><a href="#类型常量的表示（掌握）" class="headerlink" title="类型常量的表示（掌握）"></a>类型常量的表示（掌握）</h3><p>类型包括基本类型，导出类型和空类型。基本类型有整型，浮点型和复数类型。整型有各种类型的整型和字符型和布尔型。导出类型有数组，指针，结构和联合等。空类型void</p>
+<p>类型修饰符  signed  unsigned   short  long </p>
 <p>字符型 char   1个字节  【也可以保存8位二进制数】 可以用符号类型修饰符unsigned和signed</p>
 <blockquote>
 <p>保存字符，8位中，用前7位代表ASCLL码值，最多128。第6位就是大小写不同的二进制位。</p>
 </blockquote>
-<p>整型     int                                               2或4个字节【看系统的位数，64位系统4个字节】</p>
+<p>整型     int                                               2或4个字节【看系统的位数，64位系统4个字节】     </p>
 <p>​            unsigned int [unsigned ]         2或4个字节【和int 一样，只是值域只有正数，最大值增加一倍】</p>
-<p>​	   signed short int  [short]	         2个字节</p>
-<p>​	   signed long int [long]                4个字节</p>
-<p>​	   unsigned long(int)			4个字节</p>
-<p>​	  unsigned short (int)			2个字节</p>
+<p>​       signed short int  [short]             2个字节</p>
+<p>​       signed long int [long]                4个字节</p>
+<p>​       unsigned long(int)            4个字节</p>
+<p>​      unsigned short (int)            2个字节</p>
 <p>浮点型  float                                         4个字节</p>
-<p>双精度浮点型   double    			8个字节【可以用double存储很大的数】</p>
+<p>双精度浮点型   double                8个字节【可以用double存储很大的数】    </p>
 <ul>
 <li>要避免整数溢出类型限定范围</li>
 </ul>
@@ -430,27 +422,28 @@
 <li>前缀</li>
 </ol>
 <p>表示进制   前缀为0是8进制数，前缀为0x或者0X是16进制数，无前缀是十进制数。</p>
-<ol start="2">
+<ol>
 <li>后缀</li>
 </ol>
 <p>后缀表示指定的类型</p>
 <ul>
 <li>u or U represent   unsigned</li>
 <li>l or L represent     long</li>
-<li>ul or UL represent unsigned long</li>
-<li>ll or LL represent  long long</li>
+<li>ul or UL represent unsigned long </li>
+<li>ll or LL represent  long long </li>
 <li>ull or ULL represent   unsigned long long</li>
 <li>无后缀就是int</li>
 </ul>
 <p>浮点型常量</p>
 <p>可以有两种表示方式，1是带小数点的十进制表达。可以小数点开头，表示整数部分为0，也可以小数点结尾，表示小数部分为0.  第二种是指数形式，即科学计数法。e+/-n表示10的+/-n的次方。</p>
 <blockquote>
-<p>45e-3表示45*10^(-3)   .15e5表示0.15 *10^5</p>
+<p>45e-3表示45<em>10^(-3)   .15e5表示0.15 </em>10^5</p>
 </blockquote>
 <p>后缀有F，f表示浮点型。l或L表示long double  。无后缀默认为double型。</p>
 <p>字符型常量</p>
-<p>字符型常量有定界符，就是   'c'  ,字符常量就是整数，值为其ＡＳＣＬＬ码值。</p>
+<p>字符型常量有定界符，就是   ‘c’  ,字符常量就是整数，值为其ＡＳＣＬＬ码值。</p>
 <p><strong>转义序列</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -507,9 +500,10 @@
 </tr>
 </tbody>
 </table>
+</div>
 <hr>
 <ul>
-<li>'\x41' and '101'  both represent  ’ A’，即用八进制和16进制表示ASCLL码值。</li>
+<li>‘\x41’ and ‘101’  both represent  ‘ A’，即用八进制和16进制表示ASCLL码值。</li>
 <li>八进制表达1至三位都可以，习惯上在前面补0</li>
 </ul>
 <p><strong>字符串常量</strong></p>
@@ -520,15 +514,15 @@
 </ul>
 <p>在程序中书写字符串不能直接换行，但是可以在行末加 \ 然后换行，换行后下一行紧贴行首。</p>
 <blockquote>
-<p>如 &quot;hello \</p>
-<p>​       how are you &quot;</p>
+<p>如 “hello \</p>
+<p>​       how are you “</p>
 </blockquote>
 <p>\ 被叫做<strong>续行符</strong></p>
 <p>字符串常量就是字符数组。存储时，系统自动在末尾添加一个空字符’\0’来作为结束标志。所以实际存储长度比字符串长度大一。</p>
 <ul>
 <li>在使用系统函数以及常量初始化时系统会自动添加空字符，但是手动以字符赋值系统不会添加空字符</li>
 </ul>
-<p>**符号常量 **</p>
+<p><strong>符号常量 </strong></p>
 <p>符号常量就是一个标识符，是给程序中经常使用的文字常量定义的名字。</p>
 <p>定义符号常量的方法有三种</p>
 <ol>
@@ -537,8 +531,7 @@
 <li>用枚举类型定义一组符号常量</li>
 </ol>
 <p>1使用#define指令定义符号常量</p>
-<p>#define  标识符   常量</p>
-<p>在编译预处理中直接以常量代替标识符出现的位置，所以后面不能加；</p>
+<h1 id="define-标识符-常量"><a href="#define-标识符-常量" class="headerlink" title="define  标识符   常量"></a>define  标识符   常量</h1><p>在编译预处理中直接以常量代替标识符出现的位置，所以后面不能加；</p>
 <p>2 使用const 定义符号常量</p>
 <p>const 是关键字，称为类型限制符。格式如下</p>
 <p>const  类型名   标识符=常量；</p>
@@ -553,18 +546,15 @@
 <p>区别，const声明时就分配了存储空间，只是空间内值不可变。而#define是预处理时简单文本替换，在声明时没有分配存储空间，但是后来使用常量时，每使用一次都要分配静态空间。</p>
 </blockquote>
 <ul>
-<li>多个限定符在C99中允许，和单个限定符并无不同</li>
+<li>多个限定符在C99中允许，和单个限定符并无不同 </li>
 </ul>
 <p>变量定义</p>
 <p>每个变量必须分别显式初始化，int count=sum=0； 是非法的。</p>
-<h3 id="运算符和表达式必考"><a class="markdownIt-Anchor" href="#运算符和表达式必考"></a> 运算符和表达式（必考）</h3>
-<ol>
-<li>
-<p>运算符按功能分类</p>
+<h3 id="运算符和表达式（必考）"><a href="#运算符和表达式（必考）" class="headerlink" title="运算符和表达式（必考）"></a>运算符和表达式（必考）</h3><ol>
+<li><p>运算符按功能分类</p>
 <p>算术运算符，关系运算符，逻辑运算符，按位运算符，赋值运算符，自增自减运算符，条件运算符，顺序求值运算符和特殊运算符。</p>
 </li>
-<li>
-<p>按操作数的个数和类型要求</p>
+<li><p>按操作数的个数和类型要求</p>
 <p>单目运算符，双目运算符，三目运算符。</p>
 </li>
 </ol>
@@ -573,19 +563,19 @@
 <p>一般来说，单目运算符优先级高于双目运算符。</p>
 <p>除了单目条件（三目）和赋值运算符是右结合，其他都是左结合。</p>
 <p>算术运算符中 / 除法运算符，如果两边都是整数则结果取整，C99中总是向0取整，若有浮点型数据结果为浮点型。</p>
-<p><mark>算术运算符  % 取余运算符，两边都必须是整数。</mark></p>
+<p>==算术运算符  % 取余运算符，两边都必须是整数。== </p>
 <p>关系运算符的运算结果就是0和1</p>
 <p>逻辑运算符 &amp;&amp;，||，！，要和按位运算符区别开</p>
-<p>**自增自减运算符 **</p>
-<p>++  –  有前置和后置两种，前置式直接运算，优先级是单目优先。而后置式则存在滞后运算</p>
-<p>计算延迟的终止点称为<mark>序列点</mark> 。到达序列点后再进行自增或者自减运算。所以在序列点之前操作数为原值，序列点之后操作数为执行运算后值。</p>
+<p><strong>自增自减运算符 </strong></p>
+<p>++  —  有前置和后置两种，前置式直接运算，优先级是单目优先。而后置式则存在滞后运算</p>
+<p>计算延迟的终止点称为==序列点== 。到达序列点后再进行自增或者自减运算。所以在序列点之前操作数为原值，序列点之后操作数为执行运算后值。</p>
 <p>序列点为</p>
 <ol>
 <li>&amp;&amp;，||，？： 或者， 运算符，即这些运算符的第一个操作数之后。</li>
 <li>完整表达式结束时，即表达式语句，return语句中的表达式，if，switch或者循环语句中的条件表达式（包括for语句中的每个 表达式）之后</li>
 </ol>
 <blockquote>
-<p>在C语言中，多个表达式可以用逗号分开，其中用逗号分开的表达式的值分别结算，<mark>但整个表达式的值是最后一个表达式的值。</mark></p>
+<p>在C语言中，多个表达式可以用逗号分开，其中用逗号分开的表达式的值分别结算，==但整个表达式的值是最后一个表达式的值。==</p>
 <p>这是因为赋值运算符s比逗号运算符优先级高</p>
 </blockquote>
 <p>赋值运算符支持a=b=c=2的运算，即等价a=(b=(c=2)).而赋值运算的表达式的值为右值，就是赋的值。但是在声明时不允许这样运算。</p>
@@ -598,34 +588,32 @@
 <li>sizeof 表达式</li>
 </ol>
 <p>第一种形式，sizeof运算符加带括号的类型名，给出指定数据类型占用的存储字节数</p>
-<p>第二种形式，sizeof运算符加表达式，给出<mark>表达式结果的类型</mark>占用的存储字节数。</p>
+<p>第二种形式，sizeof运算符加表达式，给出==表达式结果的类型==占用的存储字节数。</p>
 <p>sizeof后接表达式的时候可以有括号也可以没有，但是没有括号的时候要有空格隔开</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">1</span>,b=<span class="number">1</span>; </span><br><span class="line"><span class="keyword">sizeof</span> (a+b);   <span class="comment">//结果为2 </span></span><br><span class="line"><span class="keyword">sizeof</span>  a+b;   <span class="comment">//结果为sizeof a为4加上b=1，为5</span></span><br></pre></td></tr></table></figure>
 <p>sizeof 表达式是一个常量表达式，在编译的时候执行，所以sizeof 中的表达式，C中只进行分析结果类型，不进行运算。</p>
-<dl>
-<dt><strong>位运算符</strong></dt>
-<dd>求反（每位变反），   &amp; 按位与（全为1则为1，不然就是0），   | 按位或（有一个1就是1）   ，   ^  按位异或（按位加，但是不进位，也就是只有1和0 为1，全0或全1都为0）  &lt;&lt;左移（从后补0），  &gt;&gt; 右移</dd>
-</dl>
-<p><mark>操作数必须是整型</mark></p>
+<p><strong>位运算符</strong></p>
+<p>~ 求反（每位变反），   &amp; 按位与（全为1则为1，不然就是0），   | 按位或（有一个1就是1）   ，   ^  按位异或（按位加，但是不进位，也就是只有1和0 为1，全0或全1都为0）  &lt;&lt;左移（从后补0），  &gt;&gt; 右移</p>
+<p>==操作数必须是整型==</p>
 <p>右移中补位有逻辑移位就是补0，也有算术移位，补符号位.  但是一般来说是补0.无符号整型符号位为0，两种移位方式相同，所以一般使用无符号位进行右移更加安全。</p>
-<h3 id="类型转换注意"><a class="markdownIt-Anchor" href="#类型转换注意"></a> 类型转换（注意）</h3>
-<p><strong>整数提升</strong></p>
-<p><mark>任何表达式中的char, unsigned char , short 和unsigned short都要先转换成int 或者unsigned ，如果原始类型的所有值可以用int表示，则转换为int,否则转换为unsigned。   这就是整数提升</mark></p>
+<h3 id="类型转换（注意）"><a href="#类型转换（注意）" class="headerlink" title="类型转换（注意）"></a>类型转换（注意）</h3><p><strong>整数提升</strong></p>
+<p>==任何表达式中的char, unsigned char , short 和unsigned short都要先转换成int 或者unsigned ，如果原始类型的所有值可以用int表示，则转换为int,否则转换为unsigned。   这就是整数提升==</p>
 <p>而有符号数与无符号数进行逻辑或者算术运算默认把有符号数看作无符号数进行运算，（int/long）</p>
 <blockquote>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">int</span> a=<span class="number">-1</span>;</span><br><span class="line">&gt; <span class="keyword">unsigned</span> <span class="keyword">int</span> b=<span class="number">2</span>;</span><br><span class="line">&gt; <span class="keyword">if</span> (a&gt;b)</span><br><span class="line">&gt;  <span class="built_in">printf</span>(<span class="string">"a&gt;b"</span>);</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
+<p>&gt;</p>
 <blockquote>
 <p>程序结果是输出a&gt;b.因为a被看作无符号数，而a的存储为0xffff，就是很大的正数所以比2大</p>
 </blockquote>
 <ul>
 <li>但是由于计算机存储没有改变，只是解释方法不同，所以算术运算结果不会改变。</li>
 </ul>
-<p>**算术转换 **</p>
-<p>当对双目运算符的操作数求值时，首先独立的对每个操作数进行整数提升，提升之后如果两个操作数<mark>类型不相同</mark>，就会发生算术转换。</p>
+<p><strong>算术转换 </strong></p>
+<p>当对双目运算符的操作数求值时，首先独立的对每个操作数进行整数提升，提升之后如果两个操作数==类型不相同==，就会发生算术转换。</p>
 <p>long double &gt; double&gt;float&gt;unsigned long &gt; long &gt;unsigned&gt;int</p>
 <p>又叫隐式转换或自动转换。</p>
-<p>**注意，当一个操作数为long一个为unsigned 如果long不能够表示所有的unsigned 的域宽，则都转换为unsigned long **</p>
+<p><strong>注意，当一个操作数为long一个为unsigned 如果long不能够表示所有的unsigned 的域宽，则都转换为unsigned long </strong></p>
 <p>转换规则简要描述为从值域窄的向值域宽的方向转换。</p>
 <p><strong>赋值转换</strong></p>
 <p>赋值转换也会发生自动转换，其转换规则为：右操作数的值被转换为左操作数的类型。即把等号右边的表达式转换为左边的类型并进行赋值。可能出现浮点型的取整</p>
@@ -640,8 +628,7 @@
 <li>强制转换只能为右值，在等号的右边。</li>
 <li>强制转换为单目运算符，右结合。高优先级</li>
 </ul>
-<h3 id="枚举类型了解"><a class="markdownIt-Anchor" href="#枚举类型了解"></a> 枚举类型（了解）</h3>
-<p>枚举类型是定义符号常量的第三种方法，主要是定义一组有关联的符号常量</p>
+<h3 id="枚举类型（了解）"><a href="#枚举类型（了解）" class="headerlink" title="枚举类型（了解）"></a>枚举类型（了解）</h3><p>枚举类型是定义符号常量的第三种方法，主要是定义一组有关联的符号常量</p>
 <p><strong>枚举类型的定义</strong></p>
 <p>枚举定义的形式为</p>
 <p><strong>enum[枚举名]{标识符[=常量表达式]，标识符[=常量表达式]，……};</strong></p>
@@ -652,18 +639,16 @@
 <li>C99允许枚举定义的最后多一个逗号</li>
 <li>可以指定一个或者多个枚举常量的值，未指定值的枚举常量的值比前一个大一。第一个没有赋值默认为0.</li>
 </ul>
-<p>enum 后也可以不出现枚举名。但是由于没有枚举名，后面无法说明该类型的<mark>变量</mark>。</p>
+<p>enum 后也可以不出现枚举名。但是由于没有枚举名，后面无法说明该类型的==变量==。</p>
 <p>枚举常量的标识符通常大写。</p>
-<p>当不出现枚举名时，枚举类型只是声明常量的手段和#define类似。但是出现枚举名后，可以声明<mark>枚举变量</mark> 。枚举变量的声明可以在枚举类型的定义时直接声明，也可以在后面利用枚举名进行声明。</p>
+<p>当不出现枚举名时，枚举类型只是声明常量的手段和#define类似。但是出现枚举名后，可以声明==枚举变量== 。枚举变量的声明可以在枚举类型的定义时直接声明，也可以在后面利用枚举名进行声明。</p>
 <blockquote>
 <p>enum color { RED , GREEN ,BLUE} c1,c2;</p>
 <p>enum color {RED, GREEN ,BLUE};</p>
 <p>enum color c1,c2;</p>
 </blockquote>
-<p>枚举变量在使用中只能是一些离散的整数值，输入输出都为整数，同类型的枚举变量可以相互赋值，也可以和整型赋值。特殊的一点就是枚举变量的值域就是声明的枚举类型的中常量。也就是说<mark>枚举变量其实就是取有限离散整数值的整型变量。</mark></p>
-<h2 id="第三章"><a class="markdownIt-Anchor" href="#第三章"></a> 第三章</h2>
-<h3 id="字符输入和输出"><a class="markdownIt-Anchor" href="#字符输入和输出"></a> 字符输入和输出</h3>
-<p><strong>putchar©;</strong></p>
+<p>枚举变量在使用中只能是一些离散的整数值，输入输出都为整数，同类型的枚举变量可以相互赋值，也可以和整型赋值。特殊的一点就是枚举变量的值域就是声明的枚举类型的中常量。也就是说==枚举变量其实就是取有限离散整数值的整型变量。==</p>
+<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="字符输入和输出"><a href="#字符输入和输出" class="headerlink" title="字符输入和输出"></a>字符输入和输出</h3><p> <strong>putchar(c);</strong></p>
 <p>参数为所要输出字符的ASCLL码值，将其转换成字符型并送入标准输出设备中。如果正常输出返回值为字符码，不然返回EOF。即-1.</p>
 <p><strong>getchar();</strong></p>
 <p>没有参数。函数从输入流中读取一个字符，并将读取的字符转换为<strong>Int型</strong> 之后作为函数的返回值。</p>
@@ -671,11 +656,10 @@
 <li>输入流即输入缓冲区，从键盘输入的数据在输入流中，按下回车时激活缓冲区，程序中的读入函数从输入流中读取数据。</li>
 <li>注意，未读完的数据仍然存在在输入流中。包括换行符等等</li>
 </ul>
-<h3 id="字符串输入和输出"><a class="markdownIt-Anchor" href="#字符串输入和输出"></a> 字符串输入和输出</h3>
-<p><strong>puts(s);</strong></p>
-<p>实参可以是字符串常量，字符数组名或者指向某个字符串的内存缓冲区的首地址。类型为字符指针。puts函数从指针指向的地址中取出字符串输出到标准输出设备，<mark>并在串尾输出一个换行符’\n’</mark>。</p>
+<h3 id="字符串输入和输出"><a href="#字符串输入和输出" class="headerlink" title="字符串输入和输出"></a>字符串输入和输出</h3><p><strong>puts(s);</strong></p>
+<p>实参可以是字符串常量，字符数组名或者指向某个字符串的内存缓冲区的首地址。类型为字符指针。puts函数从指针指向的地址中取出字符串输出到标准输出设备，==并在串尾输出一个换行符’\n’==。</p>
 <blockquote>
-<p>取字符串时在内存中以空字符作为结束。</p>
+<p>取字符串时在内存中以空字符作为结束。 </p>
 </blockquote>
 <ul>
 <li>正常输出，返回值非负整数值。否则返回EOF。</li>
@@ -689,8 +673,7 @@
 <ul>
 <li>注意:fgets函数会读入换行符，再添加空字符。所以一般要对使用fgets得到的字符串做一定的处理。</li>
 </ul>
-<h3 id="格式化输入和输出转换字符看一下"><a class="markdownIt-Anchor" href="#格式化输入和输出转换字符看一下"></a> 格式化输入和输出（转换字符看一下）</h3>
-<p><strong>printf(格式化字符串，数据项1，数据项2，。。。)</strong></p>
+<h3 id="格式化输入和输出（转换字符看一下）"><a href="#格式化输入和输出（转换字符看一下）" class="headerlink" title="格式化输入和输出（转换字符看一下）"></a>格式化输入和输出（转换字符看一下）</h3><p><strong>printf(格式化字符串，数据项1，数据项2，。。。)</strong></p>
 <ul>
 <li>返回值为调用后输出到标准输出设备的数据项数。</li>
 </ul>
@@ -698,6 +681,7 @@
 <ul>
 <li>没有负号的域宽说明是右对齐，加了负号就是左对齐。浮点数还可以限制输出小数点后位数，即%.2f  ,表示输出小数点后两位。</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -760,6 +744,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
 <ul>
 <li>一般常用的整型数据的各种类型，短整型是%h。无符号短整型就是%uh，长整型就是%ld。</li>
@@ -768,6 +753,7 @@
 </ul>
 </blockquote>
 <p>域宽说明符</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -798,6 +784,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>scanf函数</strong></p>
 <p>和printf函数类似。</p>
 <p>在格式化字符串中可以添加制表符和空格。对输入没有影响，如果输入了其他字符，则必须在输入时相应位置输入相同的字符。</p>
@@ -805,41 +792,35 @@
 <li>scanf函数会在输入数据到达相应个数之后开始执行</li>
 </ul>
 <p>scanf同样可以使用域宽限制从输入流读取的字符宽度，还有%*c用作抑制符，即虚读。</p>
-<h2 id="第四章"><a class="markdownIt-Anchor" href="#第四章"></a> 第四章</h2>
-<p>注意事项</p>
+<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><p>   注意事项</p>
 <p><strong>if语句</strong></p>
 <p>嵌套的if语句中else是遵从就近原则找到匹配的if的。即内层优先配对。如果想要避免可以加上花括号</p>
-<h3 id="switch语句-注意一下"><a class="markdownIt-Anchor" href="#switch语句-注意一下"></a> switch语句 （注意一下）</h3>
-<ol>
+<h3 id="switch语句-（注意一下）"><a href="#switch语句-（注意一下）" class="headerlink" title="switch语句 （注意一下）"></a>switch语句 （注意一下）</h3><ol>
 <li>switch语句中default表示前面所有值非后的执行，相当于else。</li>
-<li>switch后的表达式必须是整型，<mark>用括号括起来。</mark></li>
+<li>switch后的表达式必须是整型，==用括号括起来。== </li>
 <li>case后面的常量表达式的值是选择表达式可能的取值，通常是常量或者符号常量。</li>
-<li><mark>case后有多个语句时不需要加花括号。</mark></li>
-<li>switch执行时，先计算表达式的值，然后与case后的常量值比较，相等就执行后面的语句。<mark>如果遇到break语句就跳出break所在的那一层，否则继续执行后面的语句，进入下一个case，直到整个switch程序体结束</mark></li>
+<li>==case后有多个语句时不需要加花括号。== </li>
+<li>switch执行时，先计算表达式的值，然后与case后的常量值比较，相等就执行后面的语句。==如果遇到break语句就跳出break所在的那一层，否则继续执行后面的语句，进入下一个case，直到整个switch程序体结束== </li>
 <li>switch语句中可以声明变量，但是不会被初始化，case以前的所有可执行语句也不会被执行。</li>
 </ol>
-<h3 id="for语句"><a class="markdownIt-Anchor" href="#for语句"></a> for语句</h3>
-<p>for（表达式1；表达式2；表达式3）</p>
+<h3 id="for语句"><a href="#for语句" class="headerlink" title="for语句"></a>for语句</h3><p>for（表达式1；表达式2；表达式3）</p>
 <p>第一个表达式作为初始化，第二个表达式是循环条件，第三个表达式是用于修改循环变量的值。</p>
 <p>执行时，首先计算初始化的表达式，然后测试循环条件，为真进入循环体，然后计算表达式3，并测试循环条件，为假退出循环。</p>
 <p>即一次循环结束后先修改循环变量再进行循环条件测试。</p>
-<h3 id="goto语句"><a class="markdownIt-Anchor" href="#goto语句"></a> goto语句</h3>
-<p>goto又叫无条件转移语句，使用时会破环结构化程序逻辑，但是有时候使用十分方便。</p>
+<h3 id="goto语句"><a href="#goto语句" class="headerlink" title="goto语句"></a>goto语句</h3><p>goto又叫无条件转移语句，使用时会破环结构化程序逻辑，但是有时候使用十分方便。</p>
 <p>形式为                                                    goto 标号；</p>
 <p>而标号语句，形式为                             标号：语句；</p>
 <p>C语言中任何语句都可以作为标号语句，只要前面加一个标号和冒号。标号语句可以在任意位置。</p>
-<p>但是必须在同一个函数中，<mark>即goto不能跳出函数</mark>， 但是可以跳出多层的循环嵌套结构。同时标号不允许同名。</p>
+<p>但是必须在同一个函数中，==即goto不能跳出函数==， 但是可以跳出多层的循环嵌套结构。同时标号不允许同名。</p>
 <p>break 跳出当前循环</p>
 <p>continue      跳过这次循环，直接开始下一次循环。还在循环体中，只是不执行这次的continue后面的语句</p>
 <p>return          返回函数，结束当前函数，返回调用处。</p>
-<h2 id="第五章"><a class="markdownIt-Anchor" href="#第五章"></a> 第五章</h2>
-<p>随机方法</p>
+<h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2><p>随机方法</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line">srand(time(<span class="literal">NULL</span>));   <span class="comment">//以时间做种子</span></span><br><span class="line">x=rand();  <span class="comment">//生成随机数，范围是0到RAND_MAX，由系统定义</span></span><br></pre></td></tr></table></figure>
-<h3 id="函数"><a class="markdownIt-Anchor" href="#函数"></a> 函数</h3>
-<ul>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ul>
 <li>C99中不允许指明函数返回值类型，也不会默认是int，但是可以指明返回值为void，即无返回值。</li>
 <li>函数名也是标识符，服从标识符的命名规则。</li>
-<li>函数如果是普通类型返回值，return语句后表达式类型可以不同，系统自动转换为函数类型，<mark>而返回值是导出类型，如指针，必须使用强制类型转换符将表达式类型转换。</mark></li>
+<li>函数如果是普通类型返回值，return语句后表达式类型可以不同，系统自动转换为函数类型，==而返回值是导出类型，如指针，必须使用强制类型转换符将表达式类型转换。== </li>
 <li>C99规定主函数必须是int返回值，不能是void.</li>
 <li>一旦return执行，函数后面的语句不执行。</li>
 </ul>
@@ -854,18 +835,16 @@
 <p>函数名（实参列表）；</p>
 <p>实参表达式的求值问题中参数列表中的逗号只是分隔符不是逗号运算符，至于参数计算顺序由系统决定，一般是从右至左。</p>
 <p>一般要避免由于实参表达式计算顺序不同导致的误差，也就是实参表达式副作用。</p>
-<p><mark>参数传递有两种方式，值传递和地址传递</mark></p>
+<p>==参数传递有两种方式，值传递和地址传递==</p>
 <ul>
 <li>值传递不会改变原来的实参值，而地址传递可以改变实参值，有时作为函数多返回值的一个手段。</li>
 <li>数组一定是地址传递，结构可以是值传递也可以是地址传递，一般来说结构体量较大时使用地址传递更加快速。</li>
 </ul>
-<h3 id="作用域与可见性"><a class="markdownIt-Anchor" href="#作用域与可见性"></a> 作用域与可见性</h3>
-<p>作用域和可见性本质相同，表达的是变量的作用范围或者可见范围。全局变量可以在全局使用，而局部变量只能在特定范围内使用。</p>
-<p>在函数内部定义的变量叫做局部变量，也叫做内部变量。<mark>作用域就是定义变量的代码块</mark>，可以是整个函数，也可以是一个循环语句或者其他语句。不同函数中局部变量可以重名，他们毫无关联。</p>
-<p>在函数外部定义的变量是全局变量，也叫做外部变量。属于一个源程序文件，在文件中均可见。<mark>在外部变量的定义之前的函数如果要使用外部变量，需要引用性声明，即加上extern关键字</mark>。在外部变量定义之后的函数不需要引用性声明就可以使用。</p>
+<h3 id="作用域与可见性"><a href="#作用域与可见性" class="headerlink" title="作用域与可见性"></a>作用域与可见性</h3><p>作用域和可见性本质相同，表达的是变量的作用范围或者可见范围。全局变量可以在全局使用，而局部变量只能在特定范围内使用。</p>
+<p>在函数内部定义的变量叫做局部变量，也叫做内部变量。==作用域就是定义变量的代码块==，可以是整个函数，也可以是一个循环语句或者其他语句。不同函数中局部变量可以重名，他们毫无关联。</p>
+<p>在函数外部定义的变量是全局变量，也叫做外部变量。属于一个源程序文件，在文件中均可见。==在外部变量的定义之前的函数如果要使用外部变量，需要引用性声明，即加上extern关键字==。在外部变量定义之后的函数不需要引用性声明就可以使用。</p>
 <p>当内层说明的变量与外层同名 时，在内层中，外层变量暂时不可见</p>
-<h3 id="存储类型掌握"><a class="markdownIt-Anchor" href="#存储类型掌握"></a> 存储类型（掌握）</h3>
-<p>四种存储类型，auto,extern,static,register.分别是自动变量，外部变量，静态变量和寄存器变量。</p>
+<h3 id="存储类型（掌握）"><a href="#存储类型（掌握）" class="headerlink" title="存储类型（掌握）"></a>存储类型（掌握）</h3><p>四种存储类型，auto,extern,static,register.分别是自动变量，外部变量，静态变量和寄存器变量。</p>
 <p>程序的存储区域有</p>
 <ol>
 <li>程序代码区，存放程序的二进制代码</li>
@@ -884,8 +863,8 @@
 <p>在函数外部定义的就是外部变量，在定义时不需要关键字extern，但是在引用性声明中要使用extern，外部变量没有初始化初始值为0.</p>
 <p>引用性声明也可以写在函数外，则该声明后的所有函数使用该外部变量不需要声明。</p>
 <p>当外部变量和局部变量同名，外部变量不可见。</p>
-<p><mark>把全局变量的声明放在程序的最开始部分，就不需要引用性声明了</mark></p>
-<ol start="2">
+<p>==把全局变量的声明放在程序的最开始部分，就不需要引用性声明了== </p>
+<ol>
 <li>外部函数</li>
 </ol>
 <p>函数一般是全局的作用于文件范围中。默认类型就是extern。叫做外部函数。定义时一般省略关键字extern。</p>
@@ -895,8 +874,8 @@
 <li>静态变量</li>
 </ol>
 <p>静态局部变量，该局部变量在初始化之后，作用域不变，但是作用的代码块结束后不会收回空间，保持值不变。值具有连续性。静态局部变量只有在第一次进入时，执行显式初始化赋值操作，以后都是使用上次保存值。</p>
-<p>静态外部变量在外部变量定义时加关键字static。静态外部变量和外部变量作用域不同。<mark>外部变量可以被其他文件引用，但是静态外部变量不行。</mark></p>
-<ol start="2">
+<p>静态外部变量在外部变量定义时加关键字static。静态外部变量和外部变量作用域不同。==外部变量可以被其他文件引用，但是静态外部变量不行。==</p>
+<ol>
 <li>静态函数</li>
 </ol>
 <p>静态函数在定义时必须加关键字static，也是不可以被其他文件引用。</p>
@@ -905,10 +884,8 @@
 <p>register只是建议，编译器没有合适的寄存器就会忽略register，当作自动变量</p>
 <p>主要是为了调高程序的执行速度。</p>
 <p>函数的形参可以说明为register,不能声明为extern和static。寄存器变量不可以进行取地址操作。</p>
-<h2 id="第六章几乎不考"><a class="markdownIt-Anchor" href="#第六章几乎不考"></a> 第六章（几乎不考）</h2>
-<p><strong>编译预处理</strong></p>
-<h3 id="include"><a class="markdownIt-Anchor" href="#include"></a> include</h3>
-<p>预处理指令的作用是用指定的文件的内容取代该预处理指令行，使其成为源文件的一部分参与编译。</p>
+<h2 id="第六章（几乎不考）"><a href="#第六章（几乎不考）" class="headerlink" title="第六章（几乎不考）"></a>第六章（几乎不考）</h2><p><strong>编译预处理</strong></p>
+<h3 id="include"><a href="#include" class="headerlink" title="include"></a>include</h3><p>预处理指令的作用是用指定的文件的内容取代该预处理指令行，使其成为源文件的一部分参与编译。</p>
 <ul>
 <li>文件名中可以包括文件的路径名</li>
 </ul>
@@ -919,56 +896,38 @@
 <li>使用&lt;&gt;和“ ”如果指定了路径没有任何区别。然而如果没有指定路径，&lt;&gt;是在系统指定的标准目录下寻找被包含文件，而双括号是在用户当前目录中寻找被包含文件，如果找不到，再在系统指定的标准目录下寻找。</li>
 <li>一般来说包含库文件就用&lt;&gt;，包含自己的文件就用双括号。</li>
 </ul>
-<h3 id="define"><a class="markdownIt-Anchor" href="#define"></a> #define</h3>
-<p>在编译预处理时将所有出现宏名的地方，使用宏的内容替换。只是简单替换，不做语法检查。</p>
+<h3 id="define"><a href="#define" class="headerlink" title="#define"></a>#define</h3><p>在编译预处理时将所有出现宏名的地方，使用宏的内容替换。只是简单替换，不做语法检查。</p>
 <p><strong>无参宏定义</strong></p>
-<p>#define 标识符   字符串</p>
-<p>字符串可以是常数表达式格式串或者任意字符。如果字符串太长，要加上行尾反斜杠\再换行。</p>
-<p><mark>无参宏定义时注意不要加分号</mark></p>
-<p><mark>在进行宏定义时要注意在替换后不能出错。一般要加上括号使之成为整体</mark></p>
+<h1 id="define-标识符-字符串"><a href="#define-标识符-字符串" class="headerlink" title="define 标识符   字符串"></a>define 标识符   字符串</h1><p>字符串可以是常数表达式格式串或者任意字符。如果字符串太长，要加上行尾反斜杠\再换行。</p>
+<p>==无参宏定义时注意不要加分号==</p>
+<p>==在进行宏定义时要注意在替换后不能出错。一般要加上括号使之成为整体==</p>
 <p>用引号括起来的与宏名相同的标识符不做替换，只当作普通字符串。</p>
 <p><strong>带参宏定义</strong></p>
-<p>#define 标识符（标识符1，标识符2，。。。，标识符）   字符串</p>
-<p>第一个标识符是宏名，<mark>它和括号之间不能有空格</mark>，使用时用字符串代替宏名，再用实参代替形参。</p>
+<h1 id="define-标识符（标识符1，标识符2，。。。，标识符）-字符串"><a href="#define-标识符（标识符1，标识符2，。。。，标识符）-字符串" class="headerlink" title="define 标识符（标识符1，标识符2，。。。，标识符）   字符串"></a>define 标识符（标识符1，标识符2，。。。，标识符）   字符串</h1><p>第一个标识符是宏名，==它和括号之间不能有空格==，使用时用字符串代替宏名，再用实参代替形参。</p>
 <p>空宏参数。允许宏调用中任意个数的实参为空。</p>
 <p><strong>取消宏定义</strong></p>
-<p>#undef 标识符</p>
-<p>使之前定义过的宏被取消。如果之前没有定义宏，这个语句不起作用。</p>
+<h1 id="undef-标识符"><a href="#undef-标识符" class="headerlink" title="undef 标识符"></a>undef 标识符</h1><p>使之前定义过的宏被取消。如果之前没有定义宏，这个语句不起作用。</p>
 <p><strong>条件编译</strong></p>
 <p>有三种形式</p>
-<p>#if 常量表达式</p>
-<p>​     程序段</p>
-<p>#elif  常量表达式</p>
-<p>​     程序段</p>
-<p>#else</p>
-<p>​    程序段</p>
-<p>#endif</p>
+<h1 id="if-常量表达式"><a href="#if-常量表达式" class="headerlink" title="if 常量表达式"></a>if 常量表达式</h1><p>​     程序段</p>
+<h1 id="elif-常量表达式"><a href="#elif-常量表达式" class="headerlink" title="elif  常量表达式"></a>elif  常量表达式</h1><p>​     程序段</p>
+<h1 id="else"><a href="#else" class="headerlink" title="else"></a>else</h1><p>​    程序段</p>
+<h1 id="endif"><a href="#endif" class="headerlink" title="endif"></a>endif</h1><p>或者‘</p>
+<h1 id="ifdef-标识符"><a href="#ifdef-标识符" class="headerlink" title="ifdef  标识符"></a>ifdef  标识符</h1><p>   程序段</p>
+<h1 id="elif-常量表达式-1"><a href="#elif-常量表达式-1" class="headerlink" title="elif  常量表达式"></a>elif  常量表达式</h1><p>​    程序段</p>
+<h1 id="else-1"><a href="#else-1" class="headerlink" title="else"></a>else</h1><p>​     程序段</p>
+<h1 id="endif-1"><a href="#endif-1" class="headerlink" title="endif"></a>endif</h1><p>或者</p>
 <p>或者‘</p>
-<p>#ifdef  标识符</p>
-<p>程序段</p>
-<p>#elif  常量表达式</p>
-<p>​    程序段</p>
-<p>#else</p>
-<p>​     程序段</p>
-<p>#endif</p>
-<p>或者</p>
-<p>或者‘</p>
-<p>#ifndef  标识符</p>
-<p>程序段</p>
-<p>#elif  常量表达式</p>
-<p>​    程序段</p>
-<p>#else</p>
-<p>​     程序段</p>
-<p>#endif</p>
-<p>三种形式大致相同，注意的是常量表达式中没有变量，然后ifelse之间程序段不需要花括号。</p>
+<h1 id="ifndef-标识符"><a href="#ifndef-标识符" class="headerlink" title="ifndef  标识符"></a>ifndef  标识符</h1><p>   程序段</p>
+<h1 id="elif-常量表达式-2"><a href="#elif-常量表达式-2" class="headerlink" title="elif  常量表达式"></a>elif  常量表达式</h1><p>​    程序段</p>
+<h1 id="else-2"><a href="#else-2" class="headerlink" title="else"></a>else</h1><p>​     程序段</p>
+<h1 id="endif-2"><a href="#endif-2" class="headerlink" title="endif"></a>endif</h1><p>三种形式大致相同，注意的是常量表达式中没有变量，然后ifelse之间程序段不需要花括号。</p>
 <p><strong>defined运算符</strong></p>
 <p>检查宏名是否定义过，定义过为1否则为0.</p>
-<h3 id="断言"><a class="markdownIt-Anchor" href="#断言"></a> 断言</h3>
-<p>assert 断言</p>
+<h3 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h3><p>assert 断言  </p>
 <p>assert（condition）</p>
 <p>如果条件非0，则该语句无效，条件为0则输出错误信息，并通过调用库中的函数abort终止程序的运行。</p>
-<h2 id="第七章"><a class="markdownIt-Anchor" href="#第七章"></a> 第七章</h2>
-<p>数组</p>
+<h2 id="第七章"><a href="#第七章" class="headerlink" title="第七章"></a>第七章</h2><p>数组</p>
 <ul>
 <li>下标小的元素放在低地址。</li>
 <li>数组名是一个地址常量，是首元素地址，不可改变。</li>
@@ -982,43 +941,39 @@
 <li>局部数组没有进行初始化元素的默认初值是随机的，而对于外部数组和静态数组元素默认初值是0.</li>
 <li>不允许整个数组直接进行算术操作。只能针对元素操作</li>
 </ul>
-<p><mark>数组作为函数参数只能进行地址传递。</mark></p>
-<h3 id="字符数组"><a class="markdownIt-Anchor" href="#字符数组"></a> 字符数组</h3>
-<p>字符数组表示字符串要在最后加一个’\0’</p>
+<p>==数组作为函数参数只能进行地址传递。==</p>
+<h3 id="字符数组"><a href="#字符数组" class="headerlink" title="字符数组"></a>字符数组</h3><p>字符数组表示字符串要在最后加一个’\0’</p>
 <p>字符数组初始化的三种方式</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> s1[<span class="number">81</span>]=&#123;<span class="string">'w'</span>，<span class="string">'u'</span>,<span class="string">'h'</span>,<span class="string">'a'</span>,<span class="string">'n'</span>,<span class="string">'\0'</span>&#125;;</span><br><span class="line"><span class="keyword">char</span> s2[<span class="number">81</span>]=<span class="string">"Computer Science"</span>;</span><br><span class="line"><span class="keyword">char</span> s3[]=<span class="string">"Computer Engineering"</span></span><br></pre></td></tr></table></figure>
 <p>字符串处理函数</p>
 <p>strstr 寻找子串       strcmp  字符串比较     strcat  字符串连接       strcpy   字符串复制    strlen 字符串长度</p>
-<h3 id="多维数组必考初始化"><a class="markdownIt-Anchor" href="#多维数组必考初始化"></a> 多维数组(必考初始化)</h3>
-<p>多维数组中元素存储还是连续存放的，只是一行结束再开始另一行。</p>
+<h3 id="多维数组-必考初始化"><a href="#多维数组-必考初始化" class="headerlink" title="多维数组(必考初始化)"></a>多维数组(必考初始化)</h3><p>多维数组中元素存储还是连续存放的，只是一行结束再开始另一行。</p>
 <p>多维数组的初始化。</p>
 <ol>
 <li>按照数组元素的物理存储结构顺序安排初值。</li>
 </ol>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">2</span>][<span class="number">2</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;;</span><br><span class="line">a[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;a[<span class="number">0</span>][<span class="number">1</span>]=<span class="number">2</span>;a[<span class="number">1</span>][<span class="number">0</span>]=<span class="number">3</span>;a[<span class="number">1</span>][<span class="number">1</span>]=<span class="number">4</span>;</span><br></pre></td></tr></table></figure>
-<ol start="2">
+<ol>
 <li>按照逻辑结构安排初值i</li>
 </ol>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">2</span>][<span class="number">2</span>]=&#123;&#123;<span class="number">1</span>,<span class="number">2</span>&#125;,&#123;<span class="number">3</span>,<span class="number">4</span>&#125;&#125;;</span><br></pre></td></tr></table></figure>
-<p><mark>当所有初值都给出时，第一维的大小说明可以忽略，否则不能忽略</mark></p>
-<h2 id="第八章重点"><a class="markdownIt-Anchor" href="#第八章重点"></a> 第八章（重点）</h2>
-<h3 id="简单指针"><a class="markdownIt-Anchor" href="#简单指针"></a> 简单指针</h3>
-<ul>
+<p>==当所有初值都给出时，第一维的大小说明可以忽略，否则不能忽略==</p>
+<h2 id="第八章（重点）"><a href="#第八章（重点）" class="headerlink" title="第八章（重点）"></a>第八章（重点）</h2><h3 id="简单指针"><a href="#简单指针" class="headerlink" title="简单指针"></a>简单指针</h3><ul>
 <li>指针变量简称为指针，指针常量是不能改变的地址值。</li>
 <li>数组名就是指针常量，存放数组首元素的地址值。</li>
 <li>指针变量的类型由指向的基类型决定。如指向整型变量的指针就是整型指针。</li>
 </ul>
-<p><mark>地址运算，p++,是增加sizeof(*p)个字节，也就是以指向基类型的字节数为整体，进行指针运算</mark></p>
+<p>==地址运算，p++,是增加sizeof(*p)个字节，也就是以指向基类型的字节数为整体，进行指针运算==</p>
 <p><strong>复杂指针的含义</strong></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> (*p)[<span class="number">3</span>];<span class="comment">//指向有三个元素的整型数组的指针</span></span><br><span class="line"><span class="keyword">double</span> *p2[<span class="number">5</span>];   <span class="comment">//有5个元素的指针数组，每个元素都是指向一个double型变量的指针</span></span><br><span class="line"><span class="keyword">char</span> (*fp)(<span class="keyword">int</span> <span class="keyword">int</span>);   <span class="comment">//指向一个有两个整型形参返回值是char型的函数的指针</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> *<span class="title">pf</span><span class="params">(<span class="keyword">float</span> a)</span></span>;      <span class="comment">//一个形参是float，返回值是整型指针的函数</span></span><br><span class="line"><span class="keyword">int</span> (*fp_ary[<span class="number">2</span>])(<span class="keyword">char</span>*,<span class="keyword">int</span>*)<span class="comment">//一个有两个元素的指针数组，每个元素都指向一个形参为char型指针和整型指针，返回值是int的函数。</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li><mark>[]的优先级高于*。所以在声明时如果没有括号，往数组上靠</mark></li>
+<li>==[]的优先级高于*。所以在声明时如果没有括号，往数组上靠== </li>
 </ul>
 <p><strong>指针操作符</strong></p>
 <p>取地址操作</p>
 <p>&amp; 操作数</p>
 <p>取元素的地址，操作数必须是左值，即不能是数组名，常量和寄存器变量【数组名也是地址常量】</p>
-<p><mark>不允许对表达式求地址</mark></p>
+<p>==不允许对表达式求地址==</p>
 <ul>
 <li>要避免指针的悬挂，可以在声明的时候直接赋初值，也可以在程序中赋值。</li>
 </ul>
@@ -1046,13 +1001,12 @@
 <p><strong>指针作为函数参数</strong></p>
 <p>在函数调用时使用地址传递可以在函数内部改变变量值，完成多口的返回。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *p = (<span class="keyword">int</span>[])&#123;<span class="number">2</span>,<span class="number">4</span>&#125;;<span class="comment">//后面是一个匿名数组。</span></span><br></pre></td></tr></table></figure>
-<p><mark>多维数组在内存中也是顺序存放的</mark></p>
-<h3 id="复杂指针"><a class="markdownIt-Anchor" href="#复杂指针"></a> 复杂指针</h3>
-<p><strong>指针数组的声明</strong></p>
+<p>==多维数组在内存中也是顺序存放的==</p>
+<h3 id="复杂指针"><a href="#复杂指针" class="headerlink" title="复杂指针"></a>复杂指针</h3><p><strong>指针数组的声明</strong></p>
 <p>类型修饰符* 标识符[常量表达式] = {初值表};</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span>*ps;  <span class="comment">//声明一个指向整型常量的指针，指针所指值不能改变。</span></span><br><span class="line"><span class="keyword">int</span> *<span class="keyword">const</span> ps1;  <span class="comment">//声明一个指向整型变量的指针常量，指针值不可改变。</span></span><br></pre></td></tr></table></figure>
 <p>指针数组就是一个数组中每个元素都是同一类型的指针。注意和指向数组的指针区别。</p>
-<p><mark>使用指针前，要避免指针悬挂</mark></p>
+<p>==使用指针前，要避免指针悬挂==</p>
 <p><strong>多重指针</strong>就是指针所指对象仍然是指针。</p>
 <p><strong>带参数的main函数</strong>有两个参数，第一个是代表命令行中的参数个数，第二个是一个字符指针数组，将每个参数以字符串格式存入其中。命令行中参数之间以空格为隔。且还有一点就是命令行中第一个参数就是程序名。</p>
 <p><strong>指针函数</strong></p>
@@ -1061,11 +1015,9 @@
 <p>用括号括起来代表里面是一个整体，表示的是指向函数的指针，也叫函数指针。而在返回值附近出现*就是返回值类型为指针，也就是指针函数。</p>
 <p>函数指针的调用时，首先赋值，函数指针名=函数名，然后有两种方式调用。</p>
 <p>（*函数指针名）{实参表}；或者函数指针名{实参表}</p>
-<h2 id="第九章会用就可以"><a class="markdownIt-Anchor" href="#第九章会用就可以"></a> 第九章（会用就可以）</h2>
-<h3 id="结构"><a class="markdownIt-Anchor" href="#结构"></a> 结构</h3>
-<p>结构的声明不进行内存分配。只是声明一种存储类型。</p>
+<h2 id="第九章（会用就可以）"><a href="#第九章（会用就可以）" class="headerlink" title="第九章（会用就可以）"></a>第九章（会用就可以）</h2><h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><p>结构的声明不进行内存分配。只是声明一种存储类型。</p>
 <p>struct  结构类型名{</p>
-<p>​    	                      成员声明表</p>
+<p>​                              成员声明表</p>
 <p>}；</p>
 <p>成员声明表的一般形式  数据类型  成员1；</p>
 <p>​                                         数据类型   成员2；</p>
@@ -1099,13 +1051,13 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(struct point* a,struct point* b)</span></span>;</span><br><span class="line">fun(&amp;(struct point)&#123;.x=<span class="number">1</span> , .y=<span class="number">1</span>&#125;,&amp;(struct point)&#123;.x=<span class="number">3</span> , .y=<span class="number">4</span>&#125;);</span><br></pre></td></tr></table></figure>
 <p><strong>结构变量的引用</strong></p>
 <p>结构变量初始化可以在声明时直接初始化。</p>
-<p><mark>当两个结构类型相同时，结构变量可以整体直接赋值</mark></p>
+<p>==当两个结构类型相同时，结构变量可以整体直接赋值== </p>
 <p>结构成员的引用</p>
 <ol>
-<li>直接通过结构变量名加&quot;.&quot;操作符加上成员名，进行结构成员的引用。</li>
-<li>还可以通过结构指针进行访问，结构指针加上&quot;-&gt;&quot;操作符，进行结构成员的引用。</li>
+<li>直接通过结构变量名加”.”操作符加上成员名，进行结构成员的引用。</li>
+<li>还可以通过结构指针进行访问，结构指针加上”-&gt;”操作符，进行结构成员的引用。</li>
 </ol>
-<p>成员选择运算符&quot;.&quot;具有最高优先级。左结合。</p>
+<p>成员选择运算符”.”具有最高优先级。左结合。</p>
 <p><strong>嵌套结构（不考）</strong></p>
 <p>嵌套结构的中声明的结构对外不可见，也就是可以设为是无名结构。</p>
 <p>访问时就是<strong>结构变量名.结构成员名.成员名</strong></p>
@@ -1113,26 +1065,23 @@
 <p>在结构比较大的时候，在函数调用时，直接传输结构比较耗时间，所以采用直接传输结构地址也就是结构指针的方法。</p>
 <p><strong>结构数组</strong></p>
 <p>和普通数组没有什么区别。</p>
-<h3 id="联合"><a class="markdownIt-Anchor" href="#联合"></a> 联合</h3>
-<p>联合和结构类似，但是联合中的成员共用一块存储区域。联合存储区域的大小由成员中占字节数最大的成员决定，所有成员的起始地址都相同，任何时刻都只有一个成员可以拥有这块存储。</p>
+<h3 id="联合"><a href="#联合" class="headerlink" title="联合"></a>联合</h3><p>联合和结构类似，但是联合中的成员共用一块存储区域。联合存储区域的大小由成员中占字节数最大的成员决定，所有成员的起始地址都相同，任何时刻都只有一个成员可以拥有这块存储。</p>
 <p>声明就是用union代替struct 其他完全相同。</p>
 <p>初始化可以对任意的一个成员初始化，如v.l=1;</p>
-<h3 id="字段结构"><a class="markdownIt-Anchor" href="#字段结构"></a> 字段结构</h3>
-<p>字段结构可以操作字节里的bit位。</p>
+<h3 id="字段结构"><a href="#字段结构" class="headerlink" title="字段结构"></a>字段结构</h3><p>字段结构可以操作字节里的bit位。</p>
 <p>声明</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Bit</span>&#123;</span></span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">short</span> bit1 : <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">short</span> bit2 : <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">short</span> bit2 : <span class="number">2</span>; </span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">short</span> bit2 : <span class="number">2</span>;</span><br><span class="line">&#125;bit;</span><br></pre></td></tr></table></figure>
 <p>可以指定每个元素占的bit位，进行小规模数据的封装。</p>
 <p>字段和联合一起使用，可以通过字段访问数据的每个bit位。</p>
-<h2 id="第十章"><a class="markdownIt-Anchor" href="#第十章"></a> 第十章</h2>
-<p>文本文件：把数据当作以字符，保存ASCLL值，存储时字符串后面的空字符和换行符都会被忽略。</p>
+<h2 id="第十章"><a href="#第十章" class="headerlink" title="第十章"></a>第十章</h2><p>文本文件：把数据当作以字符，保存ASCLL值，存储时字符串后面的空字符和换行符都会被忽略。</p>
 <p>二进制文件： 把数据以本身在机内的二进制形式保存，中间没有间隔符和终止符，读取时要注意读写数据的格式，浮点型数据赋值给浮点型变量。</p>
 <p>文件读写有顺序读写和随机读写两种方式。、</p>
 <p>对文件的操作其实是使用指针对文件缓冲区的结构进行操作。文件指针类型FILE*。</p>
-<p>标准文件</p>
+<p>标准文件 </p>
 <ul>
 <li>stdin  标准输入设备</li>
 <li>stdout   标准输出设备</li>
-<li>stderr   标准出错设备</li>
+<li>stderr   标准出错设备 </li>
 </ul>
 <p><strong>文件操作函数</strong></p>
 <ol>
@@ -1142,6 +1091,7 @@
 <p>形参finename指向字符串所指定的文件，有相对路径和绝对路径两种，形参mode表示文件的打开方式。如果成功打开，fopen函数返回所打开文件的文件指针值，否则返回NULL。</p>
 </blockquote>
 <p><strong>mode中r表示只读，w表示只写，a表示添加，+表示更新，b表示二进制文件。</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1196,26 +1146,27 @@
 </tr>
 </tbody>
 </table>
-<ol start="2">
+</div>
+<ol>
 <li>fclose(FILE*);</li>
 </ol>
 <p>形参是要关闭的文件的文件指针。正常关闭返回0，否则返回非0.</p>
-<ol start="3">
+<ol>
 <li>freopen(filename,mode,FILE*);</li>
 </ol>
 <p>第一个参数是文件名，即重定向后文件指针所指向的文件路径，第二个形参是mode，第三个形参是文件指针。</p>
-<ol start="4">
+<ol>
 <li>fgetc(FILE*);                             从文件中读一个字符</li>
 <li>fputc(int,FILE*);                       向文件中写一个字符</li>
 <li>fgetchar(void);                        从标准输入设备中读一个字符</li>
 <li>fputchar(int)                           向标准输出设备中写一个字符</li>
-<li>ungetc(int,FILE*stream)；   返回字符回流。    *</li>
-<li>fgets(char*,int ,FILE *);         从文件中 读入字符串，小于n长度</li>
-<li>fputs(char*,FILE *stream);   输出字符串到文件中</li>
-<li>fscanf(FILE* ,char*,参数)；    和scanf用法相同，就是之前给个文件指针表示从这里读取</li>
-<li>fprintf(FILE*,char *,参数)；    和printf相同，在前面加文件指针</li>
-<li>fread(void*ptr,size_t size,size_t n,FILE *)每次从文件指针所指文件中读取至多n个大小为size个字节的数据到ptr所指的内存单元中。</li>
-<li>fwrite(const void* ptr,size_t size,size_t n,FILE*steam)和fread相似，就是从ptr所指单元读入文件中。返回值是写出的记录数。</li>
+<li>ungetc(int,FILE<em>stream)；   返回字符回流。    </em></li>
+<li>fgets(char<em>,int ,FILE </em>);         从文件中 读入字符串，小于n长度</li>
+<li>fputs(char<em>,FILE </em>stream);   输出字符串到文件中</li>
+<li>fscanf(FILE<em> ,char</em>,参数)；    和scanf用法相同，就是之前给个文件指针表示从这里读取</li>
+<li>fprintf(FILE<em>,char </em>,参数)；    和printf相同，在前面加文件指针</li>
+<li>fread(void<em>ptr,size_t size,size_t n,FILE </em>)每次从文件指针所指文件中读取至多n个大小为size个字节的数据到ptr所指的内存单元中。</li>
+<li>fwrite(const void<em> ptr,size_t size,size_t n,FILE</em>steam)和fread相似，就是从ptr所指单元读入文件中。返回值是写出的记录数。</li>
 </ol>
 <p>rewind(FILE*)，把文件指针重新定位到文件开始的位置。</p>
 
@@ -1343,7 +1294,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1365,7 +1316,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1398,7 +1349,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章了解"><span class="nav-number">1.</span> <span class="nav-text"> 第一章（了解）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进制转换"><span class="nav-number">1.1.</span> <span class="nav-text"> 进制转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数的机器码表示"><span class="nav-number">1.2.</span> <span class="nav-text"> 数的机器码表示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章重要"><span class="nav-number">2.</span> <span class="nav-text"> 第二章（重要）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标识符和关键字必考"><span class="nav-number">2.1.</span> <span class="nav-text"> 标识符和关键字（必考）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型常量的表示掌握"><span class="nav-number">2.2.</span> <span class="nav-text"> 类型常量的表示（掌握）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符和表达式必考"><span class="nav-number">2.3.</span> <span class="nav-text"> 运算符和表达式（必考）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型转换注意"><span class="nav-number">2.4.</span> <span class="nav-text"> 类型转换（注意）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举类型了解"><span class="nav-number">2.5.</span> <span class="nav-text"> 枚举类型（了解）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章"><span class="nav-number">3.</span> <span class="nav-text"> 第三章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符输入和输出"><span class="nav-number">3.1.</span> <span class="nav-text"> 字符输入和输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串输入和输出"><span class="nav-number">3.2.</span> <span class="nav-text"> 字符串输入和输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格式化输入和输出转换字符看一下"><span class="nav-number">3.3.</span> <span class="nav-text"> 格式化输入和输出（转换字符看一下）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章"><span class="nav-number">4.</span> <span class="nav-text"> 第四章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#switch语句-注意一下"><span class="nav-number">4.1.</span> <span class="nav-text"> switch语句 （注意一下）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for语句"><span class="nav-number">4.2.</span> <span class="nav-text"> for语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#goto语句"><span class="nav-number">4.3.</span> <span class="nav-text"> goto语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五章"><span class="nav-number">5.</span> <span class="nav-text"> 第五章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">5.1.</span> <span class="nav-text"> 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域与可见性"><span class="nav-number">5.2.</span> <span class="nav-text"> 作用域与可见性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存储类型掌握"><span class="nav-number">5.3.</span> <span class="nav-text"> 存储类型（掌握）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六章几乎不考"><span class="nav-number">6.</span> <span class="nav-text"> 第六章（几乎不考）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#include"><span class="nav-number">6.1.</span> <span class="nav-text"> include</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#define"><span class="nav-number">6.2.</span> <span class="nav-text"> #define</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#断言"><span class="nav-number">6.3.</span> <span class="nav-text"> 断言</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七章"><span class="nav-number">7.</span> <span class="nav-text"> 第七章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符数组"><span class="nav-number">7.1.</span> <span class="nav-text"> 字符数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多维数组必考初始化"><span class="nav-number">7.2.</span> <span class="nav-text"> 多维数组(必考初始化)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第八章重点"><span class="nav-number">8.</span> <span class="nav-text"> 第八章（重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单指针"><span class="nav-number">8.1.</span> <span class="nav-text"> 简单指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂指针"><span class="nav-number">8.2.</span> <span class="nav-text"> 复杂指针</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第九章会用就可以"><span class="nav-number">9.</span> <span class="nav-text"> 第九章（会用就可以）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#结构"><span class="nav-number">9.1.</span> <span class="nav-text"> 结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联合"><span class="nav-number">9.2.</span> <span class="nav-text"> 联合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字段结构"><span class="nav-number">9.3.</span> <span class="nav-text"> 字段结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十章"><span class="nav-number">10.</span> <span class="nav-text"> 第十章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章（了解）"><span class="nav-number">1.</span> <span class="nav-text">第一章（了解）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进制转换"><span class="nav-number">1.1.</span> <span class="nav-text">进制转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数的机器码表示"><span class="nav-number">1.2.</span> <span class="nav-text">数的机器码表示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章（重要）"><span class="nav-number">2.</span> <span class="nav-text">第二章（重要）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标识符和关键字（必考）"><span class="nav-number">2.1.</span> <span class="nav-text">标识符和关键字（必考）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型常量的表示（掌握）"><span class="nav-number">2.2.</span> <span class="nav-text">类型常量的表示（掌握）</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#define-标识符-常量"><span class="nav-number"></span> <span class="nav-text">define  标识符   常量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符和表达式（必考）"><span class="nav-number">0.1.</span> <span class="nav-text">运算符和表达式（必考）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型转换（注意）"><span class="nav-number">0.2.</span> <span class="nav-text">类型转换（注意）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举类型（了解）"><span class="nav-number">0.3.</span> <span class="nav-text">枚举类型（了解）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章"><span class="nav-number">1.</span> <span class="nav-text">第三章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符输入和输出"><span class="nav-number">1.1.</span> <span class="nav-text">字符输入和输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串输入和输出"><span class="nav-number">1.2.</span> <span class="nav-text">字符串输入和输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格式化输入和输出（转换字符看一下）"><span class="nav-number">1.3.</span> <span class="nav-text">格式化输入和输出（转换字符看一下）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章"><span class="nav-number">2.</span> <span class="nav-text">第四章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#switch语句-（注意一下）"><span class="nav-number">2.1.</span> <span class="nav-text">switch语句 （注意一下）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for语句"><span class="nav-number">2.2.</span> <span class="nav-text">for语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#goto语句"><span class="nav-number">2.3.</span> <span class="nav-text">goto语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五章"><span class="nav-number">3.</span> <span class="nav-text">第五章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">3.1.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域与可见性"><span class="nav-number">3.2.</span> <span class="nav-text">作用域与可见性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存储类型（掌握）"><span class="nav-number">3.3.</span> <span class="nav-text">存储类型（掌握）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六章（几乎不考）"><span class="nav-number">4.</span> <span class="nav-text">第六章（几乎不考）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#include"><span class="nav-number">4.1.</span> <span class="nav-text">include</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#define"><span class="nav-number">4.2.</span> <span class="nav-text">#define</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#define-标识符-字符串"><span class="nav-number"></span> <span class="nav-text">define 标识符   字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#define-标识符（标识符1，标识符2，。。。，标识符）-字符串"><span class="nav-number"></span> <span class="nav-text">define 标识符（标识符1，标识符2，。。。，标识符）   字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undef-标识符"><span class="nav-number"></span> <span class="nav-text">undef 标识符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#if-常量表达式"><span class="nav-number"></span> <span class="nav-text">if 常量表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#elif-常量表达式"><span class="nav-number"></span> <span class="nav-text">elif  常量表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#else"><span class="nav-number"></span> <span class="nav-text">else</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#endif"><span class="nav-number"></span> <span class="nav-text">endif</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ifdef-标识符"><span class="nav-number"></span> <span class="nav-text">ifdef  标识符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#elif-常量表达式-1"><span class="nav-number"></span> <span class="nav-text">elif  常量表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#else-1"><span class="nav-number"></span> <span class="nav-text">else</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#endif-1"><span class="nav-number"></span> <span class="nav-text">endif</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ifndef-标识符"><span class="nav-number"></span> <span class="nav-text">ifndef  标识符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#elif-常量表达式-2"><span class="nav-number"></span> <span class="nav-text">elif  常量表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#else-2"><span class="nav-number"></span> <span class="nav-text">else</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#endif-2"><span class="nav-number"></span> <span class="nav-text">endif</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#断言"><span class="nav-number">0.1.</span> <span class="nav-text">断言</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七章"><span class="nav-number">1.</span> <span class="nav-text">第七章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符数组"><span class="nav-number">1.1.</span> <span class="nav-text">字符数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多维数组-必考初始化"><span class="nav-number">1.2.</span> <span class="nav-text">多维数组(必考初始化)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第八章（重点）"><span class="nav-number">2.</span> <span class="nav-text">第八章（重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单指针"><span class="nav-number">2.1.</span> <span class="nav-text">简单指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂指针"><span class="nav-number">2.2.</span> <span class="nav-text">复杂指针</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第九章（会用就可以）"><span class="nav-number">3.</span> <span class="nav-text">第九章（会用就可以）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#结构"><span class="nav-number">3.1.</span> <span class="nav-text">结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联合"><span class="nav-number">3.2.</span> <span class="nav-text">联合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字段结构"><span class="nav-number">3.3.</span> <span class="nav-text">字段结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十章"><span class="nav-number">4.</span> <span class="nav-text">第十章</span></a></li></div>
             
 
           </div>
