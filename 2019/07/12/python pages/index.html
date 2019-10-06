@@ -87,14 +87,10 @@
 <meta property="og:site_name" content="柠檬笔记">
 <meta property="og:description" content="turtle库  引入模块 import turtle turtle.setup(a,b,c,d)  a,b决定绘制界面的长和宽，，c,d决定绘图界面出现在屏幕的位置，若无设置默认为出现在屏幕中央。  turtle坐标体系 绝对坐标，在绘图界面中的坐标系的坐标  turtle.goto()     线性绝对坐标的移动  空间坐标（海龟坐标），以海龟的视角，前后左右方向的坐标  turtle.bk">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/07/12/python%20pages/numpy1.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/12/python%20pages/numpy2.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/12/python%20pages/numpy3.png">
-<meta property="og:updated_time" content="2019-10-06T09:36:21.211Z">
+<meta property="og:updated_time" content="2019-10-06T09:44:29.281Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python库的使用">
 <meta name="twitter:description" content="turtle库  引入模块 import turtle turtle.setup(a,b,c,d)  a,b决定绘制界面的长和宽，，c,d决定绘图界面出现在屏幕的位置，若无设置默认为出现在屏幕中央。  turtle坐标体系 绝对坐标，在绘图界面中的坐标系的坐标  turtle.goto()     线性绝对坐标的移动  空间坐标（海龟坐标），以海龟的视角，前后左右方向的坐标  turtle.bk">
-<meta name="twitter:image" content="http://yoursite.com/2019/07/12/python%20pages/numpy1.png">
 
 
 
@@ -490,7 +486,7 @@
 <li>np.ones((1,2))</li>
 <li>np.empty((3,4))创建全空数组，其实是每个值都接近于零的数</li>
 </ul>
-<p><img src="/2019/07/12/python pages/numpy1.png" alt="img"></p>
+<p>![img](/python pages/numpy1.png)</p>
 <p>还可以指定数据类型</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([<span class="number">2</span>,<span class="number">23</span>,<span class="number">4</span>],dtype = np.float32)</span><br></pre></td></tr></table></figure>
 <h3 id="基本属性"><a class="markdownIt-Anchor" href="#基本属性"></a> 基本属性</h3>
@@ -619,7 +615,7 @@
 <p><strong>数组转置</strong> ：<mark>a.transpose()或者a.T</mark>,装置只是数组的一种view，所以改变转置会改变原来数组的值</p>
 <p><strong>数组连接</strong> :   concatenate((a0,a1,…,aN), axis = 0 )  ,除了指定的维其他的维数必须相等才能连接。默认沿着第一维连接，还可以对多个矩阵连接</p>
 <p><strong>vstack((x,y))沿着第一维连接，hstack((x,y))沿着第二维连接，dstack((x,y))把同型矩阵增加维度连接</strong></p>
-<p><img src="/2019/07/12/python pages/numpy2.png" alt="img"></p>
+<p>![img](/python pages/numpy2.png)</p>
 <p><strong>Flatten数组</strong> ：<mark>把多维数组转化为一维数组，返回的是复制值</mark></p>
 <p><strong>flat属性</strong> ：相当于返回了所有元组组成的一个迭代器，修改值会影响原来的数组</p>
 <p><strong>ravel方法</strong> ：和flat属性相同，在对象是原数组的一个view时，改变值不影响原数组</p>
@@ -657,7 +653,7 @@
 <h3 id="分割"><a class="markdownIt-Anchor" href="#分割"></a> 分割</h3>
 <p><strong>纵向分割</strong> np.split(A,2,axis = 1)</p>
 <p>第一个参数是矩阵，第二个参数是分割出多少个数组，第三个参数决定横向还是纵向分割</p>
-<p><img src="/2019/07/12/python pages/numpy3.png" alt="numpy3"></p>
+<p>![numpy3](/python pages/numpy3.png)</p>
 <p><strong>不等量分割</strong></p>
 <p>np.array_split(A,2,axis = 0)</p>
 <h2 id="matplotlib库"><a class="markdownIt-Anchor" href="#matplotlib库"></a> Matplotlib库</h2>
